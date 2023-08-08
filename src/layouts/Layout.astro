@@ -23,6 +23,7 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	/* Base */
 	:root {
 		--accent: #00d4ff;
 		--accent-gradient: linear-gradient(45deg, rgb(9,9,121), var(--accent) 30%);
@@ -35,6 +36,33 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	/* Headlines */
+	h1,h2,h3,h4,h5,h6 {
+		font-family: 'Work Sans Light', sans-serif;
+		text-transform: uppercase;
+		line-height: normal;
+	}
+	h1 {
+		font-size: 2.5rem;
+		letter-spacing: 0.1em;
+	}
+	h2 {
+		font-size: 2rem;
+		letter-spacing: 0.1em;
+	}
+	h3 {
+		font-size: 1.75rem;
+		letter-spacing: 0.08em;
+	}
+	h4 {
+		font-size: 1.5rem;
+	}
+	h5 {
+		font-size: 1.25rem;
+	}
+	h6 {
+		font-size: 1rem;
 	}
 
 	@media (prefers-color-scheme: dark) {
