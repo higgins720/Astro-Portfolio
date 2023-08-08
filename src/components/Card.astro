@@ -32,7 +32,6 @@ const { href, title, body } = Astro.props;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 	}
-
 	.link-card > a {
 		width: 100%;
 		text-decoration: none;
@@ -48,16 +47,34 @@ const { href, title, body } = Astro.props;
 		font-size: 1.25rem;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
-	p {
+	/* p {
 		margin-top: 0.5rem;
 		margin-bottom: 0;
 		color: #444;
-	}
+	} */
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
 		background-image: var(--accent-gradient);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent));
+	}
+	@media (prefers-color-scheme: dark) {
+		.link-card {
+			background-color: #505050;
+			color: #fff;
+		}
+		.link-card > a {
+			color: #fff;
+			background-color: #111;
+			opacity: 0.8;
+		}
+		.link-card:is(:hover, :focus-within) {
+			background-position: 0;
+			background-image: var(--accent-gradient);
+		}
+		.link-card:is(:hover, :focus-within) h2 {
+			color: rgb(var(--accent));
+		}
 	}
 </style>

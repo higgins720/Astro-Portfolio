@@ -1,0 +1,29 @@
+---
+const {frontmatter} = Astro.props;
+import Navigation from '../components/Navigation.astro';
+---
+<html>
+  <!-- ... -->
+  <Navigation />
+  <div class="header">
+    <h1>{frontmatter.title}</h1>
+    <h2>By: {frontmatter.author}</h2>
+    <p>{frontmatter.description}</p>
+  </div>
+  <slot /> <!-- Markdown content is injected here -->
+   <!-- ... -->
+</html>
+
+<style>
+    .header {
+        text-align: center;
+    }
+    html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+</style>
