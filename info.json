@@ -1,6 +1,21 @@
 {
-    "name": "Jesse Higgins",
-    "age": 27,
-    "location": "Tucson, AZ",
-    "title": "Web Developer"
+    "details": {
+        "name": "Jesse Higgins",
+        "age": 27,
+        "birthday": "1997-07-20",
+        "location": "Tucson, AZ",
+        "title": "Web Developer"
+    },
+    "contact": {
+        "email": "mailto:jesse@cloudchief.net",
+        "email_formatted": "jesse@cloudchief.net",
+        "phone": "tel:520-369-0007",
+        "phone_formatted": "520.369.0007"
+    },
+    "links": {
+        "github": "https://github.com/higgins720",
+        "linkedin": "https://www.linkedin.com/in/jessehiggins/",
+        "twitter": "https://twitter.com/Higgins_720",
+        "codewars": "https://www.codewars.com/users/higgins720"
+    }
 }

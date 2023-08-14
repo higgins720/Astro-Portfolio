@@ -10,10 +10,10 @@ import info from '../../info.json';
         <div id="personalInfo">
             <h3>Stats</h3>
             <p>
-                Name: {info.name}<br />
-                Age: {info.age}<br />
-                Location: {info.location}<br />
-                Position: {info.title}<br />
+                Name: {info.details.name}<br />
+                Age: <span id="age">{info.details.birthday}</span><br />
+                Location: {info.details.location}<br />
+                Position: {info.details.title}<br />
             </p>
         </div>
 
@@ -26,7 +26,6 @@ import info from '../../info.json';
             focus on Graphic Design using Photoshop and Illustrator, designing
             website concepts as well as business cards, flyers, physical mailers, newsletters, posters, billboards, and more. I've even done some motion graphics with Adobe After Effects and video editing with Premier. Eventually I started doing less of that and more website development with Joomla, and later with WordPress.
         </p>
-        <img src="../../public/Portfolio_Profile_IT-Support.webp" alt="Jesse Higgins being a poser in Falling Down IT-Support outfit" width="300px" height="300px" class="align-left width-50"/>
         <h3>WordPress Development</h3>
         <p>
             We learned how to streamline the process in order to reduce development time without sacrificing quality. I helped my team to master a particular WordPress theme called <a href="https://YOOtheme.com/" target="_blank">YOOtheme</a>. We decided it met our needs and ran with it for new website builds, and it allowed us to quickly build "Concepts" or "Prototypes" with nice consistent UI style themes that we could easiy configure. Once we nailed down a UI theme and the client was on board with it, we could then pretty quickly build out the rest of the site without much creative skill required. All our previous sites were rebuilt as we continued to build all the new websites, which made it easy for other team members with varying levels of expertise to support all our 200+ websites.
@@ -98,7 +97,7 @@ import info from '../../info.json';
     main {
         margin: auto;
         padding: 1.5rem;
-        max-width: 70ch;
+        max-width: 80ch;
     }
     h1 {
         font-size: 3rem;
@@ -138,6 +137,15 @@ import info from '../../info.json';
         padding: 0;
     }
     #personalInfo {
-        font-family: monospace;
+        font-family: monospace; 
     }
 </style>
+
+<script type="text/javascript">
+    // Determine age
+    let birthday = new Date(document.getElementById("age").innerHTML);
+    let today = new Date();
+    let diffTime = Math.abs(today - birthday);
+    let diffYears = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 365));
+    document.getElementById("age").innerHTML = diffYears;
+</script>
