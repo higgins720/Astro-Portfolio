@@ -1,4 +1,18 @@
-# Astro Starter Kit: Basics
+# Astro Portfolio
+
+## ToDo
+
+Build a complete portfolio website
+
+### MVP
+Get it to a launchable state, where it's worth replacing my current portfolio. 
+
+- [ ] Add Resume Content
+- [ ] Visually Appealing Home Page Design
+- [ ] Mobile First, make sure it works accross all devices
+
+---
+### Astro Help
 
 ```
 npm create astro@latest -- --template basics
