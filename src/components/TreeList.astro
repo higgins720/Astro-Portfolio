@@ -1,0 +1,33 @@
+---
+const {parent} = Astro.props
+const {items} = Astro.props
+---
+<div class="tree-list">
+    <span class="label">{parent}</span>
+    <ul>
+        {items.map(item => <li>{item}</li>)}
+    </ul>
+</div>
+
+<style>
+    .tree-list {
+        font-family: monospace;
+        margin-left: 20px;
+    }
+    .label {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    li {
+        list-style: none;
+    }
+    ul {
+        margin-top: 10px;
+        padding-left: 20px;
+        border-left: 1px solid #ccc;
+    }
+    /* div {
+        display: block;
+        width: auto;
+    } */
+</style>

@@ -1,0 +1,142 @@
+---
+import info from '../../info.json';
+import Layout from "../layouts/Layout.astro";
+import Sidebar from "../components/Sidebar.astro";
+import TreeList from "../components/TreeList.astro";
+import {Icon} from "astro-icon";
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+        <div style="text-align: center;">
+            <span class="text-background heading-small">Resume</span>
+        </div>
+        <div id="body" class="flex">
+            <Sidebar>
+                <div>
+                    <img src="../../public/JJHiggins_720.jpg" alt="Jesse squinting at camera" width="100%" height="auto"/>
+                    <h3>Information</h3>
+                    <p>
+                        Name: {info.details.name}<br />
+                        Age: <span id="age">{info.details.birthday}</span><br />
+                        Location: {info.details.location}<br />
+                        Position: {info.details.title}<br />
+                    </p>
+                    <hr />
+                    <h3>Education</h3>
+                    <p>
+                        High School Graduate. 
+                        Self Learner. 
+                        7 Years Experience on the Job. 
+                        Various Online Courses Half-Completed, including Harvard CS 50.
+                    </p>
+                    <hr />
+                    <h3>Interests</h3>
+                    <span class="subheading">Technology</span>
+                    <ul>
+                        <li>Application Software</li>
+                        <li>Web Development</li>
+                        <li>Game Development</li>
+                        <li>Artificial Intelligence</li>
+                    </ul>
+                    <span class="subheading">Other</span>
+                    <ul>
+                        <li>Horse Riding</li>
+                        <li>Street & Dirtbike Riding</li>
+                        <li>BJJ & Kickboxing</li>
+                        <li>Leathercraft</li>
+                        <li>Carpentry</li>
+                        <li>Fiction & Nonfiction Reading</li>
+                    </ul>
+                    <hr />
+                    <h3>Links</h3>
+                    <div class="flex" style="justify-content: space-around;">
+                        <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width="30px" height="30px"></a>
+                        <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width="30px" height="30px"></a>
+                        <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width="30px" height="30px"></a>
+                        <a href={info.links.codewars} target="_blank" rel="nofollow"><Icon name="simple-icons:codewars" width="30px" height="30px"></a>
+                    </div>
+                </div>
+            </Sidebar>
+            <div id="content" class="flex-4">
+            
+                <h1 class="margin-remove">Jesse Higgins</h1>
+                <p class="subheading">{info.details.title}</p>
+                <h2>Technologies</h2>
+
+                <div class="flex">
+                    <TreeList parent="Graphics" items={info.techSkills.graphics} />
+                    <TreeList parent="Code" items={info.techSkills.code} />
+                    <TreeList parent="Markup" items={info.techSkills.markup} />
+                    <TreeList parent="Frameworks" items={info.techSkills.frameworks} />
+                    <TreeList parent="Version Control" items={info.techSkills.versionControl} />
+                    <TreeList parent="Dev Tools" items={info.techSkills.devTools} />
+                    <TreeList parent="Project MGMT" items={info.techSkills.projectManagement} />
+                </div>
+
+                <h2>Employment History</h2>
+                <h3>CS Design Studios</h3>
+                    <p>
+                        <strong>Employee, Web Designer & Developer, 2016 - Present</strong>
+                    </p>
+                    <ul>
+                        <li>Designed, built, and supported 250+ websites for local and national companies.
+                        </li>
+                        <li>Researched and tested new technologies, improved development process, and raised web design standards. </li>
+                        <li>Communicated with clients, ran meetings, drafted estimates, set expectations.</li>
+                        <li>Also had the opportunity to do some video editing, motion graphics, photography, small Python and JS programs, and even worked on making an game for a client with Unity3D.</li>
+                    </ul>
+                <h3>Cloud Chief Technologies</h3>
+                <p>
+                    <strong>Owner, Web Designer, 2018 - Present</strong>
+                </p>
+                <ul>
+                    <li>Designed, built, and managed websites for various clients.</li>
+                    <li>Put together contracts, drafted estimates and set expectations, and handled projects from start to finish.</li>
+                </ul>
+                <h3>Go Fractional CMO</h3>
+                <p>
+                    <strong>Contractor, Web Designer, 2022 - 2023</strong>
+                </p>
+                <ul>
+                    <li>
+                        Designed, built, and managed a new website for Flock Off, a Bird Abatement Company.
+                    </li>
+                    <li>Configured a user portal for Flock Off distributors.</li>
+                    <li>Designed print collateral for the Flock Off device.</li>
+                    <li>Redesigned and built a new pest control website for Pest Friends.</li>
+                </ul>
+            </div>
+        </div>
+        
+
+        
+    </main>
+</Layout>
+
+<style>
+    #body {
+        margin: auto;
+        padding: 1.5rem;
+        max-width: 1000px;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    #content {
+        padding-left: 2rem;
+    }
+</style>
+
+<script type="text/javascript">
+    // Determine age
+    let birthday = new Date(document.getElementById("age").innerHTML);
+    let today = new Date();
+    let diffTime = Math.abs(today - birthday);
+    let diffYears = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 365));
+    document.getElementById("age").innerHTML = diffYears;
+</script>

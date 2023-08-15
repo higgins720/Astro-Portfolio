@@ -10,10 +10,10 @@ import info from '../../info.json';
         <div id="personalInfo">
             <h3>Stats</h3>
             <p>
-                Name: {info.name}<br />
-                Age: {info.age}<br />
-                Location: {info.location}<br />
-                Position: {info.title}<br />
+                Name: {info.details.name}<br />
+                Age: <span id="age">{info.details.birthday}</span><br />
+                Location: {info.details.location}<br />
+                Position: {info.details.title}<br />
             </p>
         </div>
 
@@ -97,7 +97,7 @@ import info from '../../info.json';
     main {
         margin: auto;
         padding: 1.5rem;
-        max-width: 70ch;
+        max-width: 80ch;
     }
     h1 {
         font-size: 3rem;
@@ -137,6 +137,15 @@ import info from '../../info.json';
         padding: 0;
     }
     #personalInfo {
-        font-family: monospace;
+        font-family: monospace; 
     }
 </style>
+
+<script type="text/javascript">
+    // Determine age
+    let birthday = new Date(document.getElementById("age").innerHTML);
+    let today = new Date();
+    let diffTime = Math.abs(today - birthday);
+    let diffYears = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 365));
+    document.getElementById("age").innerHTML = diffYears;
+</script>
