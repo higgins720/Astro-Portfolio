@@ -8,9 +8,9 @@ Build a complete portfolio website
 Get it to a launchable state, where it's worth replacing my current portfolio. 
 
 - [ ] Add Resume Content
+- [ ] Link to my social media accounts
 - [ ] Visually Appealing Home Page Design
 - [ ] Mobile First, make sure it works accross all devices
-
 ---
 ### Astro Help
 
