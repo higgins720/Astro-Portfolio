@@ -28,13 +28,15 @@ import Footer from '../components/Footer.astro';
 		--accent: #00d4ff;
 		--accent-hover: #b5f3ff;
 		--accent-active: #00a2cc;
-		--accent-gradient: linear-gradient(45deg, rgb(9,9,121), var(--accent) 30%);
+		--accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), var(--accent) 30%);
+		--element-glow: #0066ff;
 		--text-emphasis: #fff;
 		--text-muted: #646464;
 		--text-body: #3c3c3c;
+		--dark-background: #1a1a1a;
 	}
 	html {
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-weight: 400;
 		background-color: #F6F6F6;
 		line-height: 1.5em;
@@ -102,7 +104,7 @@ import Footer from '../components/Footer.astro';
 
 	@media (prefers-color-scheme: dark) {
 		html {
-			background-color: #1a1a1a;
+			background-color: var(--dark-background);
 			color: rgb(199, 199, 199);
 		}
 		p {
@@ -138,8 +140,14 @@ import Footer from '../components/Footer.astro';
         display: flex;
         flex-wrap: wrap;
     }
+	.flex-align-center {
+		align-items: center;
+	}
     .text-align-center {
         text-align: center;
+    }
+	.text-align-right {
+        text-align: right;
     }
 	@media(min-width: 640px) {
 	.flex-1 {
