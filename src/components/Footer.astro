@@ -5,31 +5,31 @@ import {Icon} from 'astro-icon';
 
 <footer>
     <div class="flex flex-align-center">
-        <div class="flex-2 text-align-center">
+        <div class="flex-2">
             <h3>Contact</h3>
             <p>
                 Phone: <a href={info.contact.phone}>{info.contact.phone_formatted}</a><br />
                 Email: <a href={info.contact.email}>{info.contact.email_formatted}</a>
             </p>
         </div>
-        <div class="flex-2 text-align-center">
+        <div class="flex-2 text-align-right">
                 <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width="30px" height="30px"></a>
                 <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width="30px" height="30px"></a>
                 <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width="30px" height="30px"></a>
                 <a href={info.links.codewars} target="_blank" rel="nofollow"><Icon name="simple-icons:codewars" width="30px" height="30px"></a>
             </div>
     </div>
-    <div>
-        <p>Website by Jesse Higgins</p>
-        <p>Built with <a href="https://astro.build/" target="_blank" style="position: relative; top: 4px;"><Icon name="astro-logo" width="80" height="auto"/>
+    <div class="text-align-center">
+        <p>Website by Jesse Higgins | Built with <a href="https://astro.build/" target="_blank" style="position: relative; top: 4px;"><Icon name="astro-logo" width="80" height="auto"/>
         </a>.</p>
     </div>
 </footer>
 
 <style>
     footer {
+        max-width: 80ch;
+        margin: 0 auto;
         padding: 10px 0px;
-        text-align: center;
     }
     
 </style>

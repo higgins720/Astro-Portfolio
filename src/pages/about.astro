@@ -6,12 +6,11 @@ import info from '../../info.json';
 
 <Layout title="Welcome to Astro.">
     <main>
-        <h1><span class="text-gradient">About</span></h1>
+        <h1>About <span class="text-gradient">Myself</span></h1>
         <div id="personalInfo">
             <h3>Stats</h3>
             <p>
                 Name: {info.details.name}<br />
-                Age: <span id="age">{info.details.birthday}</span><br />
                 Location: {info.details.location}<br />
                 Position: {info.details.title}<br />
             </p>
@@ -132,7 +131,7 @@ import info from '../../info.json';
     }
     .link-card-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
         gap: 1rem;
         padding: 0;
     }
@@ -140,12 +139,3 @@ import info from '../../info.json';
         font-family: monospace; 
     }
 </style>
-
-<script type="text/javascript">
-    // Determine age
-    let birthday = new Date(document.getElementById("age").innerHTML);
-    let today = new Date();
-    let diffTime = Math.abs(today - birthday);
-    let diffYears = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 365));
-    document.getElementById("age").innerHTML = diffYears;
-</script>

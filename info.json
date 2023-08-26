@@ -1,7 +1,6 @@
 {
     "details": {
         "name": "Jesse Higgins",
-        "age": 27,
         "birthday": "1997-07-20",
         "location": "Tucson, AZ",
         "title": "Software Developer"
@@ -34,9 +33,10 @@
             "C#"
         ],
         "frameworks": [
+            "WordPress",
             "Astro",
             "React",
-            "WordPress"
+            "UI Kit"
         ],
         "versionControl": [
             "Git",
