@@ -5,14 +5,20 @@
 <style>
     aside {
         display: inline-block;
-        width: calc(30% - 80px);
+        width: auto;
         height: auto;
         padding: 30px;
         min-width: 200px;
         background-color: rgb(195 195 195);
-        font-family: monospace; 
+        font-family: consolas, monospace; 
         text-transform: uppercase;
         font-size: 0.8rem;
+        height: fit-content;
+    }
+    @media(min-width: 640px) {
+        aside {
+            width: calc(30% - 80px);
+        }
     }
     @media (prefers-color-scheme: dark) {
         aside {

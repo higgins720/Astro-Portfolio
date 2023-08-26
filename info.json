@@ -4,7 +4,7 @@
         "age": 27,
         "birthday": "1997-07-20",
         "location": "Tucson, AZ",
-        "title": "Web Developer"
+        "title": "Software Developer"
     },
     "contact": {
         "email": "mailto:jesse@cloudchief.net",
@@ -23,7 +23,7 @@
             "HTML5",
             "CSS3",
             "Markdown",
-            "Regular Expressions",
+            "RegEx",
             "Emmet"
         ],
         "code": [

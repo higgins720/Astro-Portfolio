@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="UI Design">
@@ -19,4 +20,8 @@ import Layout from "../layouts/Layout.astro";
     <a href="#" class="button">Button Default</a>
     <a href="#" class="button button-primary">Button Primary</a>
     <a href="#" class="button button-secondary">Button Secondary</a>
+    <br />
+    <Button text="Button Default" href="#" styles="button-default" />
+    <Button text="Button Primary" href="#" styles="button-primary" />
+    <Button text="Button Secondary" href="#" styles="button-secondary" />
 </section>

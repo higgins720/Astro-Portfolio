@@ -11,7 +11,7 @@ const {items} = Astro.props
 
 <style>
     .tree-list {
-        font-family: monospace;
+        font-family: consolas, monospace;
         margin-left: 20px;
     }
     .label {
@@ -20,11 +20,21 @@ const {items} = Astro.props
     }
     li {
         list-style: none;
+        width: fit-content;
+        font-size: 0.9rem;
+    }
+    li:after {
+        content: '';
+        display: block;
+        position: relative;
+        width: calc(100% + 20px);
+        left: -10px;
+        border-bottom: solid 1px #484848;
     }
     ul {
         margin-top: 10px;
-        padding-left: 20px;
-        border-left: 1px solid #ccc;
+        padding-left: 10px;
+        border-left: 1px solid #484848;
     }
     /* div {
         display: block;
