@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ForcastAPI from '../components/ForcastAPI.astro';
+---
+
+<Layout title="Weather">
+    <main>
+        <h1>Weather</h1>
+        <p>Weather page</p>
+        <ForcastAPI />
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        padding: 1.5rem;
+        max-width: 80ch;
+    }
+</style>

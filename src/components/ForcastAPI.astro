@@ -1,0 +1,23 @@
+---
+const cordinates = {
+    lat: '32.22174N',
+    lon: '110.92648W'
+}
+
+const url = 'https://ai-weather-by-meteosource.p.rapidapi.com/current?lat=' + cordinates.lat + '&lon=' + cordinates.lon + '&timezone=auto&language=en&units=auto';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'dd1f537383msh0f71403fa13ef8dp118223jsn92886df3543c',
+		'X-RapidAPI-Host': 'ai-weather-by-meteosource.p.rapidapi.com'
+	}
+};
+
+const response = await fetch(url, options);
+const wthr = await response.json();
+
+console.log(wthr);
+---
+
+<p>Current Temperature: <span>{wthr.current.temperature}</span></p>
+<p>Wind: <span>{wthr.current.wind.speed}</span>mph, going <span>{wthr.current.wind.dir}</span></p>
