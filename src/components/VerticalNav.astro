@@ -3,7 +3,7 @@ nav: true
 const currentPath = Astro.url.pathname;
 ---
 
-<nav id="mainMenu">
+<nav id="verticalNav">
     <ul>
         <li>
             <a href="/" class={currentPath == '/' ? 'active' : ''}>
@@ -39,26 +39,26 @@ const currentPath = Astro.url.pathname;
 </nav>
 
 <style>
-    #mainMenu ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    ul {
+        text-align: center;
         list-style: none;
     }
-    #mainMenu ul > li {
+    ul > li {
         margin-right: 40px;
     }
-    #mainMenu ul > li > a {
+    ul > li > a {
         color: var(--text-muted);
         font-family: var(--mono-font);
         text-transform: uppercase;
         letter-spacing: 0.1rem;
         transition: color 0.2s;
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
-    #mainMenu ul > li > a:hover, .active {
+    ul > li > a:hover, .active {
         color: var(--accent) !important;
     }
-    #mainMenu ul > li > a:active {
+    ul > li > a:active {
         color: var(--accent-active) !important;
     }
 </style>

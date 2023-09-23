@@ -5,14 +5,14 @@ import {Icon} from 'astro-icon';
 
 <footer>
     <div class="flex flex-align-center">
-        <div class="flex-2">
+        <!-- <div class="flex-2">
             <h3>Contact</h3>
             <p>
                 Phone: <a href={info.contact.phone}>{info.contact.phone_formatted}</a><br />
                 Email: <a href={info.contact.email}>{info.contact.email_formatted}</a>
             </p>
-        </div>
-        <div class="flex-2 text-align-right">
+        </div> -->
+        <div id="socialMediaLinks" class="flex-2 text-align-center">
                 <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width="30px" height="30px"></a>
                 <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width="30px" height="30px"></a>
                 <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width="30px" height="30px"></a>
@@ -26,6 +26,12 @@ import {Icon} from 'astro-icon';
 </footer>
 
 <style>
+    #socialMediaLinks {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 200px;
+        margin: 0 auto;
+    }
     footer {
         max-width: 80ch;
         margin: 0 auto;
