@@ -10,9 +10,8 @@ import {Icon} from 'astro-icon';
             <p>
                 Phone: <a href={info.contact.phone}>{info.contact.phone_formatted}</a><br />
                 Email: <a href={info.contact.email}>{info.contact.email_formatted}</a>
-            </p>
-        </div> -->
-        <div id="socialMediaLinks" class="flex-2 text-align-center">
+            </p> -->
+            <div id="socialMediaLinks" class="flex-2 text-align-center">
                 <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width="30px" height="30px"></a>
                 <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width="30px" height="30px"></a>
                 <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width="30px" height="30px"></a>
@@ -21,7 +20,8 @@ import {Icon} from 'astro-icon';
     </div>
     <div class="text-align-center">
         <p>Website by Jesse Higgins | Built with <a href="https://astro.build/" target="_blank" style="position: relative; top: 4px;"><Icon name="astro-logo" width="80"/>
-        </a>.</p>
+        </a></p>
+        <p>Copyright © 2023</p>
     </div>
 </footer>
 
@@ -36,5 +36,10 @@ import {Icon} from 'astro-icon';
         max-width: 80ch;
         margin: 0 auto;
         padding: 10px 0px;
+    }
+    footer p {
+        margin: 0;
+        font-family: var(--mono-font);
+        font-size: 12px;
     }
 </style>

@@ -6,10 +6,8 @@
         "title": "Software Developer"
     },
     "contact": {
-        "email": "mailto:jesse@cloudchief.net",
-        "email_formatted": "jesse@cloudchief.net",
-        "phone": "tel:520-369-0007",
-        "phone_formatted": "520.369.0007"
+        "email": "jesse@cloudchief.net",
+        "phone": "520-369-0007"
     },
     "links": {
         "github": "https://github.com/higgins720",

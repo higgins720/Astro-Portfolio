@@ -73,8 +73,8 @@ import {Icon} from "astro-icon";
                     <p>
                         Name: {info.details.name}<br />
                         Location: {info.details.location}<br />
-                        Phone: {info.contact.phone_formatted}<br />
-                        Email: {info.contact.email_formatted}<br />
+                        Phone: {info.contact.phone}<br />
+                        Email: {info.contact.email}<br />
                     </p>
                     <hr />
                     <h3>Links</h3>
@@ -113,8 +113,6 @@ import {Icon} from "astro-icon";
 <style>
     #body {
         margin: auto;
-        padding: 1.5rem;
-        max-width: 1000px;
     }
     .text-gradient {
         background-image: var(--accent-gradient);

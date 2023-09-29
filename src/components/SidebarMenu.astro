@@ -1,0 +1,55 @@
+---
+import Logo from '../components/Logo.astro';
+import Navigation from '../components/VerticalNav.astro';
+import Footer from '../components/Footer.astro';
+
+const menu = document.getElementById('sidebarMenu');
+//const toggle = document.getElementById('toggleMenu');
+
+function toggleMenu() {
+    menu.classList.toggle('hidden');
+} 
+---
+
+
+<div id="sidebarMenu">
+    <button id="toggleMenu" onclick="toggleMenu()"></button>
+    <Logo />
+    <Navigation />
+    <Footer />
+</div>
+
+<style>
+	/* Sidebar Navigation */
+	#sidebarMenu {
+		flex: 1;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		max-width: 440px;
+		padding: 20px 40px;
+		display: none;
+	}
+	@media(min-width:640px) {
+		#sidebarMenu {
+			display: flex;
+		}
+	}
+	#verticalNav {
+		max-height: 100vh;
+		width: auto;
+		margin: 0 auto;
+	}
+	/* End Sidebar Navigation */
+
+    #toggleMenu::before {
+        content: 'Close Menu';
+    }
+
+    .flex {
+        display: flex;
+    }
+    .hidden {
+        display: none;
+    }
+</style>

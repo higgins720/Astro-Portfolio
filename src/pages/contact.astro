@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import info from "../../info.json";
+---
+
+<Layout title="Contact Me">
+    <main>
+        <div>
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me at <a href="mailto:{info.contact.email}">{info.contact.email}</a>, or call <a href="tel:{info.contact.phone}">{info.contact.phone}</a>.</p>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    main {
+        display: flex;
+        align-items: center;
+    }
+    main>div {
+        
+    }
+</style>

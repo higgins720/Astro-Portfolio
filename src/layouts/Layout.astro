@@ -1,258 +1,103 @@
 ---
-import Navigation from '../components/VerticalNav.astro';
+import '../styles/global.css';
+import "../styles/scrollbar.css";
 export interface Props {
 	title: string;
 }
 const { title } = Astro.props;
-import Footer from '../components/Footer.astro';
 import {ViewTransitions} from 'astro:transitions';
+import OrbitalElement from '../components/OrbitalElement.astro';
+import SideNav from '../components/SidebarMenu.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="flex flex-row">
-		<div id="sidebarMenu" class="flex flex-1 flex-align-center flex-column justify-evenly">
-			<div id="siteTitle" class="text-align-center">
-				<span class="text-h4">Jesse Higgins</span><br />
-				<span class="text-h1">Software Developer</span>
+	<body>
+		<div id="pageElements" style="min-height: 100vh;">
+			<div id="mobileHeader">
+				<a href="/" id="mainMenuLink">
+					Main Menu
+				</a>
 			</div>
-			<Navigation />
-			<Footer />
-		</div>
-		<div id="contentDisplay" class="flex-2">
-			<slot />
+			<SideNav />
+			<div id="contentDisplay" class="flex-2">
+				<slot />
+			</div>
 		</div>
 	</body>
+	<OrbitalElement />
 </html>
 <style is:global>
-	/* Base Colors */
-	:root {
-		--accent: #00d4ff;
-		--accent-hover: #b5f3ff;
-		--accent-active: #00a2cc;
-		--accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), var(--accent) 30%);
-		--element-glow: #0066ff;
-		--text-emphasis: #fff;
-		--text-muted: #646464;
-		--text-body: #3c3c3c;
-		--dark-background: #1a1a1a;
-		--dark-background-2: #0018347c;
-		--border-muted: #646464;
-		--body-font: 'Montserrat', sans-serif;
-		--mono-font: Consolas, monospace;
+	/* Mobile Navigation */
+	#mobileHeader {
+		display: flex;
+    	width: 100%;
+    	padding: 0.5rem;
+    	flex-direction: row;
+    	justify-content: center;
 	}
-	html {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 400;
-		background-color: #F6F6F6;
-		line-height: 1.5em;
-	}
-	body {
-		height: 100vh;
-		max-width: 1600px;
-		margin: auto;
-		overflow: hidden;
-	}
-	code {
+	#mainMenuLink {
 		font-family: var(--mono-font);
-	}
-	main {
-		min-height: 60vh;
-	}
-	h1,.text-h1,h2,.text-h2,h3,.text-h3,h4,.text-h4,h5,.text-h5,h6,.text-h6 {
-		font-family: var(--mono-font);
-		font-weight: 300;
 		text-transform: uppercase;
-		color: var(--text-emphasis);
 	}
-	h1, .text-h1 {
-		font-size: 2.5rem;
-		line-height: 2.5rem;
-	}
-	h2, .text-h2 {
-		font-size: 2rem;
-		line-height: 2rem;
-	}
-	h3, .text-h3 {
-		font-size: 1.75rem;
-		line-height: 1.75rem;
-	}
-	h4, .text-h4 {
-		font-size: 1.5rem;
-		line-height: 1.5rem;
-	}
-	h5, .text-h5 {
-		font-size: 1.25rem;
-		line-height: 1.25rem;
-	}
-	h6, .text-h6 {
-		font-size: 1rem;
-		line-height: 1rem;
-	}
-	.heading-small {
-		font-family: 'Roboto', sans-serif;
-		font-size: 3rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-		font-weight: 800;
-	}
-	.subheading {
-		font-family: var(--mono-font);
-		font-size: 1.2rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-		font-weight: 400;
-	}
-	.text-divider {
-		display: inline-block;
-		width: 100%;
-		padding-bottom: 0.7rem;
-		margin-bottom: 1.5rem;
-		border-bottom: 2px solid var(--border-muted);
-	}
-	.margin-remove {
-		margin: 0;
-	}
-	p {
-		color: var(--text-body);
-	}
-
-	.text-background {
-		background: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-
-	.hidden-small, .hidden-medium, .hidden-large {
-		display: none;
-	}
-	.visible-small, .visible-medium, .visible-large {
-		display: block;
-	}
-
-	@media (min-width: 640px) {
-		.hidden-small {
-			display: block;
+	@media(min-width:640px) {
+		#sidebarMenu {
+			display: flex;
 		}
-		.visible-small {
+		#mobileHeader {
 			display: none;
 		}
 	}
-	@media (min-width: 960px) {
-		.hidden-medium {
-			display: block;
-		}
-		.visible-medium {
-			display: none;
-		}
-	}
-	@media (min-width: 1280px) {
-		.hidden-large {
-			display: block;
-		}
-		.visible-large {
-			display: none;
-		}
-	}
-
-	@media (prefers-color-scheme: dark) {
-		html {
-			background-color: var(--dark-background);
-			color: rgb(199, 199, 199);
-		}
-		p {
-			color: rgb(199, 199, 199);
-		}
-		h1,h2,h3,h4,h5,h6 {
-			color: white;
-		}
-		a {
-			color: var(--accent);
-			text-decoration: none;
-		}
-		a:hover {
-			color: var(--accent-hover);
-		}
-		a:active {
-			color: var(--accent-active);
-		}
-		
-        svg {
-            fill: #cecece;
-        }
-	}
-    .align-left {
-        float: left;
-        margin: 0 1rem 1rem 0;
-    }
-    .width-50 {
-        width: 50%;
-        height: auto;
-    }
-    .flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-	.flex-align-center {
-		align-items: center;
-	}
-	.flox-row {
-		flex-direction: row;
-	}
-	.flex-row-reverse {
-		flex-direction: row-reverse;
-	}
-	.flex-column {
-		flex-direction: column;
-	}
-	.flex-align-center {
-		align-items: center;
-	}
-    .text-align-center {
-        text-align: center;
-    }
-	.text-align-right {
-        text-align: right;
-    }
-	.justify-evenly {
-		justify-content: space-evenly;
-	}
-	@media(min-width: 640px) {
-	.flex-1 {
-		flex: 1;
-	}
-	.flex-2 {
-        flex: 2;
-    }
-    .flex-3 {
-        flex: 3;
-    }
-	.flex-4 {
-		flex: 4;
-	}
-	}	
-	/* Sidebar Navigation */
-	#sidebarMenu {
-		max-width: 600px;
-	}
-	#verticalNav {
-		width: auto;
-		margin: 0 auto;
-	}
+	/* End Mobile Navigation */
 	#contentDisplay {
 		max-height: 100vh;
+		max-width: 100ch;
 		overflow-y: scroll;
-		background-color: var(--dark-background-2);
+		background-color: rgba(var(--dark-background-secondary), 80%);
 	}
-	footer {
-		align-self: end;
+	#contentDisplay::before {
+		content: '';
+    	display: block;
+    	position: sticky;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 60px;
+    	background: linear-gradient(180deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
+		z-index: 1;
+	}
+	#contentDisplay::after {
+		content: '';
+    	display: block;
+    	position: sticky;
+    	bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 60px;
+    	background: linear-gradient(0deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
+	}
+	#pageElements {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	main {
+		padding: 40px;
+		position: relative;
+		top: -60px;
+    } 
+	@media(min-width:640px) {
+		main {
+			padding: 80px;
+			top: -50px;
+		}
 	}
 </style>

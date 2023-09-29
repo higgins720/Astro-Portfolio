@@ -1,0 +1,217 @@
+/* Base Colors */
+:root {
+    --accent: 0, 212, 255;
+    --accent-hover: #b5f3ff;
+    --accent-active: #00a2cc;
+    
+    --element-glow: #0066ff;
+    --text-emphasis: #fff;
+    --text-muted: #646464;
+    --text-body: #3c3c3c;
+    --link: #9BA7E4;
+    --link-hover: #DFABFF;
+    --glow: #9E00FF;
+    --dark-background: #000;
+    --dark-background-secondary: 0, 24, 52;
+    --border-muted: #646464;
+    --heading-font: 'Work Sans', sans-serif;
+    --body-font: 'Work Sans', sans-serif;
+    --mono-font: 'Space Mono', Consolas, monospace;
+
+    --accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), rgb(var(--accent)) 30%);
+    --accent-gradient-secondary: linear-gradient(45deg, var(--glow), var(--element-glow) 30%);
+}
+html {
+    font-family: var(--body-font);
+    font-weight: 400;
+    background-color: #F6F6F6;
+    line-height: 1.5em;
+}
+body {
+    max-width: 1600px;
+    margin: auto;
+    overflow: hidden;
+}
+code {
+    font-family: var(--mono-font);
+}
+h1,.text-h1,h2,.text-h2,h3,.text-h3,h4,.text-h4,h5,.text-h5,h6,.text-h6 {
+    font-family: var(--heading-font);
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--text-emphasis);
+}
+h1, .text-h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+h2, .text-h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+h3, .text-h3 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+}
+h4, .text-h4 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+h5, .text-h5 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+h6, .text-h6 {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.heading-small {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+}
+.heading-medium {
+    font-family: var(--heading-font);
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+}
+.subheading {
+    font-family: var(--mono-font);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+.text-divider {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-muted);
+}
+.margin-remove {
+    margin: 0;
+}
+p {
+    color: var(--text-body);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--link-hover);
+}
+
+.text-background {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hidden-small, .hidden-medium, .hidden-large {
+    display: none;
+}
+.visible-small, .visible-medium, .visible-large {
+    display: block;
+}
+
+@media (min-width: 640px) {
+    .hidden-small {
+        display: block;
+    }
+    .visible-small {
+        display: none;
+    }
+}
+@media (min-width: 960px) {
+    .hidden-medium {
+        display: block;
+    }
+    .visible-medium {
+        display: none;
+    }
+}
+@media (min-width: 1280px) {
+    .hidden-large {
+        display: block;
+    }
+    .visible-large {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: var(--dark-background);
+        color: rgb(199, 199, 199);
+    }
+    p {
+        color: rgb(199, 199, 199);
+    }
+    h1,h2,h3,h4,h5,h6 {
+        color: white;
+    }
+    a:active {
+        color: var(--accent-active);
+    }
+    
+    svg {
+        fill: #cecece;
+    }
+}
+.align-left {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+.width-50 {
+    width: 50%;
+    height: auto;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-align-center {
+    align-items: center;
+}
+.flox-row {
+    flex-direction: row;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-align-center {
+    align-items: center;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-right {
+    text-align: right;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+@media(min-width: 640px) {
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}
+.flex-4 {
+    flex: 4;
+}
+}
