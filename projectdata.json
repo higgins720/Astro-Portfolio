@@ -3,77 +3,84 @@
         {
             "Title": "Pest Friends",
             "Link": "/projects/pestfriends",
-            "Date": "6/24/2022"
+            "Date": "12/19/2022",
+            "Industry": "Pest Control",
+            "Description": "Website migration for a local pest control company."
         },
         {
             "Title": "Flock Off",
             "Link": "/projects/flockoff",
-            "Date": "11/8/2021"
+            "Date": "10/25/2021",
+            "Industry": "Humane Bird Control",
+            "Description": "A new website for a local pest control company."
         },
         {
             "Title": "Mil+Spec Liner",
             "Link": "/projects/milspecliner",
-            "Date": "11/8/2021"
+            "Date": "9/1/2022",
+            "Industry": "Bed Liner Manufacturer",
+            "Description": "New Website and Brand Design for a Bedliner Manufacturer."
         },
         {
             "Title": "Asian Trade Rug Company",
             "Link": "https://asiantraderugcompany.com/",
-            "Date": "1/1/2020"
+            "Date": "5/12/2022",
+            "Industry": "Rug Merchant",
+            "Description": "Custom eCommerce catalogue for authentic persian rugs and rug services."
         },
         {
             "Title": "Rose Academies",
             "Link": "https://www.go2rose.com/",
-            "Date": "1/1/2020"
+            "Date": "9/4/2018",
+            "Industry": "Charter School",
+            "Description": "New Website and Brand Design for a Charter School."
         },
         {
             "Title": "Trico",
             "Link": "https://www.trico.coop/",
-            "Date": "1/1/2020"
+            "Date": "12/15/2018",
+            "Industry": "Electric Co-Op",
+            "Description": "Website build for a local Electric Company."
         },
         {
             "Title": "Trico Portal",
             "Link": "https://portal.trico.coop/",
-            "Date": "1/1/2020"
+            "Date": "8/10/2023"
         },
         {
             "Title": "Black & Yellow Paving",
             "Link": "https://blackandyellowpaving.com/",
-            "Date": "1/1/2020"
+            "Date": "5/16/2022"
         },
         {
             "Title": "Chauncey Meyer",
             "Link": "https://www.chaunceymeyer.com/",
-            "Date": "1/1/2020"
+            "Date": "10/8/2019"
         },
         {
             "Title": "Automatic Components",
             "Link": "https://www.automaticcomponents.com/",
-            "Date": "1/1/2020"
-        },
-        {
-            "Title": "Automatic Components",
-            "Link": "https://www.automaticcomponents.com/",
-            "Date": "1/1/2020"
+            "Date": "8/15/2020"
         },
         {
             "Title": "Optical Perspectives Group",
             "Link": "https://www.opticalperspectives.com/",
-            "Date": "1/1/2020"
+            "Date": "6/2/2023"
         },
         {
             "Title": "Cheri's Desert Harvest",
             "Link": "https://cherisdesertharvest.com/",
-            "Date": "1/1/2020"
+            "Date": "5/24/2023"
         },
         {
             "Title": "Gendy MD",
             "Link": "https://gendymd.com/",
-            "Date": "1/1/2020"
+            "Date": "11/22/2020"
         },
         {
             "Title": "Pima Air & Space Museum",
             "Link": "https://pimaair.org/",
-            "Date": "1/1/2020"
+            "Date": "1/27/2020"
         }
     ]
 }
