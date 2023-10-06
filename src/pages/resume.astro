@@ -3,7 +3,6 @@ import info from '../../info.json';
 import Layout from "../layouts/Layout.astro";
 import Sidebar from "../components/Sidebar.astro";
 import TreeList from "../components/TreeList.astro";
-import {Icon} from "astro-icon";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -69,21 +68,11 @@ import {Icon} from "astro-icon";
             <Sidebar>
                 <div>
                     <img src="../../public/JJHiggins_720.jpg" alt="Jesse squinting at camera" class="profile-image" width="100%" height="auto" class="hidden-small"/>
-                    <h3>Contact Info</h3>
+                    <h3>Info</h3>
                     <p>
                         Name: {info.details.name}<br />
-                        Location: {info.details.location}<br />
-                        Phone: {info.contact.phone}<br />
-                        Email: {info.contact.email}<br />
+                        Location: {info.details.location}
                     </p>
-                    <hr />
-                    <h3>Links</h3>
-                    <div class="flex" style="justify-content: space-around;">
-                        <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width="30px" height="30px"></a>
-                        <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width="30px" height="30px"></a>
-                        <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width="30px" height="30px"></a>
-                        <a href={info.links.codewars} target="_blank" rel="nofollow"><Icon name="simple-icons:codewars" width="30px" height="30px"></a>
-                    </div>
                     <hr />
                     <h3>Education</h3>
                     <p>
@@ -92,7 +81,7 @@ import {Icon} from "astro-icon";
                     </p>
                     <hr />
                     <h3>Interests</h3>
-                    <ul>
+                    <ul class="padding-small">
                         <li>Horse Riding</li>
                         <li>BJJ & Kickboxing</li>
                         <li>Leathercraft</li>
@@ -131,6 +120,9 @@ import {Icon} from "astro-icon";
     }
     .tree-list {
         min-width: 250px;
+    }
+    .padding-small {
+        padding-left: 20px;
     }
 </style>
 

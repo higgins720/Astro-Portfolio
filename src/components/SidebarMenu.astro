@@ -3,24 +3,34 @@ import Logo from '../components/Logo.astro';
 import Navigation from '../components/VerticalNav.astro';
 import Footer from '../components/Footer.astro';
 
-const menu = document.getElementById('sidebarMenu');
-//const toggle = document.getElementById('toggleMenu');
 
-function toggleMenu() {
-    menu.classList.toggle('hidden');
-} 
 ---
-
-
 <div id="sidebarMenu">
-    <button id="toggleMenu" onclick="toggleMenu()"></button>
     <Logo />
     <Navigation />
     <Footer />
 </div>
 
+<script>
+const menu = document.getElementById('sidebarMenu');
+const hideButton = document.getElementById('hideMenu');
+const showButton = document.getElementById('showMenu');
+
+function toggleMenu() {
+    if (menu.style.display === "none") {
+		menu.style.display = "flex";
+		showButton.style.display = "none";
+  	} else {
+    	menu.style.display = "none";
+		showButton.style.display = "block";
+  	}
+} 
+
+hideButton.addEventListener('click', toggleMenu);
+showButton.addEventListener('click', toggleMenu);
+</script>
+
 <style>
-	/* Sidebar Navigation */
 	#sidebarMenu {
 		flex: 1;
 		flex-direction: column;
@@ -40,16 +50,12 @@ function toggleMenu() {
 		width: auto;
 		margin: 0 auto;
 	}
-	/* End Sidebar Navigation */
-
-    #toggleMenu::before {
-        content: 'Close Menu';
-    }
-
-    .flex {
-        display: flex;
-    }
-    .hidden {
-        display: none;
-    }
+	/* Sidebar Menu Buttons */
+	#showMenu {
+		display: inline-block;
+		rotate: -90deg;
+		position: relative;
+		top: 50%;
+		right: -20px;
+	}
 </style>

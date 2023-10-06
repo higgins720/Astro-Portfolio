@@ -1,6 +1,8 @@
 /* width */
 ::-webkit-scrollbar {
     width: 14px;
+    padding: 2px 0px;
+    border: solid 1px rgb(var(--accent), 0.2);
 }
 
 /* Track */
@@ -10,6 +12,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+    width: 10px;
     background: rgba(var(--accent), 0.2);
 }
 

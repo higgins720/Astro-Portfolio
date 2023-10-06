@@ -6,7 +6,7 @@ export interface Props {
 }
 const { title } = Astro.props;
 import {ViewTransitions} from 'astro:transitions';
-import OrbitalElement from '../components/OrbitalElement.astro';
+import TriElement from '../components/TriangleElement.astro';
 import SideNav from '../components/SidebarMenu.astro';
 ---
 
@@ -33,7 +33,7 @@ import SideNav from '../components/SidebarMenu.astro';
 			</div>
 		</div>
 	</body>
-	<OrbitalElement />
+	<TriElement />
 </html>
 <style is:global>
 	/* Mobile Navigation */
@@ -59,9 +59,9 @@ import SideNav from '../components/SidebarMenu.astro';
 	/* End Mobile Navigation */
 	#contentDisplay {
 		max-height: 100vh;
-		max-width: 100ch;
+		width: 100%;
 		overflow-y: scroll;
-		background-color: rgba(var(--dark-background-secondary), 80%);
+		background-color: rgba(var(--dark-background-secondary), 50%);
 	}
 	#contentDisplay::before {
 		content: '';
@@ -98,6 +98,9 @@ import SideNav from '../components/SidebarMenu.astro';
 		main {
 			padding: 80px;
 			top: -50px;
+		}
+		#contentDisplay {
+			max-width: 100ch;
 		}
 	}
 </style>

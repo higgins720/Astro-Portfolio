@@ -5,7 +5,7 @@ export interface Props {
 	href: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, meta, body } = Astro.props;
 ---
 
 <li class="link-card">
@@ -14,6 +14,7 @@ const { href, title, body } = Astro.props;
 			{title}
 			<span>&rarr;</span>
 		</h3>
+		<span class="meta">{meta}</span>
 		<p>
 			{body}
 		</p>
@@ -23,6 +24,7 @@ const { href, title, body } = Astro.props;
 	.link-card {
 		list-style: none;
 		display: flex;
+		margin-top: 20px;
 		padding: 0.25rem;
 		background-color: white;
 		background-image: none;
@@ -53,12 +55,12 @@ const { href, title, body } = Astro.props;
 	}
 	@media (prefers-color-scheme: dark) {
 		.link-card {
-			background-color: #505050;
+			background-color: var(--dark-background);
 			color: #fff;
 		}
 		.link-card > a {
 			color: #fff;
-			background-color: var(--dark-background);
+			background-color: transparent;
 		}
 		.link-card:is(:hover, :focus-within) {
 			background-position: 0;

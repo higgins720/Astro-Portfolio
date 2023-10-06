@@ -1,0 +1,48 @@
+---
+import {Image} from 'astro:assets';
+import triangleSVG from "../graphics/JJH_Triangle.svg"
+---
+
+<Image src={triangleSVG} class="OrbElement OE1" width="800" height="800" alt="Orbital Circles" />
+<Image src={triangleSVG} class="OrbElement OE2" width="800" height="800" alt="Orbital Circles" />
+<Image src={triangleSVG} class="OrbElement OE3" width="800" height="800" alt="Orbital Circles" />
+
+<style>
+    .OrbElement {
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        max-width: 120%;
+    }
+    .OE1 {
+        animation: shift 20s ease-in-out infinite;
+    }
+    .OE2 {
+        animation: shift 30s ease-in-out infinite;
+    }
+    .OE3 {
+        animation: shift 40s ease-in-out infinite;
+    }
+
+    @keyframes shift {
+        0% {
+            transform: translate(-45%, -45%);
+        }
+        25% {
+            transform: translate(-45%, -55%);
+        }
+        50% {
+            transform: translate(-55%, -55%);
+        }
+        75% {
+            transform: translate(-55%, -45%);
+        }
+        100% {
+            transform: translate(-45%, -45%);
+        }
+    }
+</style>

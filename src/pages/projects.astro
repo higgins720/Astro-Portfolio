@@ -1,33 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Projects from '../../projectdata.json';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-        <h1>My <span class="text-gradient">Projects</span></h1>
-		<h2>Designed & Built Websites</h2>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="../posts/test"
-				title="Pest Friends"
-				body="A new website for a new local Pest Control company"
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Flock Off"
-				body="Revolutionary bird abatement tech company"
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Mil-Spec Liner"
-				body="Brand new bedliner manufacturer & distributor "
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Pima Air & Space"
-				body="Local museum deticated to the history of aviation"
-			/>
+        <h1>Website <span class="text-gradient">Projects</span></h1>
+		<p class="text-h5">Designed & Built Websites</p>
+		<ul role="list" class="card-list">
+			{Projects.Websites.map(
+				Website => 
+					<Card
+						href={Website.Link}
+						title={Website.Title}
+						body={Website.Date}
+					/>
+				)}
 		</ul>
 	</main>
 </Layout>
@@ -36,12 +25,7 @@ import Card from '../components/Card.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+		max-width: 80ch;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -69,10 +53,13 @@ import Card from '../components/Card.astro';
 	.instructions strong {
 		color: rgb(var(--accent));
 	}
-	.link-card-grid {
+	.card-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		padding-left: 0;
+		list-style: none;
+	}
+	.card-list .link-card {
+		margin-bottom: 1rem;
 	}
 </style>

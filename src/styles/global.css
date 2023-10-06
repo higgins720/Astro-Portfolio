@@ -11,7 +11,7 @@
     --link: #9BA7E4;
     --link-hover: #DFABFF;
     --glow: #9E00FF;
-    --dark-background: #000;
+    --dark-background: 0, 0, 0;
     --dark-background-secondary: 0, 24, 52;
     --border-muted: #646464;
     --heading-font: 'Work Sans', sans-serif;
@@ -148,7 +148,7 @@ a:hover {
 
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: var(--dark-background);
+        background: linear-gradient(135deg, rgba(8,2,44,1) 0%, rgba(0,0,0,1) 100%);
         color: rgb(199, 199, 199);
     }
     p {
