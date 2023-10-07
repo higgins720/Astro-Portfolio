@@ -1,42 +1,25 @@
 ---
 nav: true
 const currentPath = Astro.url.pathname;
+import MainMenu from '../../menu-main.json';
 ---
 
 <nav id="verticalNav">
     <ul>
+        {MainMenu.Links.map( Link => 
         <li>
-            <a href="/" class={currentPath == '/' ? 'hidden' : ''}>
-                Start
+            <a href={Link.Path} class={currentPath == Link.Path ? 'active' : ''}>
+                {Link.Name}
             </a>
-        </li>
-        <li>
-            <a href="/about" class={currentPath == '/about' ? 'active' : ''}>
-                About
-            </a>
-        </li>
-        <li>
-            <a href="/projects" class={currentPath == '/projects' ? 'active' : ''}>
-                Projects
-            </a>
-        </li>
-        <li>
-            <a href="/resume" class={currentPath == '/resume' ? 'active' : ''}>
-                Resume
-            </a>
-        </li>
-        <li>
-            <a href="/contact" class={currentPath == '/resume' ? 'active' : ''}>
-                Contact
-            </a>
-        </li>
+        </li> 
+        )}
     </ul>
 </nav>
 
 <style>
     ul {
-        text-align: center;
         list-style: none;
+        text-align: center;
     }
     ul > li {
         margin-right: 40px;

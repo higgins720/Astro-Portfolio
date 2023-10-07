@@ -29,7 +29,9 @@ import SideNav from '../components/SidebarMenu.astro';
 			</div>
 			<SideNav />
 			<div id="contentDisplay" class="flex-2">
+				<div class="fade fade-top"></div>
 				<slot />
+				<div class="fade fade-bottom"></div>
 			</div>
 		</div>
 	</body>
@@ -58,32 +60,47 @@ import SideNav from '../components/SidebarMenu.astro';
 	}
 	/* End Mobile Navigation */
 	#contentDisplay {
-		max-height: 100vh;
-		width: 100%;
+		height: 100vh;
 		overflow-y: scroll;
+		overflow-x: hidden;
 		background-color: rgba(var(--dark-background-secondary), 50%);
+		position: relative;
 	}
-	#contentDisplay::before {
+	.fade {
+		display: block;
+		position: sticky;
+    	height: 60px;
+		width: 100%;
+	}
+	.fade-top {
+		top: 0px;
+    	background: linear-gradient(180deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
+		z-index: 1;
+	}
+	.fade-bottom {
+		bottom: 0px;
+    	background: linear-gradient(0deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
+		z-index: 1;
+	}
+	/* #contentDisplay::before {
 		content: '';
     	display: block;
-    	position: sticky;
-    	top: 0;
-    	left: 0;
-    	width: 100%;
+		position: absolute;
+		top: 0px;
     	height: 60px;
+		width: 100%;
     	background: linear-gradient(180deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
 		z-index: 1;
 	}
 	#contentDisplay::after {
 		content: '';
     	display: block;
-    	position: sticky;
-    	bottom: 0;
-    	left: 0;
-    	width: 100%;
+		position: absolute;
     	height: 60px;
+		width: 100%;
+		bottom: 0px;
     	background: linear-gradient(0deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
-	}
+	} */
 	#pageElements {
 		display: flex;
 		flex-wrap: wrap;
@@ -92,7 +109,8 @@ import SideNav from '../components/SidebarMenu.astro';
 	main {
 		padding: 40px;
 		position: relative;
-		top: -60px;
+		top: 60px;
+		min-height: calc(100vh - 280px);
     } 
 	@media(min-width:640px) {
 		main {

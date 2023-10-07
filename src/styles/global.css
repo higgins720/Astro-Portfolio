@@ -6,7 +6,7 @@
     
     --element-glow: #0066ff;
     --text-emphasis: #fff;
-    --text-muted: #646464;
+    --text-muted: 100, 100, 100;
     --text-body: #3c3c3c;
     --link: #9BA7E4;
     --link-hover: #DFABFF;
@@ -42,7 +42,7 @@ h1,.text-h1,h2,.text-h2,h3,.text-h3,h4,.text-h4,h5,.text-h5,h6,.text-h6 {
     color: var(--text-emphasis);
 }
 h1, .text-h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     line-height: 2.5rem;
 }
 h2, .text-h2 {
@@ -50,19 +50,19 @@ h2, .text-h2 {
     line-height: 2rem;
 }
 h3, .text-h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1.75rem;
 }
 h4, .text-h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
 }
 h5, .text-h5 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.25rem;
 }
 h6, .text-h6 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1rem;
 }
 .heading-small {

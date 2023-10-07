@@ -1,0 +1,20 @@
+{
+    "Links": [
+        {
+            "Name": "Start",
+            "Path": "/"
+        },
+        {
+            "Name": "About",
+            "Path": "/about"
+        },
+        {
+            "Name": "Projects",
+            "Path": "/projects"
+        },
+        {
+            "Name": "Contact",
+            "Path": "/contact"
+        }
+    ]
+}

@@ -1,20 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Projects from '../../projectdata.json';
+import ProjectData from '../../projectdata.json';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
         <h1>Website <span class="text-gradient">Projects</span></h1>
-		<p class="text-h5">Designed & Built Websites</p>
+		<p>Here's a list of some of the websites I designed and built.</p>
 		<ul role="list" class="card-list">
-			{Projects.Websites.map(
+			{ProjectData.Websites.map(
 				Website => 
 					<Card
-						href={Website.Link}
 						title={Website.Title}
-						body={Website.Date}
+						meta={Website.Date}
+						body={Website.ShortDescription}
+						href={Website.Link}
+						target="_blank"
 					/>
 				)}
 		</ul>
@@ -24,7 +26,6 @@ import Projects from '../../projectdata.json';
 <style>
 	main {
 		margin: auto;
-		padding: 1.5rem;
 		max-width: 80ch;
 	}
 	.text-gradient {

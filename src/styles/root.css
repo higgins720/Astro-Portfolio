@@ -1,0 +1,23 @@
+/* Base Colors */
+:root {
+    --accent: 0, 212, 255;
+    --accent-hover: #b5f3ff;
+    --accent-active: #00a2cc;
+    
+    --element-glow: #0066ff;
+    --text-emphasis: #fff;
+    --text-muted: 100, 100, 100;
+    --text-body: #3c3c3c;
+    --link: #9BA7E4;
+    --link-hover: #DFABFF;
+    --glow: #9E00FF;
+    --dark-background: 0, 0, 0;
+    --dark-background-secondary: 0, 24, 52;
+    --border-muted: #646464;
+    --heading-font: 'Work Sans', sans-serif;
+    --body-font: 'Work Sans', sans-serif;
+    --mono-font: 'Space Mono', Consolas, monospace;
+
+    --accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), rgb(var(--accent)) 30%);
+    --accent-gradient-secondary: linear-gradient(45deg, var(--glow), var(--element-glow) 30%);
+}
