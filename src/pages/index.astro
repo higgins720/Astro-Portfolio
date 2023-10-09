@@ -1,5 +1,4 @@
 ---
-// import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 import VerticalNav from '../components/VerticalNav.astro';
@@ -7,57 +6,22 @@ import Footer from '../components/Footer.astro';
 import OrbitalElement from '../components/OrbitalElement.astro';
 ---
 
-<main>
-	<div class="flex flex-column justify-evenly" style="height: 100vh;">
-		<Logo />
-		<VerticalNav />
-		<Footer />
-	</div>
-	<OrbitalElement />
-</main>
+<div id="container" class="flex flex-column justify-evenly">
+	<Logo />
+	<VerticalNav />
+	<Footer />
+</div>
+<OrbitalElement />
 
 <style>
-	main {
+#container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+	/* main {
 		margin: auto;
 		max-width: 1600px;
 		overflow: hidden;
-	}
-	/* .text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		border: 1px solid var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		margin-top: 1rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit,minmax(32ch,1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-	@media ((prefers-color-scheme: dark)) {
-		.instructions {
-			background-color: #252525;
-		}
-		.instructions strong {
-			color: rgb(var(--accent));
-		}
 	} */
 </style>

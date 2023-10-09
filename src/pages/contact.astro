@@ -7,18 +7,13 @@ import "../styles/buttons.css"
 ---
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-    function onSubmit(token) {
-        document.getElementById("demo-form").submit();
-    }
-</script>
 
 <Layout title="Contact Me">
     <main>
         <div>
             <h1>Contact Me</h1>
             <p>Feel free to reach out to me at <a href="mailto:{info.contact.email}">{info.contact.email}</a>, or call <a href="tel:{info.contact.phone}">{info.contact.phone}</a>.</p>
-            <form class="contact-form" action="https:/submit-form.com/FgccWuMw">
+            <form id="contactForm" class="contact-form" action="https:/submit-form.com/FgccWuMw">
                 <div>
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name"placeholder="Name" required="true" />
@@ -29,7 +24,7 @@ import "../styles/buttons.css"
                 </div>
                 <div class="full-width">
                     <label for="subject">Subject</label>
-                    <select type="text" id="subject" name="subject" placeholder="Subject" required="false">
+                    <select id="subject" name="subject" required="false">
                         <option value="Design">Design</option>
                         <option value="Development">Website Build</option>
                         <option value="Design & Build">Design & Build</option>
@@ -45,6 +40,8 @@ import "../styles/buttons.css"
                       required="false"
                     ></textarea>
                 </div>
+                <div id="reCaptcha" class="g-recaptcha full-width" data-sitekey="6LeTkIgoAAAAALatR_qYUhXcfCanvMD6EG2NKU9V">
+                </div>
                 <div>
                     <button type="submit" class="button-default" data-sitekey="6LfT14MoAAAAAOkh1HJazLGOOTQvd57S46HiDHhf" data-callback="onSubmit">Send</button>
                 </div>
@@ -54,8 +51,12 @@ import "../styles/buttons.css"
 </Layout>
 
 <style>
+    #reCaptcha {
+        width: 100%;
+    }
     main {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 </style>

@@ -35,14 +35,13 @@ import SideNav from '../components/SidebarMenu.astro';
 			</div>
 		</div>
 	</body>
-	<TriElement />
 </html>
 <style is:global>
 	/* Mobile Navigation */
 	#mobileHeader {
 		display: flex;
+    	padding: 8px 0;
     	width: 100%;
-    	padding: 0.5rem;
     	flex-direction: row;
     	justify-content: center;
 	}
@@ -82,34 +81,13 @@ import SideNav from '../components/SidebarMenu.astro';
     	background: linear-gradient(0deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
 		z-index: 1;
 	}
-	/* #contentDisplay::before {
-		content: '';
-    	display: block;
-		position: absolute;
-		top: 0px;
-    	height: 60px;
-		width: 100%;
-    	background: linear-gradient(180deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
-		z-index: 1;
-	}
-	#contentDisplay::after {
-		content: '';
-    	display: block;
-		position: absolute;
-    	height: 60px;
-		width: 100%;
-		bottom: 0px;
-    	background: linear-gradient(0deg, rgb(var(--dark-background-secondary)) 0%, #00000000 100%);
-	} */
 	#pageElements {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: 1fr;
 	}
 	main {
-		padding: 40px;
+		padding: 0 40px 40px 40px;
 		position: relative;
-		top: 60px;
 		min-height: calc(100vh - 280px);
     } 
 	@media(min-width:640px) {
@@ -117,8 +95,8 @@ import SideNav from '../components/SidebarMenu.astro';
 			padding: 80px;
 			top: -50px;
 		}
-		#contentDisplay {
-			max-width: 100ch;
+		#pageElements {
+			grid-template-columns: minmax(250px, 1fr) minmax(300px, 3fr);
 		}
 	}
 </style>

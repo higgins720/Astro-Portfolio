@@ -1,9 +1,15 @@
 /* width */
 ::-webkit-scrollbar {
-    width: 14px;
+    width: 6px;
     padding: 2px 0px;
     border: solid 1px rgb(var(--accent), 0.2);
     z-index: 1000;
+}
+
+@media (min-width: 640px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
 }
 
 /* Track */
