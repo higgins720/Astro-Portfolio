@@ -34,8 +34,8 @@
         </a>
     </div>
         <div id="text">
-            <span class="text-h2">Jesse Higgins</span><br />
-            <span class="text-h5">Designer & Developer</span>
+            <span class="primary">Jesse Higgins</span><br />
+            <span class="secondary">Designer & Developer</span>
         </div>
 </div>
 
@@ -58,6 +58,17 @@
     }
     #text span {
         color: rgba(0, 0, 0, 0.8);
+    }
+    .primary {
+      font-family: var(--heading-font);
+      font-weight: 300;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+    }
+    .secondary {
+      font-family: var(--mono-font);
+      text-transform: uppercase;
+      font-size: 1.5rem; 
     }
     @media (prefers-color-scheme: dark) {
         #ccLogo svg {

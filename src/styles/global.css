@@ -1,4 +1,12 @@
 /* Base Colors */
+@font-face {
+    font-family: 'FixedSysExcelsior';
+    src: url('/fonts/FIXEDSYS-EXCELSIOR_3.01.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --accent: 0, 212, 255;
     --accent-hover: #b5f3ff;
@@ -16,7 +24,7 @@
     --border-muted: #646464;
     --heading-font: 'Work Sans', sans-serif;
     --body-font: 'Work Sans', sans-serif;
-    --mono-font: 'Space Mono', Consolas, monospace;
+    --mono-font: 'FixedSysExcelsior', Consolas, monospace;
 
     --accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), rgb(var(--accent)) 30%);
     --accent-gradient-secondary: linear-gradient(45deg, var(--glow), var(--element-glow) 30%);
