@@ -1,7 +1,6 @@
 ---
-import info from "../../info.json";
 import Layout from "../layouts/Layout.astro";
-import "../styles/root.css"
+import "../styles/global.css"
 import "../styles/form.css"
 import "../styles/buttons.css"
 ---
@@ -10,9 +9,7 @@ import "../styles/buttons.css"
 
 <Layout title="Contact Me">
     <main>
-        <div>
             <h1>Contact Me</h1>
-            <p>Feel free to reach out to me at <a href="mailto:{info.contact.email}">{info.contact.email}</a>, or call <a href="tel:{info.contact.phone}">{info.contact.phone}</a>.</p>
             <form id="contactForm" class="contact-form" action="https:/submit-form.com/FgccWuMw">
                 <div>
                     <label for="name">Name</label>
@@ -45,8 +42,7 @@ import "../styles/buttons.css"
                 <div>
                     <button type="submit" class="button-default" data-sitekey="6LfT14MoAAAAAOkh1HJazLGOOTQvd57S46HiDHhf" data-callback="onSubmit">Send</button>
                 </div>
-            </form>              
-        </div>
+            </form>  
     </main>
 </Layout>
 
@@ -56,6 +52,7 @@ import "../styles/buttons.css"
     }
     main {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }

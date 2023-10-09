@@ -5,14 +5,14 @@
     --accent-active: #00a2cc;
     
     --element-glow: #0066ff;
-    --text-emphasis: #fff;
+    --text-emphasis: #000000;
     --text-muted: 100, 100, 100;
     --text-body: #3c3c3c;
-    --link: #9BA7E4;
-    --link-hover: #DFABFF;
+    --link: #4160fa;
+    --link-hover: #001eb7;
     --glow: #9E00FF;
     --dark-background: 0, 0, 0;
-    --dark-background-secondary: 0, 24, 52;
+    --dark-background-secondary: 175, 175, 175;
     --border-muted: #646464;
     --heading-font: 'Work Sans', sans-serif;
     --body-font: 'Work Sans', sans-serif;
@@ -20,6 +20,16 @@
 
     --accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), rgb(var(--accent)) 30%);
     --accent-gradient-secondary: linear-gradient(45deg, var(--glow), var(--element-glow) 30%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-emphasis: #fff;
+        --link: #9BA7E4;
+        --link-hover: #DFABFF;
+        --dark-background: 0, 0, 0;
+        --dark-background-secondary: 0, 24, 52;
+    }
 }
 html {
     font-family: var(--body-font);
@@ -43,15 +53,15 @@ h1,.text-h1,h2,.text-h2,h3,.text-h3,h4,.text-h4,h5,.text-h5,h6,.text-h6 {
 }
 h1, .text-h1 {
     font-size: 2.75rem;
-    line-height: 2.5rem;
+    line-height: 3.75rem;
 }
 h2, .text-h2 {
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 h3, .text-h3 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
 }
 h4, .text-h4 {
     font-size: 1.2rem;

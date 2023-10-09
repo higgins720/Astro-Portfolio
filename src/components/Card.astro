@@ -25,9 +25,8 @@ const { href, title, meta, body, target } = Astro.props;
 	.link-card {
 		list-style: none;
 		display: flex;
-		margin-top: 20px;
 		padding: 0.25rem;
-		background-color: white;
+		background-color: transparent;
 		background-image: none;
 		background-size: 400%;
 		background-position: 100%;
@@ -38,7 +37,6 @@ const { href, title, meta, body, target } = Astro.props;
 		text-decoration: none;
 		line-height: 1.4;
 		padding: 1rem 1.3rem;
-		background-color: white;
 	}
 	h3 {
 		font-family: consolas, monaco, monospace;
@@ -48,17 +46,24 @@ const { href, title, meta, body, target } = Astro.props;
 	}
 	.meta {
 		font-size: 0.8rem;
-		color: rgba(255,255,255,0.5);
+		color: rgba(0, 0, 0, 0.5);
 	}
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
-		background-image: var(--accent-gradient);
+		background-image: var(--accent-gradient-secondary);
 		box-shadow: 0px 0px 6px var(--element-glow);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent));
 	}
+	.link-card:is(:hover, :focus-within) h3 {
+		color: rgb(var(--accent));
+	}
+	.link-card:is(:hover, :focus-within) p, .link-card:is(:hover, :focus-within) .meta {
+		color: rgba(255, 255, 255, 0.7);
+	}
 	@media (prefers-color-scheme: dark) {
+		
 		.link-card {
 			background-color: var(--dark-background);
 			color: #fff;
@@ -67,12 +72,8 @@ const { href, title, meta, body, target } = Astro.props;
 			color: #fff;
 			background-color: transparent;
 		}
-		.link-card:is(:hover, :focus-within) {
-			background-position: 0;
-			background-image: var(--accent-gradient);
-		}
-		.link-card:is(:hover, :focus-within) h3 {
-			color: rgb(var(--accent));
+		.meta {
+			color: rgba(255,255,255,0.5);
 		}
 	}
 </style>
