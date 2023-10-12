@@ -1,0 +1,97 @@
+---
+import { Image } from 'astro:assets';
+
+export interface Props {
+    image: string;
+	title: string;
+	meta: string;
+	body: string;
+	href: string;
+	target: string;
+    style: string;
+}
+
+const { image, href, title, meta, body, target, style } = Astro.props;
+---
+
+<div id="Panel" class={style}>
+    <Image src={image} width="400" height="200" id="Image" alt={title} />
+    <div id="Body">
+        <span id="Meta">{meta}</span>
+        <h3>{title}</h3>
+        <p>{body}</p>
+        <a href={href} target={target}>Follow Link -></a>
+    </div>
+</div>
+
+<style>
+:root {
+    --notchSize: 30px;
+}
+#Panel {
+    position: relative;
+    padding: 1rem;
+
+    clip-path: 
+    polygon(
+      0% 0%, 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      100% 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+    );
+}
+.primary {
+    background-color: rgb(var(--color-primary));
+}
+.secondary {
+    border: solid 1px rgb(var(--color-primary));
+}
+#Image {
+    max-width: 100%;
+    height: auto;
+    clip-path: 
+    polygon(
+        0 0, 
+        calc(100% - var(--notchSize)) 0, 
+        100% var(--notchSize), 
+        100% 100%, 
+        0 100%
+    );
+}
+.primary h3, .primary a {
+    color: rgba(0, 0, 0, 0.8);
+}
+h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+#Meta {
+    text-transform: uppercase;
+}
+.primary p, .primary #Meta {
+    color: rgba(0, 0, 0, 0.5);
+}
+#Body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+#Meta, a {
+    font-family: var(--mono-font);
+    text-transform: uppercase;
+}
+a {
+    align-self: flex-end;
+    font-size: 1.3rem;
+    transition: color 0.1s;
+    line-height: 2rem;
+}
+a:hover, .primary a:hover { 
+    color: rgba(255, 255, 255, 0.6);
+}
+</style>

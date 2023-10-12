@@ -8,6 +8,9 @@
 }
 
 :root {
+    --color-primary: 98, 123, 255;
+    --color-emphasis: 252, 252, 252;
+
     --accent: 0, 212, 255;
     --accent-hover: #b5f3ff;
     --accent-active: #00a2cc;
@@ -32,6 +35,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --color-emphasis: 48, 48, 48;
+
         --text-emphasis: #fff;
         --link: #9BA7E4;
         --link-hover: #DFABFF;

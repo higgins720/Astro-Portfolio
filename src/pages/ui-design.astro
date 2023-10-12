@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
+import Panel from "../components/Panel.astro";
+
+import "../styles/global.css";
 ---
 
 <Layout title="UI Design">
@@ -37,6 +40,28 @@ import Card from "../components/Card.astro";
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl eu nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl."
         />
     </section>
+    <section>
+        <div class="grid">
+            <Panel
+                image="/Portfolio_Profile_Desktop-Wide.webp"
+                title="Panel Title"
+                meta="Meta"
+                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl eu nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl."
+                href="#"
+                target=""
+                style="primary"
+            />
+            <Panel
+                image="/Portfolio_Profile_Desktop-Wide.webp"
+                title="Panel 2"
+                meta="Meta"
+                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl eu nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl."
+                href="#"
+                target=""
+                style="secondary"
+            />
+        </div>
+    </section>
 </main>
 
 <style>
@@ -46,5 +71,10 @@ main {
 }
 section {
     margin: 2rem 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
 }
 </style>
