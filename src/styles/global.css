@@ -1,4 +1,5 @@
-/* Base Colors */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 @font-face {
     font-family: 'FixedSysExcelsior';
     src: url('/fonts/FIXEDSYS-EXCELSIOR_3.01.woff') format('woff');
@@ -8,25 +9,30 @@
 }
 
 :root {
-    --color-primary: 98, 123, 255;
-    --color-emphasis: 252, 252, 252;
+    --color-primary: 30, 30, 30;
+    --color-secondary: 191, 89, 254;
+    --color-emphasis: 30, 30, 30;
+    --color-muted: 225, 225, 225;
+    --color-background: 255, 255, 255;
 
     --accent: 0, 212, 255;
     --accent-hover: #b5f3ff;
     --accent-active: #00a2cc;
-    
+
+    --link: 0, 0, 0;
+    --link-hover: 0, 31, 184;
+    --link-active: 120, 120, 120;
+
     --element-glow: #0066ff;
     --text-emphasis: #000000;
     --text-muted: 100, 100, 100;
     --text-body: #3c3c3c;
-    --link: #4160fa;
-    --link-hover: #001eb7;
     --glow: #9E00FF;
     --dark-background: 0, 0, 0;
     --dark-background-secondary: 175, 175, 175;
     --border-muted: #646464;
-    --heading-font: 'Work Sans', sans-serif;
-    --body-font: 'Work Sans', sans-serif;
+    --heading-font: 'Space Mono', monospace;
+    --body-font: 'Roboto Mono', monospace;
     --mono-font: 'FixedSysExcelsior', Consolas, monospace;
 
     --accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), rgb(var(--accent)) 30%);
@@ -35,7 +41,10 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-emphasis: 48, 48, 48;
+        --color-primary: 98, 123, 255;
+        --color-secondary: 191, 89, 254;
+        --color-emphasis: 252, 252, 252;
+        --color-background: 30, 30, 30;
 
         --text-emphasis: #fff;
         --link: #9BA7E4;
@@ -47,13 +56,13 @@
 html {
     font-family: var(--body-font);
     font-weight: 400;
+    font-size: 1rem;
     background-color: #F6F6F6;
     line-height: 1.5em;
 }
 body {
     max-width: 1600px;
     margin: auto;
-    overflow: hidden;
 }
 code {
     font-family: var(--mono-font);
@@ -120,15 +129,18 @@ h6, .text-h6 {
     margin: 0;
 }
 p {
-    color: var(--text-body);
+    color: rgba(0,0,0,0.5);
 }
 
 a {
-    color: var(--link);
+    color: rgb(var(--link));
     text-decoration: none;
 }
 a:hover {
-    color: var(--link-hover);
+    color: rgb(var(--link-hover));
+}
+a:active {
+    color: rgb(var(--link-active));
 }
 
 .text-background {
@@ -175,15 +187,11 @@ a:hover {
         color: rgb(199, 199, 199);
     }
     p {
-        color: rgb(199, 199, 199);
+        color: rgba(255,255,255,0.6);
     }
     h1,h2,h3,h4,h5,h6 {
         color: white;
     }
-    a:active {
-        color: var(--accent-active);
-    }
-    
     svg {
         fill: #cecece;
     }
@@ -223,6 +231,9 @@ a:hover {
 }
 .justify-evenly {
     justify-content: space-evenly;
+}
+.justify-center {
+    justify-content: center;
 }
 @media(min-width: 640px) {
 .flex-1 {

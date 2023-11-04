@@ -1,15 +1,79 @@
-.button-default {
+:root {
+    --notchSize: 12px;
+}
+
+.button {
     display: inline-block;
-    padding: 0.5em 1em;
-    border: solid 1px #ddd;
+    position: relative;
+    padding: 0.5em 2.5em;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2rem;
     font-family: Consolas, monaco, monospace;
     text-transform: uppercase;
     cursor: pointer;
+    clip-path: 
+    polygon(
+      0% 0%, 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      100% 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+    );
+}
+
+.button-default {
+    color: rgb(var(--color-primary));
+    background-color: rgb(var(--color-primary));
 }
 
 .button-default:hover {
-    background-color: #ddd;
-    color: #000;
+    color: rgb(var(--color-secondary));
+    background-color: rgb(var(--color-secondary));
+}
+
+.button-default:before {
+    --border-width: 2px;
+    --inner-size: calc(var(--border-width) * 2);
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+    width: calc(100% - var(--inner-size));
+    height: calc(100% - var(--inner-size));
+    background: rgb(var(--color-background));
+    clip-path: 
+    polygon(
+      0% 0%, 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      100% 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+    );
+    z-index: -1;
+}
+
+.button-primary {
+    color: rgba(0,0,0,0.8);
+    background-color: rgb(var(--color-primary));
+}
+.button-primary:hover {
+    color: rgba(0,0,0,0.8);
+    background-color: rgb(var(--color-secondary));
+}
+
+.button-secondary {
+    color: rgba(0,0,0,0.8);
+    background-color: rgb(var(--color-secondary));
+}
+.button-secondary:hover {
+    color: rgba(0,0,0,0.8);
+    background-color: rgb(var(--color-primary));
 }

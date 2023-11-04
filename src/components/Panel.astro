@@ -14,24 +14,29 @@ export interface Props {
 const { image, href, title, meta, body, target, style } = Astro.props;
 ---
 
-<div id="Panel" class={style}>
+<a href={href} target={target} id="Panel" class={style}>
     <Image src={image} width="400" height="200" id="Image" alt={title} />
     <div id="Body">
         <span id="Meta">{meta}</span>
         <h3>{title}</h3>
         <p>{body}</p>
-        <a href={href} target={target}>Follow Link -></a>
+        <span id="CTA">Follow Link -></span>
+        <svg id="CornerAccent" width="61" height="37" viewBox="0 0 61 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.56264 36.2326L0.888245 29.5582V0H39.3456V36.2326H7.56264Z" fill="black" fill-opacity="0.3"/>
+            <rect x="44.3945" width="5.45599" height="36.2327" fill="black" fill-opacity="0.3"/>
+            <rect x="54.8995" width="5.45599" height="36.2327" fill="black" fill-opacity="0.3"/>
+        </svg>            
     </div>
-</div>
+</a>
 
 <style>
 :root {
-    --notchSize: 30px;
+    --notchSize: 18px;
+    --transition-delay: 0.1s;
 }
 #Panel {
     position: relative;
     padding: 1rem;
-
     clip-path: 
     polygon(
       0% 0%, 
@@ -45,13 +50,54 @@ const { image, href, title, meta, body, target, style } = Astro.props;
     );
 }
 .primary {
-    background-color: rgb(var(--color-primary));
+    background: rgb(var(--color-primary));
+    transition: background-color var(--transition-delay);
+}
+.primary:hover {
+    background: rgb(var(--color-secondary));
 }
 .secondary {
-    border: solid 1px rgb(var(--color-primary));
+    /* border: solid 1px rgb(var(--color-primary)); */
+    background: rgb(var(--color-primary));
+    transition: background-color var(--transition-delay);
+}
+.secondary:before {
+    --border-width: 2px;
+    --inner-size: calc(var(--border-width) * 2);
+    content: '';
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+    width: calc(100% - var(--inner-size));
+    height: calc(100% - var(--inner-size));
+    background: rgba(0, 0, 0, 0.9);
+    clip-path: 
+    polygon(
+      0% 0%, 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      100% 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+    );
+}
+.secondary:hover {
+    background: rgb(var(--color-secondary));
+}
+.primary img, .secondary img {
+    transition: filter var(--transition-delay);
+}
+.primary:hover img, .secondary:hover img {
+    filter: opacity(0.7);
+}
+.secondary #Body {
+    z-index: 1;
 }
 #Image {
-    max-width: 100%;
+    aspect-ratio: 2 / 1;
+    width: 100%;
     height: auto;
     clip-path: 
     polygon(
@@ -62,7 +108,7 @@ const { image, href, title, meta, body, target, style } = Astro.props;
         0 100%
     );
 }
-.primary h3, .primary a {
+.primary h3, .primary #CTA{
     color: rgba(0, 0, 0, 0.8);
 }
 h3 {
@@ -74,24 +120,41 @@ h3 {
     text-transform: uppercase;
 }
 .primary p, .primary #Meta {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 #Body {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 1rem;
 }
-#Meta, a {
+#Meta, #CTA {
     font-family: var(--mono-font);
     text-transform: uppercase;
 }
-a {
+#CTA {
     align-self: flex-end;
     font-size: 1.3rem;
     transition: color 0.1s;
     line-height: 2rem;
 }
-a:hover, .primary a:hover { 
-    color: rgba(255, 255, 255, 0.6);
+p {
+    margin-bottom: 2.5rem;
+}
+#CornerAccent {
+    width: 90px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.secondary #CornerAccent path, .secondary #CornerAccent rect {
+    fill: rgba(255, 255, 255, 0.2);
+}
+
+@media(prefers-color-scheme: dark) {
+    .primary p, .primary #Meta {
+        color: rgba(0, 0, 0, 0.5);
+    }
 }
 </style>

@@ -1,15 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
 import Panel from "../components/Panel.astro";
 
 import "../styles/global.css";
+import "../styles/buttons.css";
 ---
 
 <Layout title="UI Design">
     
 <main>
+    <section>
+        <span class="text-h4 text-divider">Mobile Menu Icon</span>
+        <br />
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" onclick="this.classList.toggle('opened')">
+            <defs>
+              <style>
+                .rect-vect {
+                    fill: #1e1e1e;
+                    stroke-width: 0px;
+                    transition: all 0.5s;
+                    transform-box: fill-box;
+                    transform-origin: center;
+                }
+                .opened #rv-2 {
+                    opacity: 0;
+                }
+                .opened #rv-1 {
+                    transform: translate(0, 200%) rotate(135deg);
+                }
+                .opened #rv-3 {
+                    transform: translate(0, -200%)  rotate(-135deg)
+                }
+              </style>
+            </defs>
+            <g id="Layer_1-2" data-name="Layer 1">
+              <rect id="rv-1" class="rect-vect" y ="10" width="60" height="10"/>
+              <rect id="rv-2" class="rect-vect" y="30" width="60" height="10"/>
+              <rect id="rv-3" class="rect-vect" y="50" width="60" height="10"/>
+            </g>
+        </svg>
+    </section>
     <section>
         <span class="text-h4 text-divider">Headlines</span>
         <br />
@@ -28,31 +58,25 @@ import "../styles/global.css";
     <section>
         <span class="text-h4 text-divider">Buttons</span>
         <br />
-    <Button text="Button Default" href="#" styles="button-default"/>
-    <Button text="Button Primary" href="#" styles="button-primary"/>
-    <Button text="Button Secondary" href="#" styles="button-secondary"/>
+    <div>
+        <a href="#" class="button button-default">Button Default</a>
+        <a href="#" class="button button-primary">Button Primary</a>
+        <a href="#" class="button button-secondary">Button Secondary</a>
+    </div>
 </section>
-
-    <section>
-        <Card 
-            href="#"
-            title="Card Title"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl eu nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl."
-        />
-    </section>
     <section>
         <div class="grid">
             <Panel
                 image="/Portfolio_Profile_Desktop-Wide.webp"
-                title="Panel Title"
+                title="Panel 1"
                 meta="Meta"
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl eu nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl."
+                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl eu nisl. "
                 href="#"
                 target=""
                 style="primary"
             />
             <Panel
-                image="/Portfolio_Profile_Desktop-Wide.webp"
+                image="/JesseAndBrandonDoingPhotography.png"
                 title="Panel 2"
                 meta="Meta"
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl eu nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl. Sed vitae nisl euismod, aliquam nisl eget, aliquam nisl."
@@ -74,7 +98,8 @@ section {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    align-items: start;
 }
 </style>

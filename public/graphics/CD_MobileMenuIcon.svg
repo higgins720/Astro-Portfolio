@@ -1,0 +1,27 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" onclick="this.classList.toggle('opened')">
+            <defs>
+              <style>
+                .rect-vect {
+                    fill: #1e1e1e;
+                    stroke-width: 0px;
+                    transition: all 0.5s;
+                    transform-box: fill-box;
+                    transform-origin: center;
+                }
+                .opened #rv-2 {
+                    opacity: 0;
+                }
+                .opened #rv-1 {
+                    transform: translate(0px, 33.3px) rotate(135deg);
+                }
+                .opened #rv-3 {
+                    transform: translate(0px, -33px)  rotate(-135deg)
+                }
+              </style>
+            </defs>
+            <g id="Layer_1-2" data-name="Layer 1">
+              <rect id="rv-1" class="rect-vect" width="94" height="16"/>
+              <rect id="rv-2" class="rect-vect" y="33" width="94" height="16"/>
+              <rect id="rv-3" class="rect-vect" y="66" width="94" height="16"/>
+            </g>
+        </svg>

@@ -1,34 +1,22 @@
 ---
 import '../styles/global.css';
-import Logo from '../components/Logo.astro';
-import VerticalNav from '../components/VerticalNav.astro';
-import Footer from '../components/Footer.astro';
-import OrbitalElement from '../components/OrbitalElement.astro';
+import '../styles/buttons.css';
+import Layout from "../layouts/Layout.astro";
+import {Image} from 'astro:assets';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/logos/CloudChief_Logo-Ship-Up-Ring.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Designer & Developer Jesse Higgins</title>
-	</head>
-<body>
-	<div id="container" class="flex flex-column justify-evenly">
-		<Logo />
-		<VerticalNav />
-		<Footer />
+<Layout title="Chrome Dog">
+	<div id="container" class="flex flex-column justify-center">
+		<div class="flex flex-column flex-align-center">
+			<Image src="/logos/ChromeDog_Logo-Text-V2.svg" width="400" height="450" alt="Chrome Dog Logo" />
+			<h1 class="text-h2 text-align-center">Web Development & Design</h1>
+			<a href="/" class="button button-default">Estimator</a>
+		</div>
 	</div>
-</body>
-<OrbitalElement />
-</html>
+</Layout>
 
 <style>
-#container {
-	width: 100%;
-	min-height: 100vh;
-	overflow: hidden;
-}
+	#container {
+		flex-grow: 1;
+	}
 </style>

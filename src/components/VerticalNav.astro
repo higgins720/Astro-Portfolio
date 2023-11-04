@@ -4,7 +4,7 @@ const currentPath = Astro.url.pathname;
 import MainMenu from '../../menu-main.json';
 ---
 
-<nav id="verticalNav">
+<nav>
     <ul>
         {MainMenu.Links.map( Link => 
         <li>
@@ -17,9 +17,15 @@ import MainMenu from '../../menu-main.json';
 </nav>
 
 <style>
+	nav {
+		display: flex;
+    	flex-grow: 0.5;
+    	align-items: center;
+	}
     ul {
         list-style: none;
-        text-align: center;
+        text-align: left;
+        padding-left: 0%;
     }
     ul > li {
         margin-right: 40px;
@@ -52,11 +58,5 @@ import MainMenu from '../../menu-main.json';
     }
     ul > li > .hidden {
         display: none;
-    }
-    @media (prefers-color-scheme: dark) {
-        ul > li > a:hover, .active {
-        color: var(--link-hover);
-        text-shadow: 0 0 10px var(--glow), 0 0 20px #8800ff;
-    }
     }
 </style>
