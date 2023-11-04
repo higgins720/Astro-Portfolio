@@ -12,7 +12,7 @@
     --color-primary: 30, 30, 30;
     --color-secondary: 191, 89, 254;
     --color-emphasis: 30, 30, 30;
-    --color-muted: 225, 225, 225;
+    --color-background-muted: 225, 225, 225;
     --color-background: 255, 255, 255;
 
     --accent: 0, 212, 255;
@@ -44,7 +44,8 @@
         --color-primary: 98, 123, 255;
         --color-secondary: 191, 89, 254;
         --color-emphasis: 252, 252, 252;
-        --color-background: 30, 30, 30;
+        --color-background: 20, 20, 20;
+        --color-background-muted: 45, 45, 45;
 
         --text-emphasis: #fff;
         --link: #9BA7E4;
@@ -57,7 +58,7 @@ html {
     font-family: var(--body-font);
     font-weight: 400;
     font-size: 1rem;
-    background-color: #F6F6F6;
+    background-color: rgb(var(--color-background));
     line-height: 1.5em;
 }
 body {
@@ -183,7 +184,8 @@ a:active {
 
 @media (prefers-color-scheme: dark) {
     html {
-        background: linear-gradient(135deg, rgba(8,2,44,1) 0%, rgba(0,0,0,1) 100%);
+        /* background: linear-gradient(135deg, rgba(var(--color-background),0.9) 0%, rgba(var(--color-background),1) 100%); */
+        background-color: rgba(var(--color-background));
         color: rgb(199, 199, 199);
     }
     p {

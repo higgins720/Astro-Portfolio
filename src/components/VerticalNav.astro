@@ -30,6 +30,7 @@ import MainMenu from '../../menu-main.json';
     ul > li {
         margin-right: 40px;
         display: block;
+        border-bottom: solid 2px rgba(var(--color-primary), 0.25);
     }
     ul > li > a {
         display: inline-block;
@@ -41,10 +42,12 @@ import MainMenu from '../../menu-main.json';
         font-size: 2rem;
         line-height: 3rem;
         transition: all 0.2s;
+            color: rgba(var(--color-primary), 0.3);
     }
     ul > li > a:hover, .active {
         color: var(--link-hover);
         text-shadow: none;
+        color: rgba(var(--color-primary), 1) !important;
     }
     ul > li > a:hover::before {
         content: '';

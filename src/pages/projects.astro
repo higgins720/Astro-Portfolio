@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Panel from '../components/Panel.astro';
 import ProjectData from '../../projectdata.json';
 ---
 
@@ -8,24 +9,38 @@ import ProjectData from '../../projectdata.json';
 	<main>
         <h1>Website <span class="text-gradient">Projects</span></h1>
 		<p>Here's a list of some of the websites I designed and built.</p>
-		<ul role="list" class="card-list">
+		<div class="grid">
 			{ProjectData.Websites.map(
 				Website => 
-					<Card
+					<Panel
 						title={Website.Title}
 						meta={Website.Date}
 						body={Website.ShortDescription}
 						href={Website.Link}
+						image="/Portfolio_Profile_Desktop-Wide.webp"
 						target="_blank"
+						style="secondary"
 					/>
 				)}
-		</ul>
+		</div>
 	</main>
 </Layout>
 
 <style>
 	main {
 		margin: auto;
+	}
+	.grid {
+		display: grid;
+    	grid-template-columns: 1fr;
+    	grid-gap: 2rem;
+    	align-items: start;
+	}
+	@media (min-width: 640px) {
+		.grid {
+			display: grid;
+    		grid-template-columns: 1fr 1fr;
+		}
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -52,12 +67,5 @@ import ProjectData from '../../projectdata.json';
 	}
 	.instructions strong {
 		color: rgb(var(--accent));
-	}
-	.card-list {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		padding-left: 0;
-		list-style: none;
-		grid-gap: 1rem;
 	}
 </style>

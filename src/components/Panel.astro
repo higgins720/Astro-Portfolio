@@ -18,9 +18,9 @@ const { image, href, title, meta, body, target, style } = Astro.props;
     <Image src={image} width="400" height="200" id="Image" alt={title} />
     <div id="Body">
         <span id="Meta">{meta}</span>
-        <h3>{title}</h3>
+        <h3 class="panel-title">{title}</h3>
         <p>{body}</p>
-        <span id="CTA">Follow Link -></span>
+        <span class="panel-cta">Follow Link -></span>
         <svg id="CornerAccent" width="61" height="37" viewBox="0 0 61 37" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.56264 36.2326L0.888245 29.5582V0H39.3456V36.2326H7.56264Z" fill="black" fill-opacity="0.3"/>
             <rect x="44.3945" width="5.45599" height="36.2327" fill="black" fill-opacity="0.3"/>
@@ -50,7 +50,7 @@ const { image, href, title, meta, body, target, style } = Astro.props;
     );
 }
 .primary {
-    background: rgb(var(--color-primary));
+    background: rgba(var(--color-primary), 0.25);
     transition: background-color var(--transition-delay);
 }
 .primary:hover {
@@ -70,7 +70,7 @@ const { image, href, title, meta, body, target, style } = Astro.props;
     left: var(--border-width);
     width: calc(100% - var(--inner-size));
     height: calc(100% - var(--inner-size));
-    background: rgba(0, 0, 0, 0.9);
+    background: rgb(var(--color-background));
     clip-path: 
     polygon(
       0% 0%, 
@@ -108,10 +108,16 @@ const { image, href, title, meta, body, target, style } = Astro.props;
         0 100%
     );
 }
-.primary h3, .primary #CTA{
+.primary .panel-title, .primary .panel-cta{
     color: rgba(0, 0, 0, 0.8);
 }
-h3 {
+.secondary .panel-title, .secondary .panel-cta {
+    color: rgba(var(--color-primary));
+}
+.secondary:hover .panel-title, .secondary:hover .panel-cta {
+    color: rgba(var(--color-secondary));
+}
+.panel-title {
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 2rem;
@@ -128,11 +134,11 @@ h3 {
     flex-direction: column;
     padding: 1rem;
 }
-#Meta, #CTA {
+#Meta, .panel-cta {
     font-family: var(--mono-font);
     text-transform: uppercase;
 }
-#CTA {
+.panel-cta {
     align-self: flex-end;
     font-size: 1.3rem;
     transition: color 0.1s;
