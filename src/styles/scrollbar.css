@@ -2,7 +2,7 @@
 ::-webkit-scrollbar {
     width: 6px;
     padding: 2px 0px;
-    border: solid 1px rgb(var(--accent), 0.2);
+    border: solid 1px rgb(var(--color-primary), 0.2);
     z-index: 1000;
 }
 
@@ -14,16 +14,16 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(var(--color-background) 0.25);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     width: 10px;
-    background: rgba(var(--accent), 0.2);
+    background: rgba(var(--color-primary), 0.5);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(var(--accent), 0.4);
+    background: rgba(var(--color-primary), 0.75);
 }

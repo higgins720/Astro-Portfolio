@@ -35,7 +35,7 @@
     --body-font: 'Roboto Mono', monospace;
     --mono-font: 'FixedSysExcelsior', Consolas, monospace;
 
-    --accent-gradient: linear-gradient(45deg, rgb(1, 79, 189), rgb(var(--accent)) 30%);
+    --accent-gradient: linear-gradient(45deg, rgba(var(--color-primary), 0.33), rgba(var(--color-primary), 1) 30%);
     --accent-gradient-secondary: linear-gradient(45deg, var(--glow), var(--element-glow) 30%);
 }
 
