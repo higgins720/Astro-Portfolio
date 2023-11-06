@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Panel from '../components/Panel.astro';
 import ProjectData from '../../projectdata.json';
 ---
@@ -17,7 +16,7 @@ import ProjectData from '../../projectdata.json';
 						meta={Website.Date}
 						body={Website.ShortDescription}
 						href={Website.Link}
-						image="/Portfolio_Profile_Desktop-Wide.webp"
+						image={Website.ScreenShot}
 						target="_blank"
 						style="secondary"
 					/>
@@ -35,6 +34,7 @@ import ProjectData from '../../projectdata.json';
     	grid-template-columns: 1fr;
     	grid-gap: 2rem;
     	align-items: start;
+		align-items: stretch;
 	}
 	@media (min-width: 640px) {
 		.grid {
@@ -43,7 +43,7 @@ import ProjectData from '../../projectdata.json';
 		}
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background-image: var(--accent-gradient-secondary);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
