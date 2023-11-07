@@ -49,8 +49,8 @@
         --color-background-muted: 45, 45, 45;
 
         --text-emphasis: #fff;
-        --link: #9BA7E4;
-        --link-hover: #DFABFF;
+        --link: 105, 105, 255;
+        --link-hover: 211, 105, 255;
         --dark-background: 0, 0, 0;
         --dark-background-secondary: 0, 24, 52;
     }

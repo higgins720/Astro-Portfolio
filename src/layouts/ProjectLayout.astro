@@ -1,8 +1,9 @@
 ---
-const {title, industry, description, logo, screenshot} = Astro.props;
+const {title, industry, description, logo, screenshot, link} = Astro.props;
 import '../styles/global.css';
+import '../styles/scrollbar.css';
+import '../styles/buttons.css';
 import Navigation from '../components/Navigation.astro';
-import {ViewTransitions} from 'astro:transitions';
 import { Image } from 'astro:assets';
 import Footer from '../components/Footer.astro';
 ---
@@ -11,58 +12,60 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logos/ChromeDog_Logo-Icon-Small.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
 	</head>
-  <!-- ... -->
   <body>
     <Navigation />
-    <main>
-      <div class="logo-container">
-        <Image src={logo} alt={title + "logo"} width="400" height="200" alt="logo" id="logo"/>
-      </div>
-      <div class="flex flex-row">
-        <div class="flex-1-2">
-          <h1>{title}</h1>
-          <p>{industry}</p>
-          <p>{description}</p>
+      <h1>Project: {title} Website</h1>
+      <div class="container">
+        <main>
+          <div class="logo-container">
+            <Image src={logo} alt={title + "logo"}    width="400" height="200" alt="logo" id="logo"/>
+          </div>
+          <ul class="project-details">
+            <li>Client: {title}</li>
+            <li>Industry: {industry}</li>
+            <li>Project: {description}</li>
+          </ul>
+          <hr />
+          <h2>Summary</h2>
           <slot />
+          <a href={link} target="_blank" rel="noopener"   class="button button-default">View Live Site</a>
+        </main>
+        
+        <div class="capture">
+          <Image src={screenshot} width="600"   height="1200" alt="screenshot"  class="site-capture"/>
         </div>
-        <div id="captureContainer" class="flex-1-2">
-          <Image src={screenshot} width="600" height="1200" alt="screenshot" class="site-capture"/>
         </div>
-      </div>
-    </main>
-    <Footer />
   </body>
+  <Footer />
 </html>
 
 <style is:global>
     .header {
       text-align: center;
     }
-    html {
-		  font-family: system-ui, sans-serif;
-		  background-color: #F6F6F6;
-      min-height: 100vh;
-      overflow-y: scroll;
-	  }
-    body {
-      max-width: 1000px;
+    main {
+      width: 100ch;
+      max-width: calc(100% - 40px);
       margin: 0 auto;
     }
-    main {
-		  padding: 40px;
-      padding-top: 0;
-    } 
-	  @media(min-width:640px) {
-		  main {
-			  padding: 80px;
-        padding-top: 0;
-		  }
-	  }
+    h1 {
+      text-align: center;
+    }
+    .project-details {
+      list-style: none;
+      padding-left: 0;
+    }
+    .project-details li {
+      margin: 0;
+      font-family: var(--mono-font);
+    }
+    .button {
+      margin-top: 20px;
+    }
     .site-capture {
       height: auto;
       max-width: 100%;
@@ -71,6 +74,33 @@ import Footer from '../components/Footer.astro';
       max-height: 80vh;
       max-width: 100%;
       overflow-y: scroll;
+    }
+    .container {
+      overflow: hidden;
+    }
+    .container .capture {
+      margin-top: 40px;
+      max-height: 50vh;
+      overflow-y: scroll;
+    }
+    @media(min-width: 640px) {
+      .container main {
+        width: calc(50% - 40px);
+        padding: 0 20px;
+        float: left;
+      }
+      .container .capture {
+        width: calc(50% - 40px);
+        padding: 0 20px;
+        max-height: 80vh;
+        overflow-y: scroll;
+      }
+    }
+    .grid-container {
+		  display: grid;
+    	grid-template-columns: 1fr 1fr;
+    	grid-gap: 2rem;
+
     }
     .flex-1-2 {
       flex: auto;

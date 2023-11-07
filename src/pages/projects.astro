@@ -15,9 +15,9 @@ import ProjectData from '../../projectdata.json';
 						title={Website.Title}
 						meta={Website.Date}
 						body={Website.ShortDescription}
-						href={Website.Link}
+						href={Website.Page}
 						image={Website.ScreenShot}
-						target="_blank"
+						target=""
 						style="secondary"
 					/>
 				)}
@@ -25,7 +25,7 @@ import ProjectData from '../../projectdata.json';
 	</main>
 </Layout>
 
-<style>
+<style is:global>
 	main {
 		margin: auto;
 	}
@@ -33,7 +33,6 @@ import ProjectData from '../../projectdata.json';
 		display: grid;
     	grid-template-columns: 1fr;
     	grid-gap: 2rem;
-    	align-items: start;
 		align-items: stretch;
 	}
 	@media (min-width: 640px) {
@@ -42,6 +41,26 @@ import ProjectData from '../../projectdata.json';
     		grid-template-columns: 1fr 1fr;
 		}
 	}
+	/* Scroll Animation */
+	@media (min-width: 960px) {
+		.secondary:hover #panelImage {
+			position: absolute;
+			animation: auto-scroll linear 8s infinite;
+			animation-timing-function: ease;
+		}
+	}
+	@keyframes auto-scroll {
+		0% {
+			transform: translateY(0%);
+		}
+		50% {
+			transform: translateY(-85%);
+		}
+		100% {
+			transform: translateY(0%);
+		}
+	}
+	/* Scroll Animation */
 	.text-gradient {
 		background-image: var(--accent-gradient-secondary);
 		-webkit-background-clip: text;

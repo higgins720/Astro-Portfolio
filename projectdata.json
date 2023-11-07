@@ -2,115 +2,120 @@
     "Websites": [
         {
             "Title": "Pest Friends",
-            "Link": "https://www.mypestfriends.com/",
+            "URL": "https://www.mypestfriends.com/",
+            "Page": "/projects/pestfriends",
             "Date": "12/19/2022",
             "Industry": "Pest Control",
             "ShortDescription": "Website migration for a local pest control company.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_PestFriends-Home.jpg"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_PestFriends-Home@650px.webp"
         },
         {
             "Title": "Flock Off",
-            "Link": "https://flockoff.com/",
+            "URL": "https://flockoff.com/",
+            "Page": "/projects/flockoff",
             "Date": "10/25/2021",
             "Industry": "Humane Bird Control",
             "ShortDescription": "A new website for a local pest control company.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_FlockOff-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_FlockOff-Home@650px.webp"
         },
         {
             "Title": "Mil+Spec Liner",
-            "Link": "https://milspecliner.com/",
+            "URL": "https://milspecliner.com/",
+            "Page": "/projects/milspecliner",
             "Date": "9/1/2022",
             "Industry": "Bed Liner Manufacturer",
             "ShortDescription": "New Website and Brand Design for a Bedliner Manufacturer.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_MilSpecLiner-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_MilSpecLiner-Home@650px.webp"
         },
         {
             "Title": "Asian Trade Rug Company",
-            "Link": "https://asiantraderugcompany.com/",
+            "URL": "https://asiantraderugcompany.com/",
+            "Page": "https://asiantraderugcompany.com/",
             "Date": "5/12/2022",
             "Industry": "Rug Merchant",
             "ShortDescription": "Custom eCommerce catalogue for authentic persian rugs and rug services.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_AsianTradeRugCompany-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_AsianTradeRugCompany-Home@650px.webp"
         },
         {
             "Title": "Rose Academies",
-            "Link": "https://www.go2rose.com/",
+            "URL": "https://www.go2rose.com/",
+            "Page": "https://www.go2rose.com/",
             "Date": "9/4/2018",
             "Industry": "Charter School",
             "ShortDescription": "New Website and Brand Design for a Charter School.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_RoseAcademies-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_RoseAcademies-Home@650px.webp"
         },
         {
             "Title": "Trico",
-            "Link": "https://www.trico.coop/",
+            "URL": "https://www.trico.coop/",
+            "Page": "https://www.trico.coop/",
             "Date": "12/15/2018",
             "Industry": "Electric Co-Op",
             "ShortDescription": "Website build for a local Electric Company.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_Trico-Home.png"
-        },
-        {
-            "Title": "Trico Portal",
-            "Link": "https://portal.trico.coop/",
-            "Date": "8/10/2023",
-            "Industry": "Electric Co-Op",
-            "ShortDescription": "Employee portal for a local Electric Company.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_TricoPortal-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_Trico-Home@650px.webp"
         },
         {
             "Title": "Black & Yellow Paving",
-            "Link": "https://blackandyellowpaving.com/",
+            "URL": "https://blackandyellowpaving.com/",
+            "Page": "https://blackandyellowpaving.com/",
             "Date": "5/16/2022",
             "Industry": "Paving Company",
             "ShortDescription": "New Website and Brand Design for a Local Paving Company.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_BlackAndYellowPaving-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_BlackAndYellowPaving-Home@650px.webp"
         },
         {
             "Title": "Chauncey Meyer",
-            "Link": "https://www.chaunceymeyer.com/",
+            "URL": "https://www.chaunceymeyer.com/",
+            "Page": "https://www.chaunceymeyer.com/",
             "Date": "10/8/2019",
             "Industry": "Architect",
             "ShortDescription": "Website design and build to showcase an Architect's work.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_ChaunceyMeyer-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_ChaunceyMeyer-Home@650px.webp"
         },
         {
             "Title": "Automatic Components",
-            "Link": "https://www.automaticcomponents.com/",
+            "URL": "https://www.automaticcomponents.com/",
+            "Page": "https://www.automaticcomponents.com/",
             "Date": "8/15/2020",
             "Industry": "Manufacturing",
             "ShortDescription": "Website design and build for an industrial manufacturing company in LA.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_AutomaticComponents-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_AutomaticComponents-Home@650px.webp"
         },
         {
             "Title": "Optical Perspectives Group",
-            "Link": "https://www.opticalperspectives.com/",
+            "URL": "https://www.opticalperspectives.com/",
+            "Page": "https://www.opticalperspectives.com/",
             "Date": "6/2/2023",
             "Industry": "Optical Lab Equipment",
             "ShortDescription": "An eCommerce website redesign and migration to WordPress for an optical lab equipment company.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_OpticalPerspectivesGroup-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_OpticalPerspectivesGroup-Home@650px.webp"
         },
         {
             "Title": "Cheri's Desert Harvest",
-            "Link": "https://cherisdesertharvest.com/",
+            "URL": "https://cherisdesertharvest.com/",
+            "Page": "https://cherisdesertharvest.com/",
             "Date": "5/24/2023",
             "Industry": "Food",
             "ShortDescription": "A website redesign and migration to WordPress for a local food manufacturer.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_CherisDesertHarvest-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_CherisDesertHarvest-Home@650px.webp"
         },
         {
             "Title": "Gendy MD",
-            "Link": "https://gendymd.com/",
+            "URL": "https://gendymd.com/",
+            "Page": "https://gendymd.com/",
             "Date": "11/22/2020",
             "Industry": "Medical",
             "ShortDescription": "A new website design and build for an orthopedic surgeon's medical practice in Phoenix.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_GendyMD-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_GendyMD-Home@650px.webp"
         },
         {
             "Title": "Pima Air & Space Museum",
-            "Link": "https://pimaair.org/",
+            "URL": "https://pimaair.org/",
+            "Page": "https://pimaair.org/",
             "Date": "1/27/2020",
             "Industry": "Museum",
             "ShortDescription": "A website redesign and build for a local avionic and space exploration museum.",
-            "ScreenShot": "/sitecaptures/WebsiteCapture_PASM-Home.png"
+            "ScreenShot": "/sitecaptures/WebsiteCapture_PASM-Home@650px.webp"
         }
     ]
 }
