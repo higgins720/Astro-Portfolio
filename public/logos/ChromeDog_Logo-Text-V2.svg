@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        fill: #FCFCFC;
       }
 
       .cls-1, .cls-2 {
@@ -15,7 +15,7 @@
       }
       @media(prefers-color-scheme: dark) {
         .cls-2 {
-          fill: #fff;
+          fill: #FCFCFC;
         }
         .cls-3 {
           display: none;
