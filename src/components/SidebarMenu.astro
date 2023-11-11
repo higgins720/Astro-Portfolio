@@ -130,6 +130,9 @@ import {Image} from 'astro:assets';
 		width: auto;
 		margin: 0 auto;
 	}
+	.hidden {
+		left: -400px !important;
+	}
 </style>
 
 <script>
@@ -139,4 +142,18 @@ const menuIconEl = document.getElementById("mobileMenuIcon");
 menuIconEl.onclick = event => {
 	menuEl.classList.toggle("open-menu");
 }
+
+// For slding out of view on scroll down, and back on scroll up
+// Initial state
+var scrollPos = 0;
+// adding scroll event
+window.addEventListener('scroll', function(){
+  // detects new state and compares it with the new one
+  if ((document.body.getBoundingClientRect()).top > scrollPos)
+		menuEl.classList.remove('hidden');
+	else
+		menuEl.classList.add('hidden');
+	// saves the new position for iteration.
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
 </script>
