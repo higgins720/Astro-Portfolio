@@ -5,14 +5,12 @@ import "../styles/form.css"
 import "../styles/buttons.css"
 ---
 
-<!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
-
 <script src="https://unpkg.com/@botpoison/browser" async></script>
 
 <Layout title="Contact Me">
     <main>
             <h1>Contact Me</h1>
-            <form id="contactForm" class="contact-form" method="POST" action="https:/submit-form.com/FgccWuMw" data-botpoison-public-key="pk_456b13f7-f835-443c-8468-d6d289624189" target="_blank">
+            <form id="contactForm" class="contact-form" method="POST" action="https://submit-form.com/FgccWuMw" data-botpoison-public-key="pk_456b13f7-f835-443c-8468-d6d289624189">
                 <div>
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name"placeholder="Name" required="true" />
@@ -39,8 +37,6 @@ import "../styles/buttons.css"
                       required="false"
                     ></textarea>
                 </div>
-                <!-- <div id="reCaptcha" class="g-recaptcha full-width" data-sitekey="6LeTkIgoAAAAALatR_qYUhXcfCanvMD6EG2NKU9V">
-                </div> -->
                 <div>
                     <button type="submit" id="submitButton" class="button button-default" data-sitekey="6LfT14MoAAAAAOkh1HJazLGOOTQvd57S46HiDHhf" data-callback="onSubmit">Send -></button>
                 </div>
