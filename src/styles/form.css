@@ -7,16 +7,17 @@
     display: block;
     margin-bottom: 0.1rem;
     font-family: var(--mono-font);
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 .contact-form input, .contact-form textarea, .contact-form select {
     width: calc(100% - 20px);
     padding: 10px;
     border: none;
-    font-size: 1rem;
-    color: #3c3c3c;
-    background-color: #fff;
+    font-family: var(--mono-font);
+    font-size: 1.2rem;
+    background-color: rgb(var(--color-background));
+    border: 2px solid rgb(var(--color-muted));
 }
 .contact-form select {
     width: 100%;
@@ -27,8 +28,7 @@
 }
 .contact-form select>option {
     display: inline-block;
-    background-color: rgb(225, 225, 225);
-    color: #3c3c3c;
+    background-color: rgb(var(--color-background));
     line-height: 2rem;
     padding: 0.5rem;
 }
@@ -43,11 +43,10 @@
 @media (prefers-color-scheme: dark) {
     .contact-form input, .contact-form textarea, .contact-form select {
         color: #fff;
-        background-color: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(var(--accent), 0.5);
+        background-color: rgb(var(--color-background));
+        border: 2px solid rgb(var(--color-muted));
     }
     .contact-form select>option {
-        background-color: rgb(28, 16, 61);
         color: #fff;
     }
 }

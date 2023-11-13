@@ -22,6 +22,7 @@
       var(--notchSize) 100%, 
       0% calc(100% - var(--notchSize))
     );
+    border: 0px;
 }
 
 .button-default {

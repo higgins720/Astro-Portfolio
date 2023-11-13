@@ -10,7 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@botpoison/browser": "^0.1.30",
     "astro": "^3.2.3",
-    "astro-icon": "^0.8.1"
+    "astro-icon": "^0.8.1",
+    "axios": "^1.6.1"
   }
 }
