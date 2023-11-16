@@ -1,0 +1,24 @@
+{
+    "Hourly": {
+        "Retainer": 50,
+        "NonRetainer": 75
+    },
+    "TimeEstimate": {
+        "ProjectInit": 2.5,
+        "ContentMigration": 2,
+        "Design": {
+            "UI": 5.25,
+            "PageLayout": 2.5,
+            "Logo": 5.5,
+            "Branding": 5
+        },
+        "Development": {
+            "WebsiteSetup": 1,
+            "TemplateConfiguration": 2.75,
+            "PluginConfiguration": 1,
+            "Elements": 1,
+            "Layout": 5,
+            "QC": 3
+        }
+    }
+}
