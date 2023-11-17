@@ -7,10 +7,10 @@ Build a complete portfolio website
 ### MVP
 Get it to a launchable state, where it's worth replacing my current portfolio. 
 
-- [ ] Add Resume Content
-- [ ] Link to my social media accounts
-- [ ] Visually Appealing Home Page Design
-- [ ] Mobile First, make sure it works accross all devices
+- [x] Add Resume Content
+- [x] Link to my social media accounts
+- [x] Visually Appealing Home Page Design
+- [x] Mobile First, make sure it works accross all devices
 ---
 ### Astro Help
 
