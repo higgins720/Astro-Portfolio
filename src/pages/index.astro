@@ -2,19 +2,24 @@
 import '../styles/global.css';
 import '../styles/buttons.css';
 import Layout from "../layouts/Layout.astro";
-import {Image} from 'astro:assets';
+//import {Image} from 'astro:assets';
 ---
 
 <Layout title="Chrome Dog">
 	<div id="container" class="flex flex-column justify-center">
 		<div class="flex flex-column flex-align-center">
-			<Image 
+			<!-- <Image 
 				src="/logos/ChromeDog_Logo-Text-DM-Neon-Animated.svg" 
 				srcset=""
 				width="400" height="450" 
 				alt="Chrome Dog Logo" 
 				id="logo"
-			/>
+			/> -->
+			<picture>
+				<source srcset="/logos/ChromeDog_Logo-Text-DM-Neon-Animated.svg" media="(prefers-color-scheme: dark)" />
+				<source srcset="/logos/ChromeDog_Logo-Text-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+				<img decoding="async" id="logo" src="/logos/ChromeDog_Logo-Text-LM.svg" width="400" height="450" />
+			</picture>
 			<h1 class="text-h2 text-align-center">Web Development & Design</h1>
 			<a href="/contact" class="button button-default">Contact Me -></a>
 		</div>
@@ -25,6 +30,9 @@ import {Image} from 'astro:assets';
 	#container {
 		flex-grow: 1;
 		overflow: hidden;
+		align-items: center;
+		max-width: 80%;
+		margin: 0 auto;
 	}
 	#logo {
 		max-width: 100%;
