@@ -1,9 +1,7 @@
 ---
-nav: true
+nav: true;
 const currentPath = Astro.url.pathname;
 import MainMenu from '../../menu-main.json';
-
-console.log('URL: ' + currentPath);
 ---
 
 <nav>
@@ -28,11 +26,11 @@ console.log('URL: ' + currentPath);
         text-align: left;
         padding-left: 0%;
     }
-    ul > li {
+    /* ul > li {
         margin-right: 40px;
         display: block;
         border-bottom: solid 2px rgba(var(--color-primary), 0.25);
-    }
+    } */
     ul > li > a {
         display: inline-block;
         position: relative;
@@ -43,12 +41,18 @@ console.log('URL: ' + currentPath);
         font-size: 2rem;
         line-height: 3rem;
         transition: all 0.2s;
-            color: rgba(var(--color-primary), 0.3);
+        color: rgba(var(--color-muted), 1);
     }
-    ul > li > a:hover, .active {
+    .active {
+        color: rgba(var(--color-primary), 1) !important;
+    }
+    ul > li > a:hover {
         color: var(--link-hover);
         text-shadow: none;
         color: rgba(var(--color-primary), 1) !important;
+    }
+    ul > li > a:active {
+        color: rgba(var(--color-secondary), 1) !important;
     }
     ul > li > a:hover::before {
         content: '';

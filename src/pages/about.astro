@@ -8,8 +8,11 @@ import { Image } from "astro:assets"
 <Layout title="About Jesse Higgins">
     <main>
         
-        <div class="grid-split-1-2">
-            <Image src="/JesseHiggins-PrimaryPointOfContact.webp" width="300" height="450" alt="Web Developer Jesse Higgins talking on the phone" style="margin: 0 auto;"/>
+        <div id="hero" class="grid-split-3-5">
+            <div id="profilePicture">
+                <Image src="/JesseHiggins-PrimaryPointOfContact.webp" width="300" height="450" alt="Web Developer Jesse Higgins talking on the phone"/>
+                <p class="text-h5">Jesse Higgins - CEO</p>
+            </div>
             <div>
                 <h1 class="heading-medium" style="margin-top: 0px;">About <span class="text-gradient">Myself</span></h1>
                 <p>
@@ -24,10 +27,11 @@ import { Image } from "astro:assets"
                     <TreeList parent="Graphics" items={info.techSkills.graphics} />
                     <TreeList parent="Code" items={info.techSkills.code} />
                     <TreeList parent="Markup" items={info.techSkills.markup} />
-                    <TreeList parent="Frameworks / Libraries" items={info.techSkills.frameworks} />
+                    <TreeList parent="Frameworks" items={info.techSkills.frameworks} />
                     <TreeList parent="Version Control" items={info.techSkills.versionControl} />
                     <TreeList parent="Dev Tools" items={info.techSkills.devTools} />
                     <TreeList parent="Project MGMT" items={info.techSkills.projectManagement} />
+                    <TreeList parent="Web Hosting" items={info.techSkills.webHosting} />
                 </div>
 
         <h2>Work Experience</h2>
@@ -91,7 +95,19 @@ import { Image } from "astro:assets"
 </Layout>
 
 <style>
-    .grid-split-1-2 {
+    #hero {
+        background-image: url("/graphics/Grid-Accent.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 20px;
+    }
+    #profilePicture {
+        /* margin: 0 auto;
+        padding: 20px;
+        aspect-ratio: 1/1;
+        max-width: calc(100% - 40px); */
+    }
+    .grid-split-1-2, .grid-split-3-5 {
         display: grid; 
         grid-template-columns: 1fr;
         grid-gap: 20px; 
@@ -100,6 +116,9 @@ import { Image } from "astro:assets"
     @media(min-width: 640px) {
         .grid-split-1-2 { 
             grid-template-columns: 1fr 2fr;
+        }
+        .grid-split-3-5 {
+            grid-template-columns: 3fr 5fr;
         }
     } 
     .text-gradient {
@@ -139,9 +158,14 @@ import { Image } from "astro:assets"
     }
     #techTrees {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 1rem;
         padding: 0;
+    }
+    @media(min-width: 640px) {
+        #techTrees {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
     }
     img {
         max-width: 100%;

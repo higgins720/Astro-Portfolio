@@ -1,0 +1,139 @@
+<svg width="600" height="469" viewBox="0 0 600 469" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+.stroke-line {
+    stroke: #000;
+    stroke-opacity: 0.1;
+}
+@media (prefers-color-scheme: dark) {
+    .stroke-line { 
+        stroke: #627BFF;
+    }
+}
+</style>
+</defs>
+<mask id="mask0_68_342" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="469">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M212.069 258.621L137.069 328.448L95.6897 183.621L136.689 77.396L100.862 59.4828L43.9655 121.552L54.3103 170.69L85.3448 103.448L113.793 108.621L85.3448 183.621L113.793 284.483L62.069 323.276L0 121.552L93.1035 5.17241C93.1035 5.17241 136.034 34.1379 152.586 36.2069L289.655 0L300 106.034L310.345 0L447.414 36.2069C463.966 34.1379 506.897 5.17241 506.897 5.17241L600 121.552L537.931 323.276L486.207 284.483L514.655 183.621L486.207 108.621L514.655 103.448L545.69 170.69L556.034 121.552L499.138 59.4828L463.311 77.396L504.31 183.621L462.931 328.448L387.931 258.621L462.931 356.897L400.862 462.931L307.759 375L318.103 305.172L333.621 315.517L367.241 292.241L341.379 261.207H258.621L232.759 292.241L266.379 315.517L281.897 305.172L292.241 375L199.138 462.931L137.069 356.897L212.069 258.621ZM248.778 227.31L300 183.621L351.222 227.31L300 199.138L248.778 227.31ZM191.379 222.414L139.655 178.707L168.103 165.517L258.621 178.707L191.379 222.414ZM408.621 222.414L460.345 178.707L431.897 165.517L341.379 178.707L408.621 222.414Z" fill="#EDEDED"/>
+<path d="M300 468.103L372.414 452.586L300 387.931L227.586 452.586L300 468.103Z" fill="#EDEDED"/>
+</mask>
+<g mask="url(#mask0_68_342)">
+<path d="M-6 0H605" class="stroke-line"/>
+<path d="M-6 4H605" class="stroke-line"/>
+<path d="M-6 8H605" class="stroke-line"/>
+<path d="M-6 12H605" class="stroke-line"/>
+<path d="M-6 16H605" class="stroke-line"/>
+<path d="M-6 20H605" class="stroke-line"/>
+<path d="M-6 24H605" class="stroke-line"/>
+<path d="M-6 28H605" class="stroke-line"/>
+<path d="M-6 32H605" class="stroke-line"/>
+<path d="M-6 36H605" class="stroke-line"/>
+<path d="M-6 40H605" class="stroke-line"/>
+<path d="M-6 44H605" class="stroke-line"/>
+<path d="M-6 48H605" class="stroke-line"/>
+<path d="M-6 52H605" class="stroke-line"/>
+<path d="M-6 56H605" class="stroke-line"/>
+<path d="M-6 60H605" class="stroke-line"/>
+<path d="M-6 64H605" class="stroke-line"/>
+<path d="M-6 68H605" class="stroke-line"/>
+<path d="M-6 72H605" class="stroke-line"/>
+<path d="M-6 76H605" class="stroke-line"/>
+<path d="M-6 80H605" class="stroke-line"/>
+<path d="M-6 84H605" class="stroke-line"/>
+<path d="M-6 88H605" class="stroke-line"/>
+<path d="M-6 92H605" class="stroke-line"/>
+<path d="M-6 96H605" class="stroke-line"/>
+<path d="M-6 100H605" class="stroke-line"/>
+<path d="M-6 104H605" class="stroke-line"/>
+<path d="M-6 108H605" class="stroke-line"/>
+<path d="M-6 112H605" class="stroke-line"/>
+<path d="M-6 116H605" class="stroke-line"/>
+<path d="M-6 120H605" class="stroke-line"/>
+<path d="M-6 124H605" class="stroke-line"/>
+<path d="M-6 128H605" class="stroke-line"/>
+<path d="M-6 132H605" class="stroke-line"/>
+<path d="M-6 136H605" class="stroke-line"/>
+<path d="M-6 140H605" class="stroke-line"/>
+<path d="M-6 144H605" class="stroke-line"/>
+<path d="M-6 148H605" class="stroke-line"/>
+<path d="M-6 152H605" class="stroke-line"/>
+<path d="M-6 156H605" class="stroke-line"/>
+<path d="M-6 160H605" class="stroke-line"/>
+<path d="M-6 164H605" class="stroke-line"/>
+<path d="M-6 168H605" class="stroke-line"/>
+<path d="M-6 172H605" class="stroke-line"/>
+<path d="M-6 176H605" class="stroke-line"/>
+<path d="M-6 180H605" class="stroke-line"/>
+<path d="M-6 184H605" class="stroke-line"/>
+<path d="M-6 188H605" class="stroke-line"/>
+<path d="M-6 192H605" class="stroke-line"/>
+<path d="M-6 196H605" class="stroke-line"/>
+<path d="M-6 200H605" class="stroke-line"/>
+<path d="M-6 204H605" class="stroke-line"/>
+<path d="M-6 208H605" class="stroke-line"/>
+<path d="M-6 212H605" class="stroke-line"/>
+<path d="M-6 216H605" class="stroke-line"/>
+<path d="M-6 220H605" class="stroke-line"/>
+<path d="M-6 224H605" class="stroke-line"/>
+<path d="M-6 228H605" class="stroke-line"/>
+<path d="M-6 232H605" class="stroke-line"/>
+<path d="M-6 236H605" class="stroke-line"/>
+<path d="M-6 240H605" class="stroke-line"/>
+<path d="M-6 244H605" class="stroke-line"/>
+<path d="M-6 248H605" class="stroke-line"/>
+<path d="M-6 252H605" class="stroke-line"/>
+<path d="M-6 256H605" class="stroke-line"/>
+<path d="M-6 260H605" class="stroke-line"/>
+<path d="M-6 264H605" class="stroke-line"/>
+<path d="M-6 268H605" class="stroke-line"/>
+<path d="M-6 272H605" class="stroke-line"/>
+<path d="M-6 276H605" class="stroke-line"/>
+<path d="M-6 280H605" class="stroke-line"/>
+<path d="M-6 284H605" class="stroke-line"/>
+<path d="M-6 288H605" class="stroke-line"/>
+<path d="M-6 292H605" class="stroke-line"/>
+<path d="M-6 296H605" class="stroke-line"/>
+<path d="M-6 300H605" class="stroke-line"/>
+<path d="M-6 304H605" class="stroke-line"/>
+<path d="M-6 308H605" class="stroke-line"/>
+<path d="M-6 312H605" class="stroke-line"/>
+<path d="M-6 316H605" class="stroke-line"/>
+<path d="M-6 320H605" class="stroke-line"/>
+<path d="M-6 324H605" class="stroke-line"/>
+<path d="M-6 328H605" class="stroke-line"/>
+<path d="M-6 332H605" class="stroke-line"/>
+<path d="M-6 336H605" class="stroke-line"/>
+<path d="M-6 340H605" class="stroke-line"/>
+<path d="M-6 344H605" class="stroke-line"/>
+<path d="M-6 348H605" class="stroke-line"/>
+<path d="M-6 352H605" class="stroke-line"/>
+<path d="M-6 356H605" class="stroke-line"/>
+<path d="M-6 360H605" class="stroke-line"/>
+<path d="M-6 364H605" class="stroke-line"/>
+<path d="M-6 368H605" class="stroke-line"/>
+<path d="M-6 372H605" class="stroke-line"/>
+<path d="M-6 376H605" class="stroke-line"/>
+<path d="M-6 380H605" class="stroke-line"/>
+<path d="M-6 384H605" class="stroke-line"/>
+<path d="M-6 388H605" class="stroke-line"/>
+<path d="M-6 392H605" class="stroke-line"/>
+<path d="M-6 396H605" class="stroke-line"/>
+<path d="M-6 400H605" class="stroke-line"/>
+<path d="M-6 404H605" class="stroke-line"/>
+<path d="M-6 408H605" class="stroke-line"/>
+<path d="M-6 412H605" class="stroke-line"/>
+<path d="M-6 416H605" class="stroke-line"/>
+<path d="M-6 420H605" class="stroke-line"/>
+<path d="M-6 424H605" class="stroke-line"/>
+<path d="M-6 428H605" class="stroke-line"/>
+<path d="M-6 432H605" class="stroke-line"/>
+<path d="M-6 436H605" class="stroke-line"/>
+<path d="M-6 440H605" class="stroke-line"/>
+<path d="M-6 444H605" class="stroke-line"/>
+<path d="M-6 448H605" class="stroke-line"/>
+<path d="M-6 452H605" class="stroke-line"/>
+<path d="M-6 456H605" class="stroke-line"/>
+<path d="M-6 460H605" class="stroke-line"/>
+<path d="M-6 464H605" class="stroke-line"/>
+<path d="M-6 468H605" class="stroke-line"/>
+</g>
+</svg>

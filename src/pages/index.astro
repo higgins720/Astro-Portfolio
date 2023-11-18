@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
 				alt="Chrome Dog Logo" 
 				id="logo"
 			/> -->
-			<picture>
+			<picture id="logoDisplay">
 				<source srcset="/logos/ChromeDog_Logo-Text-DM-Neon-Animated.svg" media="(prefers-color-scheme: dark)" />
 				<source srcset="/logos/ChromeDog_Logo-Text-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
 				<img decoding="async" id="logo" src="/logos/ChromeDog_Logo-Text-LM.svg" width="400" height="450" />
@@ -31,7 +31,7 @@ import Layout from "../layouts/Layout.astro";
 		flex-grow: 1;
 		overflow: hidden;
 		align-items: center;
-		max-width: 80%;
+		max-width: 90%;
 		margin: 0 auto;
 	}
 	#logo {
@@ -41,5 +41,12 @@ import Layout from "../layouts/Layout.astro";
 	h1 {
 		color: rgba(var(--color-muted), 1);
 		font-family: var(--mono-font);
+	}
+	#logoDisplay {
+		padding: 40px;
+		background-image: url("/graphics/Grid-Accent.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 </style>
