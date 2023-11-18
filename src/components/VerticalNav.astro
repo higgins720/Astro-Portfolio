@@ -8,7 +8,7 @@ import MainMenu from '../../menu-main.json';
     <ul>
         {MainMenu.Links.map( Link => 
         <li>
-            <a href={Link.Path} class={currentPath == Link.Path ? 'active' : ''}>
+            <a href={Link.Path} class={currentPath == Link.Path ? 'active' : null}>
                 {Link.Name}
             </a>
         </li> 
