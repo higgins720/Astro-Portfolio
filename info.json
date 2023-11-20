@@ -58,7 +58,7 @@
             "Figma"
         ],
         "webHosting": [
-            "AWS",
+            "Vercel",
             "WP Engine",
             "Hostinger",
             "Linode"

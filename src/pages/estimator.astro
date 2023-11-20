@@ -1,12 +1,124 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import pricing from "../../pricing.json";
+import "../styles/buttons.css";
+//import pricing from "../../pricing.json";
+//import Panel from "../components/Panel.astro";
 ---
 
 <Layout title="Estimate Calculator">
-    <span id="total">$0.00</span>
-    <form>
+    <h1>Project Estimator</h1>
+    <div id="totalDisplay">Total: <span id="total">$0.00</span></div>
+    <div id="projectType" class="step">
+        <h2>New Website Project</h2>
+        <div class="selection" data-service="100">
+            <h2>New Website</h2>
+            <p>Start from nothing.</p>
+        </div>
+        <div class="selection" data-service="50">
+            <h2>Redesign</h2>
+            <p>Modernize or improve upon your existing site.</p>
+        </div>
+        <div class="selection" data-service="50">
+            <h2>Takeover</h2>
+            <p>Have Chrome Dog take control.</p>
+        </div>
+    </div>
+    <div id="websiteType" class="step">
+        <h2>Website Type</h2>
+        <div>
+            Option 1
+        </div>
+        <div>
+            Option 2
+        </div>
+        <div>
+            Option 3
+        </div>
+    </div>
 
-    </form>
+    <div style="overflow:auto;">
+        <div style="float:right;">
+          <button type="button" id="prevBtn" data-step="-1">Previous</button>
+          <button type="button" id="nextBtn" data-step="1">Next</button>
+        </div>
+    </div>
+
+<!-- Circles which indicates the steps of the form: -->
+<!-- <div style="text-align:center;margin-top:40px;">
+    <span class="step-icon"></span>
+    <span class="step-icon"></span>
+    <span class="step-icon"></span>
+    <span class="step-icon"></span>
+</div> -->
 </Layout>
 
+<style>
+    .selection {
+        border: solid 2px rgba(var(--color-primary), 1);
+        padding: 20px;
+    }
+    .selected {
+        border-color: rgba(var(--color-secondary), 1);
+    }
+    .step {
+        display: none;
+    }
+    .display {
+        display: block;
+    }
+</style>
+
+<script defer>
+let currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+const steps = document.querySelectorAll(".step");
+const navButtons = document.querySelectorAll("[data-step]");
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  steps[n].classList.add("display");
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (steps.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+}
+
+navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Hide the current tab:
+        steps[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + button.dataset.step;
+        // Display the correct tab:
+        showTab(currentTab);
+    })
+})
+
+function changeStep(n) {
+    // This function will figure out which tab to display
+  // Exit the function if any field in the current tab is invalid:
+  //if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  steps[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= steps.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+</script>
+
+<script src="../scripts/estimator.js"></script>
