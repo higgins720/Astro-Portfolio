@@ -43,20 +43,25 @@
         ],
         "devTools": [
             "VS Code",
-            "Chrome DevTools",
             "WP CLI",
             "Local WP"
         ],
         "projectManagement": [
             "Monday",
-            "Basecamp",
-            "GitHub Projects"
+            "Asana",
+            "Jira"
         ],
         "graphics": [
             "Adobe Photoshop",
             "Adobe Illustrator",
             "Adobe XD",
             "Figma"
+        ],
+        "webHosting": [
+            "Vercel",
+            "WP Engine",
+            "Hostinger",
+            "Linode"
         ]
     }
 }

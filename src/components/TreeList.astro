@@ -3,7 +3,7 @@ const {parent} = Astro.props
 const {items} = Astro.props
 ---
 <div class="tree-list">
-    <span class="label">{parent}</span>
+    <span class="label text-h5">{parent}</span>
     <ul>
         {items.map(item => <li>{item}</li>)}
     </ul>
@@ -15,11 +15,12 @@ const {items} = Astro.props
         min-width: 200px;
     }
     .label {
-        font-family: var(--mono-font);
         font-size: 1rem;
         text-transform: uppercase;
     }
     li {
+        
+        font-family: var(--mono-font);
         list-style: none;
         width: fit-content;
         font-size: 0.9rem;
