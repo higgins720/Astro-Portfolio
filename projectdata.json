@@ -116,6 +116,15 @@
             "Industry": "Museum",
             "ShortDescription": "A website redesign and build for a local avionic and space exploration museum.",
             "ScreenShot": "/sitecaptures/WebsiteCapture_PASM-Home@650px.webp"
+        },
+        {
+            "Title": "SVP Tucson",
+            "URL": "https://svptucson.org/",
+            "Page": "https://svptucson.org/",
+            "Date": "11/30/2023",
+            "Industry": "Nonprofit",
+            "ShortDescription": "New website design and build for a local branch of philanthropists.",
+            "ScreenShot": "/sitecaptures/WebsiteCapture_SVPTucson-Home.png"
         }
     ]
 }
