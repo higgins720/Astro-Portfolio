@@ -10,37 +10,44 @@ import "../styles/buttons.css";
     <div id="totalDisplay">Total: <span id="total">$0.00</span></div>
     <div id="projectType" class="step">
         <h2>New Website Project</h2>
-        <div class="selection" data-service="100">
+        <div class="selection" data-service="project-new">
             <h2>New Website</h2>
             <p>Start from nothing.</p>
         </div>
-        <div class="selection" data-service="50">
+        <div class="selection" data-service="project-redesign">
             <h2>Redesign</h2>
             <p>Modernize or improve upon your existing site.</p>
         </div>
-        <div class="selection" data-service="50">
+        <div class="selection" data-service="project-takeover">
             <h2>Takeover</h2>
             <p>Have Chrome Dog take control.</p>
         </div>
     </div>
     <div id="websiteType" class="step">
         <h2>Website Type</h2>
-        <div>
+        <div class="selection" data-service="type-1">
             Option 1
         </div>
-        <div>
+        <div class="selection" data-service="type-2">
             Option 2
         </div>
-        <div>
+        <div class="selection" data-service="type-3">
             Option 3
         </div>
     </div>
-
-    <div style="overflow:auto;">
-        <div style="float:right;">
-          <button type="button" id="prevBtn" data-step="-1">Previous</button>
-          <button type="button" id="nextBtn" data-step="1">Next</button>
+    <div id="design" class="step">
+        <h2>Grop Type</h2>
+        <div class="selection" data-service="design-custom">
+            Custom Design
         </div>
+        <div class="selection" data-service="design-template">
+            Use a Template
+        </div>
+    </div>
+
+    <div id="stepNav">
+        <button type="button" id="prevBtn" class="button button-default" data-step="-1"><- Previous</button>
+        <button type="button" id="nextBtn" class="button button-default" data-step="1">Next -></button>
     </div>
 
 <!-- Circles which indicates the steps of the form: -->
@@ -56,6 +63,10 @@ import "../styles/buttons.css";
     .selection {
         border: solid 2px rgba(var(--color-primary), 1);
         padding: 20px;
+        margin-bottom: 20px;
+    }
+    .selection:hover {
+        cursor: pointer;
     }
     .selected {
         border-color: rgba(var(--color-secondary), 1);
@@ -64,30 +75,39 @@ import "../styles/buttons.css";
         display: none;
     }
     .display {
-        display: block;
+        display: block !important;
+    }
+    .button {
+        margin: 20px;
+    }
+    #stepNav {
+        text-align: center;
     }
 </style>
 
 <script defer>
-let currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
 const steps = document.querySelectorAll(".step");
 const navButtons = document.querySelectorAll("[data-step]");
 
+const prevButton = document.querySelector("#prevBtn");
+const nextButton = document.querySelector("#nextBtn");
+
+let currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
 function showTab(n) {
   // This function will display the specified tab of the form ...
-  steps[n].classList.add("display");
+  steps[n].style.display = "block"
   // ... and fix the Previous/Next buttons:
   if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+    prevButton.style.display = "none";
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+    prevButton.style.display = "inline";
   }
   if (n == (steps.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    nextButton.innerHTML = "Submit";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    nextButton.innerHTML = "Next ->";
   }
 }
 
@@ -96,29 +116,11 @@ navButtons.forEach(button => {
         // Hide the current tab:
         steps[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
-        currentTab = currentTab + button.dataset.step;
+        currentTab += parseInt(button.dataset.step);
         // Display the correct tab:
         showTab(currentTab);
     })
 })
-
-function changeStep(n) {
-    // This function will figure out which tab to display
-  // Exit the function if any field in the current tab is invalid:
-  //if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  steps[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form... :
-  if (currentTab >= steps.length) {
-    //...the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
 </script>
 
 <script src="../scripts/estimator.js"></script>

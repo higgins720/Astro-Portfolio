@@ -171,7 +171,6 @@ a:active {
 .visible-small, .visible-medium, .visible-large {
     display: block;
 }
-
 @media (min-width: 640px) {
     .hidden-small {
         display: block;

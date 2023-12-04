@@ -8,19 +8,12 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Chrome Dog">
 	<div id="container" class="flex flex-column justify-center">
 		<div class="flex flex-column flex-align-center">
-			<!-- <Image 
-				src="/logos/ChromeDog_Logo-Text-DM-Neon-Animated.svg" 
-				srcset=""
-				width="400" height="450" 
-				alt="Chrome Dog Logo" 
-				id="logo"
-			/> -->
 			<picture id="logoDisplay">
-				<source srcset="/logos/ChromeDog_Logo-Text-DM-Neon-Animated.svg" media="(prefers-color-scheme: dark)" />
-				<source srcset="/logos/ChromeDog_Logo-Text-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+				<source srcset="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" media="(prefers-color-scheme: dark)" />
+				<source srcset="/logos/AlphaChrome_Logo-Icon-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
 				<img decoding="async" id="logo" src="/logos/ChromeDog_Logo-Text-LM.svg" width="400" height="450" />
 			</picture>
-			<h1 class="text-h2 text-align-center">Web Development & Design</h1>
+			<h1 class="text-align-center"><span class="text-h1 heading-medium">Alpha Chrome</span> <br /><span class="text-h2 text-color-primary">Web Design & Development</span></h1>
 			<a href="/contact" class="button button-default">Contact Me -></a>
 		</div>
 	</div>
@@ -48,5 +41,8 @@ import Layout from "../layouts/Layout.astro";
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+	}
+	.text-color-primary {
+		color: rgb(var(--color-primary));
 	}
 </style>
