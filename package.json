@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@botpoison/browser": "^0.1.30",
+    "@fontsource-variable/roboto-mono": "^5.0.17",
+    "@fontsource/aldrich": "^5.0.18",
+    "@fontsource/roboto-mono": "^5.0.16",
     "astro": "^3.5.5",
     "astro-icon": "^0.8.1",
     "axios": "^1.6.1"

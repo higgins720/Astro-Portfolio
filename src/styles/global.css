@@ -1,36 +1,34 @@
-@font-face {
-    font-family: 'Roboto Mono';
-    src: url('/fonts/RobotoMono-VariableFont_wght.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('/fonts/SpaceMono-Regular') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
+/* @font-face {
     font-family: 'FixedSysExcelsior';
     src: url('/fonts/FIXEDSYS-EXCELSIOR_3.01.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
+
+/* 
+
+>>> Brand Color Reference <<<
+
+Light Blurple: rgb(98, 123, 255)
+Goth Purple: rgb(173, 97, 255)
+Near Black: rgb(32, 35, 51)
+Grey AF: rgb(119, 125, 153)
+Near White: rgb(232, 234, 240)
+
+*/
 
 :root {
-    --color-primary: 30, 30, 30;
-    --color-secondary: 191, 89, 254;
-    --color-emphasis: 30, 30, 30;
-    --color-muted: 160, 160, 160;
+    --color-primary: 98, 123, 255;
+    /*--color-secondary: 191, 89, 254;*/
+    --color-secondary: 173, 97, 255;
+    --color-emphasis: 32, 35, 51;
+    --color-base: 119, 125, 153;
+    --color-muted: 232, 234, 240;
     --color-background-muted: 225, 225, 225;
     --color-background: 255, 255, 255;
 
-    --accent: 0, 212, 255;
+    --accent: 98, 123, 255;
     --accent-hover: #b5f3ff;
     --accent-active: #00a2cc;
 
@@ -39,22 +37,21 @@
     --link-active: 120, 120, 120;
 
     --element-glow: #0066ff;
-    --text-emphasis: #000000;
     --text-muted: 100, 100, 100;
     --text-body: #3c3c3c;
     --glow: #9E00FF;
     --dark-background: 0, 0, 0;
     --dark-background-secondary: 175, 175, 175;
     --border-muted: #646464;
-    --heading-font: 'Space Mono', monospace;
+    --heading-font: 'Aldrich', sans-serif;
     --body-font: 'Roboto Mono', monospace;
-    --mono-font: 'FixedSysExcelsior', Consolas, monospace;
+    --mono-font: Consolas, monospace;
 
     --accent-gradient: linear-gradient(10deg, rgba(255,255,255, 0.2), rgba(255,255,255, 0.8) 100%);
-    --accent-gradient-secondary: linear-gradient(45deg, var(--glow), var(--element-glow) 30%);
+    --accent-gradient-secondary: linear-gradient(45deg, rgb(var(--color-primary)), rgb(var(--color-secondary)) 30%);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --color-primary: 98, 123, 255;
         --color-secondary: 191, 89, 254;
@@ -68,7 +65,21 @@
         --dark-background: 0, 0, 0;
         --dark-background-secondary: 0, 24, 52;
     }
-}
+    html {
+        background-color: rgba(var(--color-background));
+        color: rgb(199, 199, 199);
+    }
+    p {
+        color: rgba(255,255,255,0.6);
+    }
+    h1,h2,h3,h4,h5,h6 {
+        color: white;
+    }
+    svg {
+        fill: #cecece;
+    }
+} */
+
 html {
     font-family: var(--body-font);
     font-weight: 400;
@@ -85,9 +96,10 @@ code {
 }
 h1,.text-h1,h2,.text-h2,h3,.text-h3,h4,.text-h4,h5,.text-h5,h6,.text-h6 {
     font-family: var(--heading-font);
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--text-emphasis);
+    color: rgb(var(--color-emphasis));
 }
 h1, .text-h1 {
     font-size: 2.75rem;
@@ -145,15 +157,17 @@ h6, .text-h6 {
     margin: 0;
 }
 p {
-    color: rgba(0,0,0,0.5);
+    color: rgb(var(--color-base));
 }
-
 a {
-    color: rgb(var(--link));
+    color: rgb(var(--color-primary));
     text-decoration: none;
 }
+strong {
+    color: rgb(var(--color-emphasis));
+}
 a:hover {
-    color: rgb(var(--link-hover));
+    color: rgba(var(--color-primary), 0.66);
 }
 a:active {
     color: rgb(var(--link-active));
@@ -196,22 +210,6 @@ a:active {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        /* background: linear-gradient(135deg, rgba(var(--color-background),0.9) 0%, rgba(var(--color-background),1) 100%); */
-        background-color: rgba(var(--color-background));
-        color: rgb(199, 199, 199);
-    }
-    p {
-        color: rgba(255,255,255,0.6);
-    }
-    h1,h2,h3,h4,h5,h6 {
-        color: white;
-    }
-    svg {
-        fill: #cecece;
-    }
-}
 .align-left {
     float: left;
     margin: 0 1rem 1rem 0;

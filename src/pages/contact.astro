@@ -9,7 +9,7 @@ import "../styles/buttons.css"
 
 <Layout title="Contact Me">
     <main>
-            <h1>Contact <span class="text-color-primary">Alpha Chrome</span></h1>
+            <h1>Contact <span class="text-color-primary" style="white-space: nowrap;">Alpha Chrome</span></h1>
             <form id="contactForm" class="contact-form" method="POST" action="https://submit-form.com/FgccWuMw" data-botpoison-public-key="pk_456b13f7-f835-443c-8468-d6d289624189">
                 <div>
                     <label for="name">Name</label>
@@ -56,5 +56,8 @@ import "../styles/buttons.css"
     }
     .text-color-primary {
         color: rgba(var(--color-primary));
+    }
+    h1 {
+        text-align: center;
     }
 </style>

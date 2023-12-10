@@ -4,11 +4,11 @@
 .fill {
     fill: #EDEDED;
 }
-@media(prefers-color-scheme: dark) {
+<!-- @media(prefers-color-scheme: dark) {
     .fill {
         fill: #627BFF;
     }
-}
+} -->
 </style>
 </defs>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M88 136L66.5 132L59 136L38.5 102L40.5 98L37 88.5L21 98L0 35.5L30 0.5L48 9.5L88 0.5L128 9.5L146 0.5L176 35.5L155 98L139 88.5L135.5 98L137.5 102L117 136L109.5 132L88 136Z" fill="#303030"/>

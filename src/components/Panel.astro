@@ -35,8 +35,9 @@ const { image, href, title, meta, body, target, style } = Astro.props;
 <style>
 :root {
     --notchSize: 18px;
-    --transition-delay: 0.1s;
+    --transition-delay: 0.2s;
 }
+/* Defaults */
 #Panel {
     position: relative;
     padding: 1rem;
@@ -52,46 +53,35 @@ const { image, href, title, meta, body, target, style } = Astro.props;
       0% calc(100% - var(--notchSize))
     );
 }
-.primary {
-    background: rgba(var(--color-primary), 0.25);
-    transition: background-color var(--transition-delay);
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
-.primary:hover {
-    background: rgb(var(--color-secondary));
+#Meta {
+    text-transform: uppercase;
 }
-.secondary {
-    /* border: solid 1px rgb(var(--color-primary)); */
-    background: rgb(var(--color-primary));
-    transition: background-color var(--transition-delay);
+#Body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
-.secondary:before {
-    --border-width: 2px;
-    --inner-size: calc(var(--border-width) * 2);
-    content: '';
-    position: absolute;
-    top: var(--border-width);
-    left: var(--border-width);
-    width: calc(100% - var(--inner-size));
-    height: calc(100% - var(--inner-size));
-    background: rgb(var(--color-background));
-    clip-path: 
-    polygon(
-      0% 0%, 
-      var(--notchSize) 0%, 
-      calc(100% - var(--notchSize)) 0%, 
-      100% var(--notchSize), 
-      100% calc(100% - var(--notchSize)), 
-      100% 100%, 
-      var(--notchSize) 100%, 
-      0% calc(100% - var(--notchSize))
-    );
+#Meta, .panel-cta {
+    font-family: var(--mono-font);
+    text-transform: uppercase;
 }
-.secondary:hover {
-    background: rgb(var(--color-secondary));
+.panel-cta {
+    align-self: flex-end;
+    font-size: 1.3rem;
+    transition: color 0.1s;
+    line-height: 2rem;
 }
-.secondary #Body {
-    z-index: 1;
+p {
+    margin-bottom: 2.5rem;
 }
+/* End Defaults */
+
 /* Image */
 .image-container {
     position: relative;
@@ -120,53 +110,14 @@ const { image, href, title, meta, body, target, style } = Astro.props;
         0 100%
     );
     height: auto;
-}
-.primary #panelImage, .secondary #panelImage {
     transition: filter var(--transition-delay);
 }
-.primary:hover #panelImage, .secondary:hover #panelImage {
+#Panel:hover #panelImage {
     filter: opacity(0.7);
 }
 /* End Image */
-.primary .panel-title, .primary .panel-cta{
-    color: rgba(0, 0, 0, 0.8);
-}
-.secondary .panel-title, .secondary .panel-cta {
-    color: rgba(var(--color-primary));
-}
-.secondary:hover .panel-title, .secondary:hover .panel-cta {
-    color: rgba(var(--color-secondary));
-}
-.panel-title {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-}
-#Meta {
-    text-transform: uppercase;
-}
-.primary p, .primary #Meta {
-    color: rgba(255, 255, 255, 0.5);
-}
-#Body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
-#Meta, .panel-cta {
-    font-family: var(--mono-font);
-    text-transform: uppercase;
-}
-.panel-cta {
-    align-self: flex-end;
-    font-size: 1.3rem;
-    transition: color 0.1s;
-    line-height: 2rem;
-}
-p {
-    margin-bottom: 2.5rem;
-}
+
+/* Accent */
 #CornerAccent {
     width: 90px;
     height: auto;
@@ -174,13 +125,80 @@ p {
     bottom: 0px;
     left: 0px;
 }
-.secondary #CornerAccent path, .secondary #CornerAccent rect {
-    fill: rgba(255, 255, 255, 0.2);
-}
+/* End Accent */
 
-@media(prefers-color-scheme: dark) {
+/* Primary */
+.primary {
+    background: rgb(var(--color-emphasis));
+    transition: background-color var(--transition-delay);
+}
+.primary:hover {
+    background: rgb(var(--color-primary));
+}
+.primary #CornerAccent path, .primary #CornerAccent rect {
+    fill: rgba(var(--color-muted), 0.5);
+}
+.primary .panel-title, .primary .panel-cta{
+    color: rgb(var(--color-muted));
+}
+.primary p, .primary #Meta {
+    color: rgba(var(--color-muted), 0.5);
+}
+/* End Primary */
+/* Secondary */
+.secondary {
+    /* border: solid 1px rgb(var(--color-primary)); */
+    background: rgb(var(--color-base));
+    transition: background-color var(--transition-delay);
+}
+.secondary:before {
+    --border-width: 3px;
+    --inner-size: calc(var(--border-width) * 2);
+    content: '';
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+    width: calc(100% - var(--inner-size));
+    height: calc(100% - var(--inner-size));
+    background: rgb(var(--color-muted));
+    clip-path: 
+    polygon(
+      0% 0%, 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      100% 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+    );
+}
+.secondary:hover {
+    background: rgb(var(--color-primary));
+}
+.secondary #Body {
+    z-index: 1;
+}
+.secondary .panel-title, .secondary .panel-cta {
+    color: rgba(var(--color-emphasis));
+}
+.secondary:hover .panel-title, .secondary:hover .panel-cta {
+    color: rgba(var(--color-primary));
+}
+.secondary:hover::before{
+    background-color: rgba(var(--color-muted), 0.9);
+}
+.secondary p, .secondary #Meta {
+    color: rgba(var(--color-emphasis), 0.5);
+}
+.secondary #CornerAccent path, .secondary #CornerAccent rect {
+    fill: rgba(var(--color-emphasis), 0.5);
+}
+/* End Secondary */
+
+/* @media(prefers-color-scheme: dark) {
     .primary p, .primary #Meta {
         color: rgba(0, 0, 0, 0.5);
     }
-}
+} */
 </style>

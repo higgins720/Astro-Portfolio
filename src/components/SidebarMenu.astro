@@ -27,11 +27,11 @@ import {Image} from 'astro:assets';
                 .opened #rv-3 {
                     transform: translate(0, -200%)  rotate(-135deg)
                 }
-				@media(prefers-color-scheme: dark) {
+				/* @media(prefers-color-scheme: dark) {
 					.rect-vect {
 						fill: #e4e4e4;
 					}
-				}
+				} */
               </style>
             </defs>
             <g id="Layer_1-2" data-name="Layer 1">
@@ -43,7 +43,7 @@ import {Image} from 'astro:assets';
 	</div>
 	<div id="label">Menu</div>
     <div id="MenuElements">
-		<Image src="/logos/ChromeDog_Logo-Icon.svg" width="120" height="120" alt="Chrome Dog Logo" />
+		<Image src="/logos/AlphaChrome_Logo-Icon.svg" width="120" height="120" alt="Chrome Dog Logo" />
 		<VerticalNav />
 	</div>
 </div>
@@ -65,7 +65,7 @@ import {Image} from 'astro:assets';
 		left: -340px;
 		transition: all 0.2s;
 		z-index: 999;
-        background-color: rgb(var(--color-background-muted));
+        background-color: rgb(var(--color-muted));
 		background-image: url("/graphics/ChromeDog_Logo-Lined-Accent.svg");
 		background-repeat: no-repeat;
 		background-position: -300px 20%;
@@ -94,8 +94,9 @@ import {Image} from 'astro:assets';
 		rotate: 90deg;
 		text-transform: uppercase;
 		font-family: var(--mono-font);
-		color: rgb(var(--color-muted));
+		color: rgba(var(--color-base));
 		font-size: 1.5rem;
+		letter-spacing: 0.1em;
 	}
 	#MenuElements {
 		display: flex;

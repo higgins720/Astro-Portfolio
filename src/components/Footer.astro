@@ -1,6 +1,8 @@
 ---
 import info from '../../info.json';
 import {Icon} from 'astro-icon';
+
+const iconSize = '24px';
 ---
 
 <footer>
@@ -12,16 +14,16 @@ import {Icon} from 'astro-icon';
                 Email: <a href={info.contact.email}>{info.contact.email_formatted}</a>
             </p> -->
             <div id="socialMediaLinks" class="flex-2 text-align-center">
-                <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width="30px" height="30px"></a>
-                <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width="30px" height="30px"></a>
-                <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width="30px" height="30px"></a>
-                <a href={info.links.codewars} target="_blank" rel="nofollow"><Icon name="simple-icons:codewars" width="30px" height="30px"></a>
+                <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width={iconSize} height={iconSize}></a>
+                <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width={iconSize} height={iconSize}></a>
+                <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width={iconSize} height={iconSize}></a>
+                <a href={info.links.codewars} target="_blank" rel="nofollow"><Icon name="simple-icons:codewars" width={iconSize} height={iconSize}></a>
             </div>
     </div>
     <div class="text-align-center">
         <p>
             Website by Jesse Higgins | <span style="white-space: nowrap;">Built with <a href="https://astro.build/" target="_blank" style="display: inline-block; position: relative; overflow: hidden; line-height: 0rem; top: 5px;">
-                <img src="/logos/astro-logo-chameleon.svg" width="60px" height="20px" alt="Astro Logo"/>
+                <img src="/logos/astro-logo-dark.svg" width="60px" height="20px" alt="Astro Logo"/>
             </a>
             </span>
         </p>

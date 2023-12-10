@@ -7,8 +7,10 @@
     position: relative;
     padding: 0.5em 2.5em;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-family: var(--mono-font);
+    font-size: 1rem;
+    font-family: var(--heading-font);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
     cursor: pointer;
     clip-path: 
@@ -23,16 +25,18 @@
       0% calc(100% - var(--notchSize))
     );
     border: 0px;
+    
+    transition: 0.1s all;
 }
 
 .button-default {
-    color: rgb(var(--color-primary));
-    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-emphasis));
+    background-color: rgb(var(--color-emphasis));
 }
 
 .button-default:hover {
-    color: rgb(var(--color-secondary));
-    background-color: rgb(var(--color-secondary));
+    color: rgb(var(--color-primary));
+    background-color: rgb(var(--color-primary));
 }
 
 .button-default:before {
@@ -62,19 +66,19 @@
 }
 
 .button-primary {
-    color: rgba(0,0,0,0.8);
+    color: rgb(var(--color-emphasis));
     background-color: rgb(var(--color-primary));
 }
 .button-primary:hover {
-    color: rgba(0,0,0,0.8);
-    background-color: rgb(var(--color-secondary));
+    color: rgb(var(--color-emphasis));
+    background-color: rgba(var(--color-primary),0.66);
 }
 
 .button-secondary {
-    color: rgba(0,0,0,0.8);
+    color: rgb(var(--color-emphasis));
     background-color: rgb(var(--color-secondary));
 }
 .button-secondary:hover {
-    color: rgba(0,0,0,0.8);
-    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-emphasis));
+    background-color: rgba(var(--color-secondary),0.66);
 }
