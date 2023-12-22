@@ -9,6 +9,10 @@
             "Path": "/about"
         },
         {
+            "Name": "Services",
+            "Path": "/services"
+        },
+        {
             "Name": "Projects",
             "Path": "/projects"
         },
