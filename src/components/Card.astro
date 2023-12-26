@@ -1,28 +1,59 @@
 ---
+
 export interface Props {
+	image: string;
 	title: string;
-	meta: string;
 	body: string;
-	href: string;
-	target: string;
 }
 
-const { href, title, meta, body, target } = Astro.props;
+const { image, title, body } = Astro.props;
+
+import { Image } from "astro:assets"
 ---
 
-<li class="link-card">
-	<a href={href} target={target}>
-		<h3>
-			{title} <span> &rarr;</span>
-		</h3>
-		<span class="meta">{meta}</span>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+<div id="Card">
+	<div class="image">
+		<Image src={image} width="300" height="300" alt={title} />
+	</div>
+	<div class="content">
+		<h2 class="title">{title}</h2>
+		<div class="divider">
+			<svg width="641" height="6" viewBox="0 0 641 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 5.5V0H640.5V2H117L113.5 5.5H0Z" fill="rgb(var(--color-base))"/>
+			</svg>
+		</div>
+		<p class="body">{body}</p>
+	</div>
+</div>
 <style>
-	.link-card {
+#Card {
+	display: grid;
+	grid-template-columns: 25% auto;
+	grid-column-gap: 3ch;
+	align-content: center;
+	margin: 40px 0;
+}
+.image {
+	overflow: hidden;
+}
+.image img { 
+	max-width: 100%;
+	height: auto;
+}
+.content {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	overflow: hidden;
+}
+.title, .body {
+	margin: 0px;
+}
+.divider {
+	margin: 10px 0;
+}
+
+	/* .link-card {
 		list-style: none;
 		display: flex;
 		padding: 0.25rem;
@@ -76,5 +107,5 @@ const { href, title, meta, body, target } = Astro.props;
 		.meta {
 			color: rgba(255,255,255,0.5);
 		}
-	}
+	} */
 </style>
