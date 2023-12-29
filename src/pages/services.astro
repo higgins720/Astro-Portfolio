@@ -9,54 +9,64 @@ const currentYear = new Date().getFullYear();
 
 <Layout title="Services">
     <main>
-        <section class="hero">
-            <h1 class="heading-medium" style="margin-top: 0px;">Online Services</h1>
-            <p>
-                We specialize in creating digital experiences that put brands in the best light possible and help everyone reach their goals. We hold ourselves to a high standard, paying close attention to the nuances of performance and optimization.
-            </p>
-            <p>
-                We're looking to do business with individuals, companies, non-profits, agencies, or anyone who values design and development integrity. Here's a list of services we offer.
-            </p>
+        <section class="hero background-1">
+            <div class="side-borders">
+                <h1 class="heading-medium" style="margin-top: 0px;">Online Services</h1>
+                <p class="max-width-small">
+                    We specialize in creating digital experiences that put brands in the best light possible and help everyone reach their goals. We hold ourselves to a high standard, paying close attention to the nuances of performance and optimization.
+                </p>
+                <p class="max-width-small">
+                    We're looking to do business with individuals, companies, non-profits, agencies, or anyone who values design and development integrity. Here's a list of services we offer.
+                </p>
+            </div>
         </section>
         <section>
-            <Card
-                image="/graphics/Icon_SquareGrid-WebDesign.svg" 
-                title="Web Design"
-                body="What's the difference between a good design and a bad design? It can be subjective in some ways, but without getting deep into the philosophy of design and aesthetics, visual and functional design can seriously influence how people feel."
-            />
-            <p>
-                If you have a well-designed site, users will likely feel good about your brand, as opposed to it being poorly designed or out of date where they might get a false impression about the quality of your work. So reach out to us anytime to discuss a new Web Design project that can put your business in the best light possible.
-            </p>
+            <div class="max-width-medium">
+                <Card
+                    image="/graphics/Icon_SquareGrid-WebDesign.svg"
+                    title="Web Design"
+                    body="What's the difference between a good design and a bad design? It can be subjective in some ways, but without getting deep into the philosophy of design and aesthetics, visual and functional design can seriously influence how people feel."
+                />
+                <p class="max-width-small">
+                    If you have a well-designed site, users will likely feel good about your brand, as opposed to it being poorly designed or out of date where they might get a false impression about the quality of your work. So reach out to us anytime to discuss a new Web Design project that can put your business in the best light possible.
+                </p>
+            </div>
         </section>
         <section>
-            <Card
-                image="/graphics/Icon_SquareGrid-WebDevelopment.svg" 
-                title="Web Development"
-                body="We combine solid design with seamless functionality and performance to make high-quality websites that everyone loves."
-            />
-            <p>
-                It's not just about a pretty interface; it's about how well your site works, and how well it engages your audience. Whether it's building responsive layouts, optimizing performance, ensuring robust functionality, or implementing on-page SEO, we excel in crafting websites that do everything they should in {currentYear}.
-            </p>
+            <div class="max-width-medium">
+                <Card
+                    image="/graphics/Icon_SquareGrid-WebDevelopment.svg"
+                    title="Web Development"
+                    body="We combine solid design with seamless functionality and performance to make high-quality websites that everyone loves."
+                />
+                <p class="max-width-small">
+                    It's not just about a pretty interface; it's about how well your site works, and how well it engages your audience. Whether it's building responsive layouts, optimizing performance, ensuring robust functionality, or implementing on-page SEO, we excel in crafting websites that do everything they should in {currentYear}.
+                </p>
+            </div>
         </section>
         <section>
-            <Card
-                image="/graphics/Icon_SquareGrid-Internet.svg" 
-                title="Web Hosting"
-                body="Alpha Chrome's website hosting is a reliable and comprehensive solution for anyone seeking a hassle-free online presence. "
-            />
-            <p>
-                We run updates on a regular basis to keep it functional up to date with constantly changing web standards. We can offer a free hour of update requests, and a discounted rate for additional hours.
-            </p>
+            <div class="max-width-medium">
+                <Card
+                    image="/graphics/Icon_SquareGrid-Internet.svg"
+                    title="Web Hosting"
+                    body="Alpha Chrome's website hosting is a reliable and comprehensive solution for anyone seeking a hassle-free online presence. "
+                />
+                <p class="max-width-small">
+                    We run updates on a regular basis to keep it functional up to date with constantly changing web standards. We can offer a free hour of update requests, and a discounted rate for additional hours.
+                </p>
+            </div>
         </section>
         <section>
-            <Card
-                image="/graphics/Icon_SquareGrid-GraphicDesign.svg" 
-                title="Logo & Brand Design"
-                body="Your brand is more than just your logo. Your brand is all about how people feel about your company, and while brand development goes deeper, graphic design plays an important role."
-            />
-            <p>
-                We can help you get started by creating a brand design guide to unify your brand style across all digital and print media created for your business.
-            </p>
+            <div class="max-width-medium">
+                <Card
+                    image="/graphics/Icon_SquareGrid-GraphicDesign.svg"
+                    title="Logo & Brand Design"
+                    body="Your brand is more than just your logo. Your brand is all about how people feel about your company, and while brand development goes deeper, graphic design plays an important role."
+                />
+                <p class="max-width-small">
+                    We can help you get started by creating a brand design guide to unify your brand style across all digital and print media created for your business.
+                </p>
+            </div>
         </section>
     </main>
 </Layout>
@@ -73,9 +83,7 @@ const currentYear = new Date().getFullYear();
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-    p {
-        max-width: 600px;
-        margin: 0 auto;
+        background-color: rgb(var(--color-muted));
+        margin-top: 0;
     }
 </style>

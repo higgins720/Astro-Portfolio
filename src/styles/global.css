@@ -185,6 +185,65 @@ a:active {
 .visible-small, .visible-medium, .visible-large {
     display: block;
 }
+
+section {
+    padding: 0 40px;
+    overflow: hidden;
+}
+
+.background-0 {}
+
+.background-1 {
+    background-image: url('/graphics/Background-DiagonalShade-v0.svg');
+    background-size: cover;
+}
+
+.side-borders {
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+.side-borders::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: -120px;
+    height: calc(100% + 120px);
+    width: 50px;
+    background-image: url('/graphics/SideBorder-Left.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.side-borders::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -60px;
+    right: -120px;
+    height: calc(100% + 120px);
+    width: 50px;
+    background-image: url('/graphics/SideBorder-Right.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.max-width-small, .max-width-medium, .max-width-large {
+    display: block;
+    margin: 0 auto;
+}
+.max-width-small {
+    max-width: 600px;
+}
+.max-width-medium {
+    max-width: 900px;
+}
+.max-width-large {
+    max-width: 1200px;
+}
+
 @media (min-width: 640px) {
     .hidden-small {
         display: block;
