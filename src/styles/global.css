@@ -25,8 +25,7 @@ Near White: rgb(232, 234, 240)
     --color-emphasis: 32, 35, 51;
     --color-base: 119, 125, 153;
     --color-muted: 232, 234, 240;
-    --color-background-muted: 225, 225, 225;
-    --color-background: 255, 255, 255;
+    --color-background: 254, 254, 254;
 
     --accent: 98, 123, 255;
     --accent-hover: #b5f3ff;
@@ -189,13 +188,23 @@ a:active {
 section {
     padding: 0 40px;
     overflow: hidden;
+    margin-top: 40px;
 }
-
-.background-0 {}
-
+section:nth-last-child(1) {
+    margin-bottom: 40px;
+}
+.background-0 {
+    background-image: url('/graphics/Background-VerticalLines-v0.svg');
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 .background-1 {
+    background-color: rgb(var(--color-muted));
     background-image: url('/graphics/Background-DiagonalShade-v0.svg');
     background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .side-borders {
@@ -293,8 +302,8 @@ section {
 .flex-column {
     flex-direction: column;
 }
-.flex-align-center {
-    align-items: center;
+.flex-grow {
+    flex-grow: 1;
 }
 .text-align-center {
     text-align: center;

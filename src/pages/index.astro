@@ -6,28 +6,26 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Alpha Chrome">
-	<div id="container" class="flex flex-column justify-center">
-		<div class="flex flex-column flex-align-center">
-			<!-- <picture id="logoDisplay">
-				<source srcset="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" media="(prefers-color-scheme: dark)" />
-				<source srcset="/logos/AlphaChrome_Logo-Icon-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-				<img decoding="async" id="logo" src="/logos/ChromeDog_Logo-Text-LM.svg" width="400" height="450" />
-			</picture> -->
-			<img src="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" width="400px" height="310px" alt="Alpha Chrome Dog Icon" style="margin-bottom: 40px;"/>
-			<img src="/logos/AlphaChrome_Logo-Text-Stacked.svg" width="400px" height="150px" alt="Alpha Chrome"/>
-			<h1 class="text-align-center"><span class="text-h2 text-color-primary">Web Design & Development</span></h1>
-			<a href="/contact" class="button button-default">Contact Me -></a>
+	<section id="container" class="flex flex-column flex-grow background-0 justify-center">
+		<div class="flex flex-column">
+			<div class="flex flex-column flex-align-center">
+				<!-- <picture id="logoDisplay">
+					<source srcset="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" media="(prefers-color-scheme: dark)" />
+					<source srcset="/logos/AlphaChrome_Logo-Icon-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+					<img decoding="async" id="logo" src="/logos/ChromeDog_Logo-Text-LM.svg" width="400" height="450" />
+				</picture> -->
+				<img src="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" width="400px" height="310px" alt="Alpha Chrome Dog Icon" style="margin-bottom: 40px;"/>
+				<img src="/logos/AlphaChrome_Logo-Text-Stacked.svg" width="400px" height="150px" alt="Alpha Chrome"/>
+				<h1 class="text-align-center"><span class="text-h2 text-color-primary">Web Design & Development</span></h1>
+				<a href="/contact" class="button button-default">Contact Me -></a>
+			</div>
 		</div>
-	</div>
+	</section>
 </Layout>
 
 <style>
 	#container {
-		flex-grow: 1;
-		overflow: hidden;
-		align-items: center;
-		max-width: 90%;
-		margin: 0 auto;
+		margin-top: 0px;
 	}
 	#logo {
 		max-width: 100%;

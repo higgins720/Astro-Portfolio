@@ -5,24 +5,26 @@ import ProjectData from '../../projectdata.json';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-        <h1 class="heading-medium">Website <span class="text-gradient">Projects</span></h1>
-		<p>Here's a list of some of the websites I designed and built.</p>
-		<div class="grid">
-			{ProjectData.Websites.map(
-				Website => 
-					<Panel
-						title={Website.Title}
-						meta={Website.Date}
-						body={Website.ShortDescription}
-						href={Website.Page}
-						image={Website.ScreenShot}
-						target=""
-						style="secondary"
-					/>
-				)}
-		</div>
-	</main>
+        <section style="margin-bottom: 40px;">
+        	<div class="max-width-large">
+        		<h1 class="heading-medium">Website <span class="text-gradient">Projects</span></h1>
+        				<p>Here's a list of some of the websites I designed and built.</p>
+        				<div class="grid">
+        					{ProjectData.Websites.map(
+        						Website => 
+        							<Panel
+        								title={Website.Title}
+        								meta={Website.Date}
+        								body={Website.ShortDescription}
+        								href={Website.Page}
+        								image={Website.ScreenShot}
+        								target=""
+        								style="secondary"
+        							/>
+        						)}
+        				</div>
+        	</div>
+        </section>
 </Layout>
 
 <style is:global>
@@ -37,12 +39,13 @@ import ProjectData from '../../projectdata.json';
 	}
 	@media (min-width: 640px) {
 		.grid {
-			display: grid;
     		grid-template-columns: 1fr 1fr;
 		}
 	}
-	/* Scroll Animation */
 	@media (min-width: 960px) {
+		.grid {
+    		grid-template-columns: 1fr 1fr 1fr;
+		}
 		.secondary:hover #panelImage {
 			position: absolute;
 			animation: auto-scroll linear 8s infinite;
@@ -60,7 +63,6 @@ import ProjectData from '../../projectdata.json';
 			transform: translateY(0%);
 		}
 	}
-	/* Scroll Animation */
 	.text-gradient {
 		background-image: var(--accent-gradient-secondary);
 		-webkit-background-clip: text;
