@@ -14,8 +14,8 @@ import Layout from "../layouts/Layout.astro";
 					<source srcset="/logos/AlphaChrome_Logo-Icon-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
 					<img decoding="async" id="logo" src="/logos/ChromeDog_Logo-Text-LM.svg" width="400" height="450" />
 				</picture> -->
-				<img src="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" width="400px" height="310px" alt="Alpha Chrome Dog Icon" style="margin-bottom: 40px;"/>
-				<img src="/logos/AlphaChrome_Logo-Text-Stacked.svg" width="400px" height="150px" alt="Alpha Chrome"/>
+				<img src="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" width="400px" height="310px" alt="Alpha Chrome Dog Icon" class="contain" style="margin-bottom: 40px;"/>
+				<img src="/logos/AlphaChrome_Logo-Text-Stacked.svg" width="400px" height="150px" alt="Alpha Chrome" class="contain" />
 				<h1 class="text-align-center"><span class="text-h2 text-color-primary">Web Design & Development</span></h1>
 				<a href="/contact" class="button button-default">Contact Me -></a>
 			</div>
@@ -26,6 +26,7 @@ import Layout from "../layouts/Layout.astro";
 <style>
 	#container {
 		margin-top: 0px;
+		overflow-x: clip;
 	}
 	#logo {
 		max-width: 100%;
@@ -44,5 +45,9 @@ import Layout from "../layouts/Layout.astro";
 	}
 	.text-color-primary {
 		color: rgb(var(--color-primary));
+	}
+	.contain {
+		max-width: 100%;
+		height: auto;
 	}
 </style>
