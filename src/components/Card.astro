@@ -3,7 +3,6 @@
 export interface Props {
 	image: string;
 	title: string;
-	body: string;
 }
 
 const { image, title, body } = Astro.props;
@@ -22,7 +21,9 @@ import { Image } from "astro:assets"
 			<path d="M0 5.5V0H640.5V2H117L113.5 5.5H0Z" fill="rgb(var(--color-base))"/>
 			</svg>
 		</div>
-		<p class="body">{body}</p>
+		<div class="body">
+			<slot />
+		</div>
 	</div>
 </div>
 <style>
