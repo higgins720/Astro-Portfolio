@@ -3,6 +3,8 @@ import info from "../../info.json";
 import Layout from "../layouts/Layout.astro";
 import TreeList from "../components/TreeList.astro";
 import { Image } from "astro:assets"
+import ProfilePicture from "../images/Profile_JesseHiggins_DevelopmentCenter_TotallyNotGenerated.webp";
+
 ---
 
 <Layout title="About Jesse Higgins">
@@ -10,7 +12,7 @@ import { Image } from "astro:assets"
         <section>
             <div id="hero" class="max-width-medium grid-split-3-5 flex-align-center">
                 <div id="profilePicture">
-                    <Image src="/JesseHiggins-PrimaryPointOfContact.webp" width="300" height="450" alt="Web Developer Jesse Higgins talking on the phone"/>
+                    <Image src={ProfilePicture} width="300" height="450" alt="Web Developer Jesse Higgins talking on the phone"/>
                     <p class="text-h5">Jesse Higgins - CEO</p>
                 </div>
                 <div>
@@ -43,15 +45,11 @@ import { Image } from "astro:assets"
                 <div class="max-width-small">
                     <h2>Work Experience</h2>
                     <p>
-                        I've been designing, building, and supporting WordPress websites for a wide variety of clients with different needs at CS Design Studios since 2015. I'm very grateful to CS for giving me the opportunity start my career, and I love working with everyone there today.
-                    </p>
-                    <p>
                         I started out at CS with a
-                        focus on Graphic Design using Photoshop and Illustrator, designing
-                        website concepts as well as business cards, flyers, physical mailers, newsletters, posters, billboards, and more. I've even done some motion graphics with Adobe After Effects and video editing with Premier. Eventually I started doing less of that and more website development with Joomla, and later with WordPress.
+                        focus on Graphic Design using Photoshop and Illustrator, designing website concepts as well as business cards, flyers, physical mailers, newsletters, posters, billboards, and more. I've even done some motion graphics with Adobe After Effects and video editing with Premier. Eventually I started doing less of that and more website development with Joomla, and later with WordPress.
                     </p>
                 </div>
-                <Image src="/SaludEvent-JesseConnorBrandon.webp" width="1000" height="600" alt="Jesse, Connor, and Brandon at an event in 2019"/>
+                <!--<Image src="/SaludEvent-JesseConnorBrandon.webp" width="1000" height="600" alt="Jesse, Connor, and Brandon at an event in 2019"/>-->
                 <div class="max-width-small">
                     <h3>WordPress Development</h3>
                     <p>
