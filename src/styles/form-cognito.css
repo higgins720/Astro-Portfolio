@@ -1,0 +1,96 @@
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+.cog-label {
+    display: block;
+    margin-bottom: 0.1rem;
+    font-family: var(--mono-font);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.cog-input input, .cog-input textarea, .cog-picker select {
+    padding: 10px;
+    border: none;
+    font-family: var(--mono-font);
+    font-size: 1.2rem;
+    background-color: rgb(var(--color-background));
+    border: 2px solid rgb(var(--color-muted));
+}
+.contact-form select {
+    width: 100%;
+}
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+.contact-form select>option {
+    display: inline-block;
+    background-color: rgb(var(--color-background));
+    line-height: 2rem;
+    padding: 0.5rem;
+}
+.full-width {
+    grid-column: 1 / 3;
+}
+
+
+.cog-button {
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 2.5em;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--heading-font);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    clip-path: 
+    polygon(
+      0% 0%, 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      100% 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+    );
+    border: 0px;
+    
+    transition: 0.1s all;
+}
+
+.cog-button--primary {
+    background-color: rgb(var(--color-primary));
+
+    &>span .cog-button__text {
+        color: rgb(var(--color-emphasis));
+    }
+}
+
+.cog-button--primary:hover {
+    background-color: rgba(var(--color-primary),0.66);
+    
+    &>span .cog-button__text {
+        color: rgb(var(--color-emphasis));
+    }
+}
+
+@media (max-width: 959px) {
+    .contact-form div {
+        grid-column: 1 / 3;  
+    }
+}
+/* @media (prefers-color-scheme: dark) {
+    .contact-form input, .contact-form textarea, .contact-form select {
+        color: #fff;
+        background-color: rgb(var(--color-background));
+        border: 2px solid rgb(var(--color-muted));
+    }
+    .contact-form select>option {
+        color: #fff;
+    }
+} */

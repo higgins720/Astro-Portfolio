@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css"
-import "../styles/form.css"
+import "../styles/form-cognito.css"
 import "../styles/buttons.css"
 ---
 
@@ -11,7 +11,8 @@ import "../styles/buttons.css"
             <section class="flex flex-column flex-align-center justify-center flex-grow background-0" style="margin-top: 0px;">
                 <div class="max-width-small">
                     <h1>Contact <span class="text-color-primary" style="white-space: nowrap;">Alpha Chrome</span></h1>
-                    <form id="contactForm" class="contact-form" method="POST" action="https://submit-form.com/FgccWuMw" data-botpoison-public-key="pk_456b13f7-f835-443c-8468-d6d289624189">
+                    <script src="https://www.cognitoforms.com/f/seamless.js" data-key="CZ61P35MWUuKHJaMRmZyQQ" data-form="1"></script>
+                    <!--<form id="contactForm" class="contact-form" method="POST" action="https://submit-form.com/FgccWuMw" data-botpoison-public-key="pk_456b13f7-f835-443c-8468-d6d289624189">
                         <div>
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name"placeholder="Name" required="true" />
@@ -41,7 +42,7 @@ import "../styles/buttons.css"
                         <div>
                             <button type="submit" id="submitButton" class="button button-default" data-sitekey="6LfT14MoAAAAAOkh1HJazLGOOTQvd57S46HiDHhf" data-callback="onSubmit">Send -></button>
                         </div>
-                    </form>
+                    </form>-->
                 </div>
             </section>
 </Layout>
