@@ -87,8 +87,8 @@ html {
     line-height: 1.5em;
 }
 body {
-    max-width: 1600px;
-    margin: auto;
+    /* max-width: 1600px; */
+    margin: 0;
 }
 code {
     font-family: var(--mono-font);
