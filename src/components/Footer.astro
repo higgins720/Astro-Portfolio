@@ -33,7 +33,7 @@ const year = new Date().getFullYear();
               )}
           </ul>
         <div class="divider"><img src="/graphics/divider-right.svg" width="300px" height="auto" /></div>
-        <p>Alpha Chrome LLC | Copyright © {year}</p>
+        <p class="copyright">Alpha Chrome LLC | Copyright © {year}</p>
     </div>
   </div>
 </footer>
@@ -50,12 +50,29 @@ const year = new Date().getFullYear();
     footer p {
         margin: 0;
     }
+    .copyright {
+      text-align: center;
+    }
     #footerNav {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: end;
         list-style: none;
         gap: 1rem;
         margin: 0;
+    }
+    .divider {
+      display: none;
+    }
+    @media(min-width: 640px) {
+        #footerNav {
+            display: flex;
+        }
+        .divider {
+            display: block;
+        }
+    .copyright {
+      text-align: right;
+    }
     }
 </style>

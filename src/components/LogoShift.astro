@@ -17,11 +17,14 @@
 
 <style>
   div {
-    display: block;
+    display: flex;
+    justify-content: center;
     position: relative;
   }
   div > img {
     /* opacity: 0.9; */
+    max-width: 90%;
+    height: auto;
   }
   #overLayer {
     position: absolute;
@@ -34,6 +37,9 @@
     display: none;
   }
   @media (min-width: 960px) {
+    div > img {
+      max-width: inherit;
+    }
     #overLayer {
       display: block;
     }

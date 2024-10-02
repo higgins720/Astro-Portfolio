@@ -20,7 +20,7 @@ import LogoShift from "../components/LogoShift.astro";
           width="400px"
           height="40px"
           alt="Alpha Chrome"
-          class="contain"
+          style="max-width: 100%;"
         />
         <h1 class="text-align-center">Web Design & Development</h1>
         <a href="/contact" class="button button-primary">Get a Quote</a>
@@ -43,7 +43,9 @@ import LogoShift from "../components/LogoShift.astro";
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    max-width: 600px;
+    width: 600px;
+    max-width: 100%;
+    overflow: hidden;
     z-index: 1;
   }
   #container {
@@ -56,10 +58,15 @@ import LogoShift from "../components/LogoShift.astro";
     height: auto;
   }
   #hero h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 2.2rem;
     text-transform: uppercase;
     margin: auto;
+  }
+  @media(min-width: 640px) {
+    #hero h1 { 
+      font-size: 2.2rem;
+    }
   }
   #hero p {
     margin: auto;
