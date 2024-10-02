@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import "../styles/form-cognito.css";
+import "../styles/buttons.css";
+---
+
+<!-- <script src="https://unpkg.com/@botpoison/browser" async></script> -->
+<Layout title="Website Intake Form">
+  <section
+    class="flex flex-column flex-align-center justify-center flex-grow"
+    style="margin-top: 0px;"
+  >
+    <div id="formContainer">
+      <!-- <h1 class="color-text-primary">Website Intake Form</h1> -->
+      <script
+        src="https://www.cognitoforms.com/f/seamless.js"
+        data-key="CZ61P35MWUuKHJaMRmZyQQ"
+        data-form="11"></script>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* #reCaptcha {
+        width: 100%;
+    } */
+  /* .text-color-primary {
+        color: rgba(var(--color-primary));
+    } */
+  h1 {
+    text-align: center;
+    /* color: rgba(var(--color-muted)); */
+  }
+  #formContainer {
+    background-color: rgb(var(--color-background));
+    border: 2px solid rgb(var(--color-muted));
+    padding: 2rem;
+  }
+</style>

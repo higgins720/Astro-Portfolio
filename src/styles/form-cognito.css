@@ -79,6 +79,10 @@
     }
 }
 
+section.cog-section {
+  padding: 0;
+}
+
 @media (max-width: 959px) {
     .contact-form div {
         grid-column: 1 / 3;  

@@ -104,7 +104,7 @@ import {Image} from 'astro:assets';
 		flex-grow: 1;
 		justify-content: center;
 	}
-	@media(min-width:640px) {
+	@media(min-width:960px) {
 		#sidebarMenu {
 			--tab-outer-size: 60px;
 			max-width: 440px;
@@ -145,15 +145,15 @@ menuIconEl.onclick = event => {
 
 // For slding out of view on scroll down, and back on scroll up
 // Initial state
-var scrollPos = 0;
+//var scrollPos = 0;
 // adding scroll event
-window.addEventListener('scroll', function(){
-  // detects new state and compares it with the new one
-  if ((document.body.getBoundingClientRect()).top > scrollPos)
-		menuEl.classList.remove('hidden');
-	else
-		menuEl.classList.add('hidden');
-	// saves the new position for iteration.
-	scrollPos = (document.body.getBoundingClientRect()).top;
-});
+// window.addEventListener('scroll', function(){
+//   // detects new state and compares it with the new one
+//   if ((document.body.getBoundingClientRect()).top > scrollPos)
+// 		menuEl.classList.remove('hidden');
+// 	else
+// 		menuEl.classList.add('hidden');
+// 	// saves the new position for iteration.
+// 	scrollPos = (document.body.getBoundingClientRect()).top;
+// });
 </script>

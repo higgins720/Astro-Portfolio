@@ -1,0 +1,142 @@
+<div id="dogIcons">
+  <div id="diColumn">
+    <div class="di-container">
+      <img
+        src="/logos/dog/Logo-Stroke-Blue.svg"
+        width="360px"
+        height="280px"
+        alt="Alpha Chrome dog logo icon"
+      />
+    </div>
+    <div class="di-container">
+      <img
+        src="/logos/dog/Logo-Stroke-Grey.svg"
+        width="360px"
+        height="280px"
+        alt="Alpha Chrome dog logo icon"
+      />
+    </div>
+    <div class="di-container di-center layer-shift">
+      <img
+        src="/logos/dog/Logo-Stroke-Shark.svg"
+        width="360px"
+        height="280px"
+        alt="Alpha Chrome dog logo icon"
+      />
+    </div>
+    <div class="di-container">
+      <img
+        src="/logos/dog/Logo-Stroke-NearBlack.svg"
+        width="360px"
+        height="280px"
+        alt="Alpha Chrome dog logo icon"
+      />
+    </div>
+  </div>
+      <img
+        src="/logos/dog/Logo-NearBlack.svg"
+        width="360px"
+        height="280px"
+        alt="Alpha Chrome dog logo icon"
+        class="di-img-fixed"
+      />
+</div>
+
+<style>
+  #dogIcons {
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: visible;
+  }
+  #diColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 600px;
+    gap: 2rem;
+    position: relative;
+    inset: 50%;
+    translate: -50% -50%;
+    animation: scrolldown 20s linear infinite;
+    opacity: 0.2;
+  }
+  @media(min-width: 960px) {
+    #diColumn {
+      opacity: 1;
+    }
+  }
+  .di-img-fixed {
+    position: absolute;
+    inset: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    opacity: 0.9;
+    scale: 0.9;
+  }
+  .di-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 33%;
+    aspect-ratio: 1/1;
+    background: url("/graphics/Grid-Accent.svg");
+    background-color: rgb(var(--color-background));
+    border: 1px solid rgb(var(--color-muted));
+    background-size: contain;
+  }
+  .di-container img {
+    max-width: 90%;
+    height: auto;
+  }
+  /* .di-container:not(.di-center) img {
+    opacity: 0.1;
+  }
+
+  @media(min-width: 960px) {
+    .di-container:not(.di-center) img {
+      opacity: 0.5;
+    }
+  } */
+
+  @keyframes scrolldown {
+    0% {
+      translate: -50% -100%;
+    }
+    100% {
+      translate: -50% 0%;
+    }
+  }
+</style>
+
+<script is:inline>
+    // let id = null;
+
+    const diColumn = document.querySelector("#diColumn");
+    const items = diColumn.querySelectorAll(".di-container");
+    
+    // Duplicate items
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      diColumn.prepend(clone);
+    });
+
+    // clearInterval(id);
+    // id = setInterval(frame, 10);
+
+    // let position = 50;
+
+    // function frame() {
+    //   if (diColumn.style.translate === "-50% -12.5%") {
+    //     clearInterval(id);
+    //     console.log("Animation complete");
+    //   } else {
+    //     position -= 0.1;
+    //     diColumn.style.translate = "-50% -" + position + "%";
+    //     console.log("Moved: " + diColumn.style.translate.toString());
+    //   }
+    // }
+</script>

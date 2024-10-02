@@ -1,0 +1,58 @@
+<div>
+  <img
+    src="/logos/AlphaChrome_Logo-Icon.svg"
+    width="360px"
+    height="280px"
+    alt="Alpha Chrome dog logo icon"
+  />
+  <div id="overLayer">
+    <img
+      src="/logos/dog/Logo-Stroke-Blue.svg"
+      width="360px"
+      height="280px"
+      alt="Alpha Chrome dog logo icon"
+    />
+  </div>
+</div>
+
+<style>
+  div {
+    display: block;
+    position: relative;
+  }
+  div > img {
+    /* opacity: 0.9; */
+  }
+  #overLayer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* scale: 4; */
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    /* position: relative; */
+    display: none;
+  }
+  @media (min-width: 960px) {
+    #overLayer {
+      display: block;
+    }
+  }
+</style>
+
+<script is:inline defer>
+  if (window.innerWidth > 960) {
+    const shiftRange = 50;
+    const shiftLayer = document.querySelector("#overLayer>img");
+    let currentPosition = shiftLayer.getBoundingClientRect();
+
+    document.addEventListener("mousemove", (event) => {
+      let x = event.clientX;
+      let y = event.clientY;
+
+      // console.log(`Mouse position: x=${x}, y=${y}`);
+      // shiftLayer.style.transform = `translate(${x / shiftRange}px, ${y / shiftRange}px)`;
+      shiftLayer.style.transform = `translate(${(x - currentPosition.left) / shiftRange}px, ${(y - currentPosition.top) / shiftRange}px)`;
+    });
+  }
+</script>

@@ -1,0 +1,35 @@
+<div id="shiftLayer">
+  <img
+    src="/logos/AlphaChrome_Logo-Icon.svg"
+    width="360px"
+    height="280px"
+    alt="Alpha Chrome dog logo icon"
+  />
+</div>
+
+<style>
+  #shiftLayer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    scale: 4;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+    /* position: relative; */
+  }
+</style>
+
+<script>
+  const shiftRange = 50;
+  const shiftLayer = document.querySelector('#overLayer>img');
+  let currentPosition = shiftLayer.getBoundingClientRect();
+
+  document.addEventListener('mousemove', (event) => {
+    let x = event.clientX;
+    let y = event.clientY;
+
+    // console.log(`Mouse position: x=${x}, y=${y}`);
+    // shiftLayer.style.transform = `translate(${x / shiftRange}px, ${y / shiftRange}px)`;
+    shiftLayer.style.transform = `translate(${(x - currentPosition.left) / shiftRange}px, ${(y - currentPosition.top) / shiftRange}px)`;
+  });
+</script>

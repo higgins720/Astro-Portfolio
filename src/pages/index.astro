@@ -1,53 +1,77 @@
 ---
-import '../styles/global.css';
-import '../styles/buttons.css';
+import "../styles/global.css";
+import "../styles/buttons.css";
 import Layout from "../layouts/Layout.astro";
+import ScrollingLogoColumn from "../components/ScrollingLogoColumn.astro";
+import LogoShift from "../components/LogoShift.astro";
 //import {Image} from 'astro:assets';
 ---
 
 <Layout title="Alpha Chrome">
-	<section id="container" class="flex flex-column flex-grow background-0 justify-center">
-		<div class="flex flex-column">
-			<div class="flex flex-column flex-align-center">
-				<!-- <picture id="logoDisplay">
-					<source srcset="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" media="(prefers-color-scheme: dark)" />
-					<source srcset="/logos/AlphaChrome_Logo-Icon-LM.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-					<img decoding="async" id="logo" src="/logos/ChromeDog_Logo-Text-LM.svg" width="400" height="450" />
-				</picture> -->
-				<img src="/logos/AlphaChrome_Logo-Icon-Stroke-Blurple-Animated.svg" width="400px" height="310px" alt="Alpha Chrome Dog Icon" class="contain" style="margin-bottom: 40px;"/>
-				<img src="/logos/AlphaChrome_Logo-Text-Stacked.svg" width="400px" height="150px" alt="Alpha Chrome" class="contain" />
-				<h1 class="text-align-center"><span class="text-h2 text-color-primary">Web Design & Development</span></h1>
-				<a href="/contact" class="button button-default">Contact Me -></a>
-			</div>
-		</div>
-	</section>
+  <section id="container" class="flex flex-column flex-grow justify-center">
+    <div
+      id="hero"
+      class="flex md:flex-row justify-center flex-align-center gap-32"
+    >
+    <LogoShift />
+      <div id="heroContent">
+        <img
+          src="/logos/AlphaChrome_Logo-Text-Grey.svg"
+          width="400px"
+          height="40px"
+          alt="Alpha Chrome"
+          class="contain"
+        />
+        <h1 class="text-align-center">Web Design & Development</h1>
+        <a href="/contact" class="button button-primary">Get a Quote</a>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
-	#container {
-		margin-top: 0px;
-		overflow-x: clip;
-	}
-	#logo {
-		max-width: 100%;
-		height: auto;
-	}
-	h1 {
-		color: rgba(var(--color-muted), 1);
-		font-family: var(--mono-font);
-	}
-	#logoDisplay {
-		padding: 40px;
-		background-image: url("/graphics/Grid-Accent.svg");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.text-color-primary {
-		color: rgb(var(--color-primary));
-	}
-	.contain {
-		max-width: 100%;
-		height: auto;
-	}
+  #hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 100%;
+  }
+  #heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+    z-index: 1;
+  }
+  #container {
+    margin-top: 0;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  #logo {
+    max-width: 100%;
+    height: auto;
+  }
+  #hero h1 {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    margin: auto;
+  }
+  #hero p {
+    margin: auto;
+  }
+  #logoDisplay {
+    padding: 40px;
+    background-image: url("/graphics/Grid-Accent.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .text-color-primary {
+    color: rgb(var(--color-primary));
+  }
 </style>

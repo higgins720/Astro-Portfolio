@@ -1,50 +1,61 @@
 ---
-import info from '../../info.json';
-import {Icon} from 'astro-icon';
-
-const iconSize = '24px';
+const currentPath = Astro.url.pathname;
+import MainMenu from '../../menu-main.json';
+const year = new Date().getFullYear();
 ---
 
 <footer>
-    <div class="flex flex-align-center max-width-small">
-        <!-- <div class="flex-2">
-            <h3>Contact</h3>
-            <p>
-                Phone: <a href={info.contact.phone}>{info.contact.phone_formatted}</a><br />
-                Email: <a href={info.contact.email}>{info.contact.email_formatted}</a>
-            </p> -->
-            <div id="socialMediaLinks" class="flex-2 text-align-center">
+            <!-- <div id="socialMediaLinks" class="flex-2 text-align-right">
                 <a href={info.links.twitter} target="_blank" rel="nofollow"><Icon name="mdi:twitter" width={iconSize} height={iconSize}></a>
                 <a href={info.links.linkedin} target="_blank" rel="nofollow"><Icon name="mdi:linkedin" width={iconSize} height={iconSize}></a>
                 <a href={info.links.github} target="_blank" rel="nofollow"><Icon name="mdi:github" width={iconSize} height={iconSize}></a>
                 <a href={info.links.codewars} target="_blank" rel="nofollow"><Icon name="simple-icons:codewars" width={iconSize} height={iconSize}></a>
-            </div>
-    </div>
-    <div class="text-align-center">
-        <p>
-            Website by Jesse Higgins | <span style="white-space: nowrap;">Built with <a href="https://astro.build/" target="_blank" style="display: inline-block; position: relative; overflow: hidden; line-height: 0rem; top: 5px;">
-                <img src="/logos/astro-logo-dark.svg" width="60px" height="20px" alt="Astro Logo"/>
+            </div> -->
+    <div class="text-align-right text-uppercase">
+        <!-- <p>
+            <span style="white-space: nowrap;">Built with <a href="https://astro.build/" target="_blank" style="display: inline-block; position: relative; overflow: hidden; line-height: 0rem; top: 5px;">
+                <img src="/logos/astro-logo-dark.svg" width="54px" height="16px" alt="Astro Logo"/>
             </a>
             </span>
-        </p>
-        <p>Copyright © 2023</p>
+        </p> -->
+        <!-- <ul id="footerMenuItems">
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/sitemap">Sitemap</a></li>
+        </ul> -->
+          <ul id="footerNav">
+              {MainMenu.Links.map( Link => 
+              <li>
+                  <a href={Link.Path} class={currentPath == Link.Path ? 'active' : ''}>
+                      {Link.Name}
+                  </a>
+              </li> 
+              )}
+          </ul>
+        <div class="divider"><img src="/graphics/divider-right.svg" width="300px" height="auto" /></div>
+        <p>Alpha Chrome LLC | Copyright © {year}</p>
     </div>
+  </div>
 </footer>
 
 <style>
-    #socialMediaLinks {
-        display: flex;
-        justify-content: space-evenly;
-        max-width: 200px;
-        margin: 0 auto;
-    }
     footer {
         width: calc(100% - 40px);
         padding: 20px;
-        background-color: rgb(var(--color-muted));
+        background: transparent;
+        /* background-color: rgb(var(--color-muted)); */
+        font-family: var(--mono-font);
+        z-index: 999;
     }
     footer p {
         margin: 0;
-        font-family: var(--mono-font);
+    }
+    #footerNav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        list-style: none;
+        gap: 1rem;
+        margin: 0;
     }
 </style>

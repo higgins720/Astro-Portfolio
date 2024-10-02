@@ -66,17 +66,42 @@
 }
 
 .button-primary {
-    color: rgb(var(--color-emphasis));
+    color: rgb(var(--color-emphasis-inverted));
     background-color: rgb(var(--color-primary));
 }
 .button-primary:hover {
-    color: rgb(var(--color-emphasis));
-    background-color: rgba(var(--color-primary),0.66);
+    color: rgb(var(--color-emphasis-inverted));
+    background-color: rgb(var(--color-emphasis));
 }
 
 .button-secondary {
     color: rgb(var(--color-emphasis));
     background-color: rgb(var(--color-secondary));
+}
+.button-secondary:before {
+    --border-width: 2px;
+    --inner-size: calc(var(--border-width) * 2);
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+    width: calc(100% - var(--inner-size));
+    height: calc(100% - var(--inner-size));
+    background: rgb(var(--color-background));
+    clip-path: 
+    polygon(
+      0% 0%, 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      100% 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+    );
+    z-index: -1;
 }
 .button-secondary:hover {
     color: rgb(var(--color-emphasis));

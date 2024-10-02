@@ -8,6 +8,7 @@ export interface Props {
 }
 const { title } = Astro.props;
 //import {ViewTransitions} from 'astro:transitions';
+import Header from '../components/Header.astro';
 import SidebarMenu from '../components/SidebarMenu.astro';
 import Footer from '../components/Footer.astro';
 
@@ -37,9 +38,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 	</head>
 	<body>
-		<div id="pageElements">
+		<div id="pageElements" class="background-0">
 			<SidebarMenu />
 			<div id="contentDisplay">
+        <Header />
 				<slot/>
 				<Footer />
 			</div>
@@ -79,11 +81,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 		align-self: flex-end;
 	}
 	#contentDisplay {
-    	max-width: 100%;
+    max-width: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+    overflow: hidden;
 	}
 	/* main {
 		padding: 0 40px 40px 40px;
