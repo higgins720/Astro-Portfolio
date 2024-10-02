@@ -1,6 +1,6 @@
 <div id="infoWidget">
   <div id="info">
-    <span style="opacity: 0.67">Serving the world from Tucson AZ</span><br>
+    <span class="tagline">Serving the world from Tucson AZ</span><br>
     <a href="tel:+15207240104">+1(520)724-0104</a>
   </div>
   <img src="/logos/AlphaChrome_Logo-Icon-Diamond.svg" width="80px" height="80px" alt="Alpha Chrome Dog Icon" />
@@ -14,7 +14,9 @@
     align-items: center;
     gap: 16px;
     padding: 16px;
-    pointer-events: none;
+    max-width: 75%;
+    margin-left: auto;
+    /* pointer-events: none; */
     /* position: relative;
     top: 16px;
     right: 16px; */
@@ -24,16 +26,25 @@
     line-height: 1.4rem;
     text-transform: uppercase;
     text-align: right;
-    display: none;
+  }
+  #info .tagline {
+    display: inline;
+    font-size: 0.8rem;
+    line-height: 0.5rem;
+  }
+  #info a {
+    /* color: var(--accent); */
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
   @media (min-width: 640px) {
-    #info {
+    /* #info {
       display: block;
-    }
+    } */
     #infoWidget {
-      z-index: 999;
-      pointer-events: all;
+      /* z-index: 999; */
+      /* pointer-events: all; */
     }
   }
 </style>
