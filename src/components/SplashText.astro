@@ -61,9 +61,15 @@ const splashTexts = [
   "Unsimulated!",
   "Totally legit!"
 ];
+
+function getRandomSplashText() {
+  return splashTexts[Math.floor(Math.random() * splashTexts.length)];
+}
+
+let splashText = getRandomSplashText();
 ---
 
-<span>{splashTexts[Math.floor(Math.random() * splashTexts.length)]}</span>
+<span id="textDisplay">{splashText}</span>
 
 <style>
   span {
