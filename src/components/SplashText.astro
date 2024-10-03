@@ -1,4 +1,29 @@
----
+<span id="textDisplay">Replace me!</span>
+
+<style>
+  span {
+    display: block;
+    font-size: 1.2em;
+    font-family: var(--mono-font);
+    font-weight: bold;
+    color: rgb(var(--color-secondary));
+    text-align: center;
+    animation: pulse 1.5s infinite linear;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+<script is:inline>
 const splashTexts = [
   "Man-owned!",
   "Human-owned!",
@@ -59,38 +84,14 @@ const splashTexts = [
   "Criminally sane!",
   "Lets be friends!",
   "Unsimulated!",
-  "Totally legit!"
+  "Totally legit!",
+  "I love you! (not you Dave)",
 ];
 
 function getRandomSplashText() {
   return splashTexts[Math.floor(Math.random() * splashTexts.length)];
 }
 
-let splashText = getRandomSplashText();
----
-
-<span id="textDisplay">{splashText}</span>
-
-<style>
-  span {
-    display: block;
-    font-size: 1.2em;
-    font-family: var(--mono-font);
-    font-weight: bold;
-    color: rgb(var(--color-secondary));
-    text-align: center;
-    animation: pulse 1.5s infinite linear;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-</style>
+const textDisplay = document.querySelector("#textDisplay");
+textDisplay.innerHTML = getRandomSplashText();
+</script>
