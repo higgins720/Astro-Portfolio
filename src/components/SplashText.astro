@@ -1,0 +1,90 @@
+---
+const splashTexts = [
+  "Man-owned!",
+  "Human-owned!",
+  "Five Stars!",
+  "High Five!",
+  "Now with 20% more!",
+  "Now with 20% less!",
+  "Totally Organic!",
+  "No ʀᴇᴅᴀᴄᴛᴇᴅ required!",
+  "One Million Dollars!",
+  "Hot Dog!",
+  "The bee's knees!",
+  "Buy one get one!",
+  "99.9% sugar free!",
+  "Πίθι ή άπιθι",
+  "CSS Sucks!",
+  "Totally Legal!",
+  "Now offering SEO!",
+  "Κάλλιο αργά παρά ποτέ",
+  "Lorem ipsum!",
+  "Not Cheap!",
+  "Wow!",
+  "Now accepting Dogecoin!",
+  "What? Yes!",
+  "Praise יהוה!",
+  "Now open to negotiation!",
+  "But wait, there's more!",
+  "Call Now! (or later)",
+  "Don't Run! Walk! Slowly!",
+  "Now with 1% more cowbell!",
+  "Less lame than our competition!",
+  "Who Cares!",
+  "Eat This!",
+  "Why Wait!",
+  "Someone call 911!",
+  "The droids you're looking for!",
+  "Now with 13.7% less cringe!",
+  "Yeah Right!",
+  "Superstition, Fear, and Jealousy!",
+  "Not actually a pyramid scheme!",
+  "Woah!",
+  "Ask your doctor!",
+  "Question authority!",
+  "You are beautiful!",
+  "Drugs are bad!",
+  "Check your local Bible!",
+  "Packing peanuts aren't food!",
+  "I don't know!",
+  "I'm not a doctor!",
+  "Call your dad!",
+  "I promise nothing!",
+  "100% guaranteed!",
+  "Nothing like it!",
+  "Nothing else matters!",
+  "Buy UBIK today!",
+  "We're all gonna die!",
+  "Not a cult!",
+  "Criminally sane!",
+  "Lets be friends!",
+  "Unsimulated!",
+  "Totally legit!"
+];
+---
+
+<span>{splashTexts[Math.floor(Math.random() * splashTexts.length)]}</span>
+
+<style>
+  span {
+    display: block;
+    font-size: 1.2em;
+    font-family: var(--mono-font);
+    font-weight: bold;
+    color: rgb(var(--color-secondary));
+    text-align: center;
+    animation: pulse 1.5s infinite linear;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
